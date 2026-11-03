@@ -66,12 +66,13 @@ items:
   'kits':
     material: CHEST
     slot: 22
-    display_name: '&a&lKITS DIÁRIOS & VIP'
+    display_name: '&c&lKITS DA MINA PVP'
     lore:
-      - '&7Resgate ferramentas, armaduras'
-      - '&7e consumíveis disponíveis para o seu rank.'
+      - '&7Resgate seu kit de combate'
+      - '&7básico, VIP ou prestígio.'
       - ''
-      - '&eClique para abrir o menu de kits!'
+      - '&eCooldown individual de 1 hora.'
+      - '&eClique para abrir os kits PvP!'
     left_click_commands:
       - '[sound] BLOCK_CHEST_OPEN'
       - '[close]'

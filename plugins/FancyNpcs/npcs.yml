@@ -2,7 +2,7 @@ npcs:
   2ef7c583-bf01-4efc-9276-573c035f6af4:
     name: menu
     creator: bf2b2ea5-688a-3bd3-8b1b-ffea352f9cc8
-    displayName: '&6&lMENU PRINCIPAL'
+    displayName: <empty>
     type: PLAYER
     location:
       world: world

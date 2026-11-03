@@ -1,0 +1,26 @@
+{
+  "stats": {
+    "minecraft:used": {
+      "minecraft:iron_leggings": 1,
+      "minecraft:iron_helmet": 1,
+      "minecraft:iron_chestplate": 1,
+      "minecraft:bow": 1,
+      "minecraft:iron_boots": 1
+    },
+    "minecraft:custom": {
+      "minecraft:sprint_one_cm": 16270,
+      "minecraft:time_since_rest": 71039,
+      "minecraft:fall_one_cm": 1275,
+      "minecraft:walk_one_cm": 19401,
+      "minecraft:total_world_time": 71039,
+      "minecraft:leave_game": 6,
+      "minecraft:fly_one_cm": 12249,
+      "minecraft:crouch_one_cm": 28,
+      "minecraft:sneak_time": 12,
+      "minecraft:play_time": 71039,
+      "minecraft:jump": 84,
+      "minecraft:time_since_death": 71039
+    }
+  },
+  "DataVersion": 5023
+}

@@ -337,14 +337,14 @@ ah:
     - auction
 
 kit:
-  enabled: true
+  enabled: false
   priority: normal
   aliases: []
   # Kit cooldowns are configured per-kit in kits.yml and are DB-backed.
   # Bypass permissions: essentialsc.kits.cooldown.bypass or essentialsc.kits.cooldown.bypass.<kitname>
 
 kits:
-  enabled: true
+  enabled: false
   priority: normal
   aliases: []
 

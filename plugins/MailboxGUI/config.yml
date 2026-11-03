@@ -1,0 +1,937 @@
+# ============================================================
+# MailboxGUI Configuration
+# ============================================================
+# This file controls mailbox behavior, Public Access Mailboxes,
+# Dynmap markers, language behavior, mail systems, packages,
+# money mail, and update checking.
+#
+# Important:
+# - Use spaces, not tabs.
+# - Display text supports legacy '&' codes, HEX colors (&#RRGGBB),
+#   and restricted MiniMessage colors/decorations/gradients/rainbows.
+#   Interactive, click, hover, and other unsupported MiniMessage tags
+#   are not executed. Placeholders and literal /n remain intact.
+# - Text placeholders such as %player% and %sender% are replaced
+#   by the plugin where supported.
+# - Startup and /mba reload synchronize missing defaults while preserving existing
+#   settings. Version migrations may rename legacy keys without resetting their values.
+# - Back up the entire plugin data folder before an upgrade.
+# - Keep this config, language files and scheduled-mail settings when
+#   moving from Free to Premium. Do not delete them to get new defaults.
+# - See UPGRADE-SAFETY.txt for stock-text refresh and rollback cautions.
+# ============================================================
+
+config-version: 13
+
+# Enables icon appearance overrides from gui.yml for every inventory menu and inbox mail type.
+# Controls share one appearance per purpose; fillers have one global appearance.
+# Recipient online/offline states and package/money message/expiration variants are separate.
+# Paper/book letters use only their base and expiration appearances because they inherently contain messages.
+# GUI titles, icon names, lore, colors, and translated text are customized in language/messages_<locale>.yml.
+# Real package contents, claimed items, menu layouts, permissions, and click actions are not changed by appearance overrides.
+# Inbox session and claim protection remain mandatory; appearance settings cannot disable them.
+# When false, built-in appearances are used and gui.yml is not generated or synchronized.
+# Any existing gui.yml is preserved but ignored while this setting is false.
+# Set true, then use /mba reload to generate gui.yml and load its appearance settings.
+# While enabled, /mba reload also applies edits made directly to gui.yml.
+# Optional ItemsAdder appearances: set itemsadder-item: namespace:id on supported gui.yml roles/variants.
+# Global navigation example: icons.controls.back.itemsadder-item; personal/public floating items also support it.
+# ItemsAdder must be installed, compatible with this server version, and finished loading its custom item registry.
+# Non-null itemsadder-item takes precedence over same-layer material/custom-model-data/item-model fields.
+# Missing/unready/incompatible ItemsAdder or invalid/unknown IDs retain the preceding inherited/built-in appearance.
+# Same-layer sibling fields are not fallback fields; configure an earlier layer or set itemsadder-item to null.
+# ItemsAdder owns pack building/merging, hosting and deployment; MailboxGUI never sends a second pack.
+# Include all referenced models in its deployed pack; ItemsAdder availability is NOT proof of player pack acceptance.
+# /iareload reloads ItemsAdder content; rebuild/deploy its pack when needed, then /mba reload applies GUI edits.
+# ItemsAdder does not bypass gui-customization.enabled, player On/Off/Auto or forced automatic detection.
+# Automatic resource-pack fallback: each player uses built-in icons until a server-supplied pack is confirmed loaded.
+# In auto mode, declined, failed, pending, or unknown status uses original icons, not gui.yml material/model overrides.
+# This also applies to each owner's floating new-mail item; pack acceptance is not required to use mail.
+# Pack status is local to the player's connection on each backend, not shared across the network.
+# Proxy-delivered packs may not produce Bukkit acknowledgements. A pack provider can integrate
+# the public resource-pack status API in both editions; confirmations expire unless refreshed.
+# Unsupported item-model assignments use CustomModelData when configured, otherwise the original icon.
+# The server cannot inspect individual client assets or detect manually installed local packs.
+# A loaded pack must contain your configured models; unrelated/missing models cannot be detected automatically.
+# Pack status changes take effect on the next normal GUI render/open; /mba reload retains known pack status.
+# Client-installed packs: /mb settings resourcepack on explicitly enables gui.yml icons for that player.
+# /mb settings resourcepack off forces built-in icons, even with a loaded server pack.
+# /mb settings resourcepack auto restores automatic server-pack detection (the default).
+# The on setting is the player's confirmation, not asset detection; the matching pack must be installed and enabled.
+# Choices are saved locally per player/backend and survive reconnects, reloads, and restarts.
+# Changing a choice refreshes the owner's floating notification; reopen inventory menus to update icons.
+# The player choices above are available only when require-automatic-detection is false.
+gui-customization:
+  enabled: false
+  # Locks every player to auto mode; takes effect after /mba reload in both editions.
+  # Hides/disables only /mb settings resourcepack (including localized aliases),
+  # its help entry, settings output and tab completion. Other player settings remain available.
+  # Existing saved on/off choices are ignored, not deleted; disabling this restores them.
+  # Requires a SERVER-SENT pack (server.properties or another pack-delivery plugin).
+  # Proxy pack plugins must forward verified loaded status through the public resource-pack API
+  # if the backend receives no native acknowledgement. MailboxGUI itself does not forward proxy status.
+  # A manually installed client pack cannot be detected and will use built-in icons in this mode.
+  # MailboxGUI NEVER sends/downloads/requires a pack or disconnects players for not loading one.
+  # To require your server pack, configure that in server.properties or your pack-delivery plugin.
+  # Detection only confirms a server pack loaded, NOT which assets it contains.
+  # ItemsAdder being installed or resolving an item does not bypass this policy or verify client models.
+  # Include every gui.yml model reference in the pack you send; an unrelated loaded pack
+  # or missing/incompatible client models can still produce incorrect/missing custom icons.
+  # Use a pack and gui.yml matching the edition, server API and client Minecraft version.
+  # Older APIs need custom-model-data fallback where item-model is unsupported.
+  # No loaded pack -> original icons; mail and the other settings remain usable.
+  # This setting does nothing while gui-customization.enabled is false.
+  require-automatic-detection: false
+
+# ============================================================
+# Data Storage
+# ============================================================
+# Controls how MailboxGUI stores persistent plugin data.
+#
+# Available storage types:
+# - YAML   = flat YAML files under plugins/MailboxGUI/data/playerdata and data/postofficedata
+# - SQLITE = local database file under plugins/MailboxGUI/data/data.db
+# - MYSQL  = remote MySQL database storage
+#
+# New installs default to SQLITE.
+# Upgrades with legacy mailboxdata from 3.1.2 or older default to YAML unless storage.type already existed.
+# Keep the existing config: deleting it selects new-install defaults, not your former database.
+# Changing storage.type selects a provider; it is not an automatic data conversion.
+# Back up all storage first and use /mba convert <YAML|SQLITE|MYSQL> to migrate data.
+# /mba reload loads edited connection settings but does not convert data between providers.
+# ============================================================
+
+storage:
+  type: SQLITE
+
+  sqlite:
+    file: data/data.db
+
+  mysql:
+    host: localhost
+    port: 3306
+    database: mailboxgui
+    username: root
+    password: ''
+    use-ssl: false
+
+# ============================================================
+# Language / Locale
+# ============================================================
+# MailboxGUI can use the player's Minecraft client locale when
+# a matching language file exists.
+#
+# Language files are stored in:
+# plugins/MailboxGUI/language/
+#
+# Supported locale.default codes:
+# en, es, fr, de, sv, nl, it, ja, ko, pl, pt_br, ru, uk, zh_cn, zh_hk, zh_tw
+# ============================================================
+
+locale:
+  # Default language code.
+  #
+  # Used when automatic locale detection is disabled or when a
+  # player's locale is not supported by MailboxGUI.
+  default: en
+
+  # If true, MailboxGUI attempts to use the player's Minecraft
+  # client language.
+  #
+  # If false, all players use locale.default.
+  auto-detect-player-locale: true
+
+  # Command names and syntax are independent of message, GUI, and date languages.
+  # At startup, ONLY command-syntax.default language roots and English roots are registered.
+  # With default: en, only English root aliases are registered.
+  # A non-English default registers that language's root aliases plus English root aliases.
+  # English roots are always available; other languages' roots are not registered.
+  # Changing registered roots requires a server restart; /mba reload does not register roots.
+  # Player names, messages, IDs, permission nodes, and configuration keys are not translated.
+  command-syntax:
+    # Selects the roots registered at startup alongside the always-available English roots.
+    # Console and unsupported client locales fall back to the invoking root's language.
+    # For example, console /mba uses English even with command-syntax.default: es.
+    # Uses the same supported language codes listed above; en is the default.
+    default: en
+
+    # If true, use a supported Minecraft client language ONLY for subcommands,
+    # help arguments, flags, and tab completion, never for command roots.
+    # If false, syntax follows the root used: /mb uses English, /bz uses Spanish, etc.
+    # A translated root is usable only if it was registered at startup.
+    # Message, GUI, and date locales remain independent of command syntax.
+    auto-detect-player-locale: true
+
+# ============================================================
+# Player Mailboxes
+# ============================================================
+# Player mailboxes are private physical mailbox locations owned
+# by a specific player.
+#
+# Supported bodies, matching regular wall signs and required bases depend on
+# the mailbox style and materials available on the running Minecraft version.
+# Use /mb guide to inspect supported styles; some styles require a fence below.
+# Registration validates the actual structure, not only the container material.
+# ============================================================
+
+mailbox:
+  # Maximum number of physical player mailboxes one player may register.
+  max-mailboxes-per-player: 5
+
+  # Controls what /mb check does for players.
+  #
+  # gui  = opens a read-only inbox view where players can inspect mail icons and lore.
+  # text = sends a chat summary of unchecked mail counts by mail type.
+  # Both are check-only: they do not claim mail or clear unchecked-mail notifications.
+  # GUI check shows package icons/lore, not package contents or management actions.
+  #
+  # paper-letter-readable:
+  #   true  = paper letter message bodies are visible in the /mb check GUI.
+  #   false = paper letters only show a notice that the player must open
+  #           their real inbox to read the message body.
+  #   This setting only applies when mailbox.mailbox-check-command.setting is gui.
+  mailbox-check-command:
+    setting: gui
+    paper-letter-readable: true
+
+  # Allows players to use /mb track to see delayed mail waiting
+  # to arrive for them.
+  #
+  # Mail type delivery delays are included. Admin command sends,
+  # console command sends and API sends may also
+  # use custom delays that differ from the standard mail type delay.
+  # Tracking delayed mail helps players understand when mail is still
+  # on the way, and delays help larger servers spread out mail delivery
+  # instead of processing every mail item at the same instant.
+  # Future scheduled tasks are not tracked here; only mail already in the delayed queue is listed.
+  mail-tracking:
+    enabled: true
+
+  # If true, players may send letters, packages, and money mail
+  # to themselves through normal player recipient menus.
+  #
+  # If false, the sender is hidden from their own recipient lists.
+  allow-player-self-send: true
+
+  # Allows loaded shulker boxes to be placed inside MailboxGUI packages.
+  #
+  # false = shulker boxes that already contain items are blocked.
+  # true  = loaded shulker boxes are allowed in packages.
+  #
+  # This applies to player, admin, command, and API package creation.
+  loaded-shulker-box:
+    enabled: false
+
+  # Allows players to open the main MailboxGUI menu by command with
+  # /mailbox open or /mb open.
+  #
+  # This is disabled by default so physical mailbox, Public Access Mailbox,
+  # and Public Access NPC access remains the normal access flow.
+  # Enable it for backend servers that do not have mailbox access points.
+  command-open:
+    enabled: true
+    worlds:
+      enabled: false
+      whitelist:
+        - worldname1
+        - worldname2
+
+  # Gives players starter blocks for building a physical mailbox.
+  #
+  # /mailbox kit and /mb kit use the named kits below.
+  # If exactly one kit is enabled and supported on the running Minecraft version,
+  # the command gives that kit immediately.
+  # If multiple kits are enabled and supported, /mb kit shows a list and
+  # /mb kit <kitname> claims one kit.
+  #
+  # Kit contents use Bukkit material names. Materials that do not exist on the
+  # running server version make that whole kit unavailable. This lets newer
+  # examples stay in the config while preserving Spigot/Paper/Purpur 1.18.2+
+  # compatibility.
+  #
+  # enabled:
+  #   false = the kit command and reminder are disabled.
+  #   true  = eligible players may use /mb kit.
+  #
+  # usage:
+  #   1 = each player may claim the kit once.
+  #   0 = unlimited kit claims.
+  #
+  # notification:
+  #   true  = enables /mb kit reminder support and allows players
+  #           to toggle the reminder in /mb settings notification.
+  #   false = disables kit reminders completely and hides the kit
+  #           notification setting from /mb settings.
+  #
+  # notification-frequency-minutes:
+  #   How often online players with remaining kit uses are reminded
+  #   that /mb kit is available.
+  #   0 = do not send reminder messages.
+  #   This setting only works when mailbox.kit.notification is true.
+  kit:
+    enabled: true
+    usage: 1
+    notification: true
+    notification-frequency-minutes: 0
+    kits:
+      Classic_Mailbox:
+        enabled: true
+        kit-contents:
+          - CHEST:1
+          - OAK_SIGN:1
+          - OAK_FENCE:1
+
+      Classic_Barrel:
+        enabled: true
+        kit-contents:
+          - BARREL:1
+          - DARK_OAK_SIGN:1
+          - DARK_OAK_FENCE:1
+
+      Copper_Chest:
+        enabled: true
+        kit-contents:
+          - WAXED_COPPER_CHEST:1
+          - ACACIA_SIGN:1
+          - ACACIA_FENCE:1
+
+      Wall_Shelf_Mailbox:
+        enabled: true
+        kit-contents:
+          - MANGROVE_SHELF:1
+          - MANGROVE_SIGN:1
+
+      Green_Shulker:
+        enabled: false
+        kit-contents:
+          - GREEN_SHULKER_BOX:1
+          - SPRUCE_SIGN:1
+          - SPRUCE_FENCE:1
+
+      Pink_Shulker:
+        enabled: false
+        kit-contents:
+          - PINK_SHULKER_BOX:1
+          - CHERRY_SIGN:1
+          - CHERRY_FENCE:1
+
+      Dropper:
+        enabled: false
+        kit-contents:
+          - DROPPER:1
+          - PALE_OAK_SIGN:1
+          - PALE_OAK_FENCE:1
+
+      Dispenser_Kit:
+        enabled: false
+        kit-contents:
+          - DISPENSER:1
+          - CHERRY_SIGN:1
+          - CHERRY_FENCE:1
+
+      Ender_Chest:
+        enabled: false
+        kit-contents:
+          - ENDER_CHEST:1
+          - WARPED_SIGN:1
+          - WARPED_FENCE:1
+
+      Chiseled_Bookshelf:
+        enabled: false
+        kit-contents:
+          - CHISELED_BOOKSHELF:1
+          - ACACIA_SIGN:1
+          - ACACIA_FENCE:1
+
+      Crafter:
+        enabled: false
+        kit-contents:
+          - CRAFTER:1
+          - BAMBOO_SIGN:1
+          - BAMBOO_FENCE:1
+
+  # Shows a floating item above registered physical player mailboxes
+  # when the mailbox owner has unread mail.
+  #
+  # The notification clears when the owner has no unchecked mail left.
+  # MailboxGUI controls the item position and refresh timing internally.
+  #
+  # This uses a no-gravity dropped item for 1.18+ compatibility.
+  # APPEARANCE OVERRIDES (gui.yml): icons.new-mail-notification.personal
+  # Require gui-customization.enabled: true AND personal.enabled: true there.
+  # - A valid, non-null personal.material replaces ONLY the item setting below.
+  # - A null/omitted material retains this base material (PAPER by default).
+  # - personal.custom-model-data and personal.item-model add item metadata;
+  #   they do not replace any other config.yml setting. The model must exist
+  #   in the player's resource pack; item-model needs a supporting server API.
+  #
+  # NOT OVERRIDDEN: mailbox.new-mail-notification.enabled, saved mailbox location, sign text,
+  # unread/expired-mail checks, visibility rules, pickup/despawn protection,
+  # or notification clearing. gui.yml does not move the item or change timers.
+  # World anchor, height, and refresh timing are controlled internally by MailboxGUI,
+  # not configurable here or in gui.yml. A pack's ground display transform controls
+  # how the model looks in the world, not the mailbox's saved location.
+  new-mail-notification:
+    # Master toggle for personal mailbox notifications; appearance cannot enable it.
+    enabled: true
+    # Base non-air Minecraft item Material. Used unless an active valid gui.yml
+    # personal.material overrides it; custom model metadata may still use this base.
+    item: PAPER
+
+  detection:
+    # If true, player mailbox signs are refreshed on startup/reload
+    # when the saved world, container, and sign are physically available.
+    #
+    # Mailbox numbers remain available in mailbox management views
+    # and Dynmap marker text.
+    refresh-signs-on-load: true
+
+  sign-format:
+    # Sign format used when a normal player mailbox is registered.
+    #
+    # Available placeholders:
+    # %player% = mailbox owner's player name
+    #
+    # Keep all four lines present.
+    line-1: '&6[&lMailbox&r&6]'
+    line-2: '%player%'
+    line-3: '&bPersonal Access'
+    line-4: '&7Right Click'
+
+# ============================================================
+# Letters
+# ============================================================
+# ============================================================
+
+letter:
+  # Paper letters: controls player sending only, never existing mail claims.
+  paper-letter:
+    enabled: true
+    # /mb send letter requires this flag AND paper-letter.enabled; permissions do not bypass either.
+    player-command-send:
+      enabled: true
+      worlds:
+        # When enabled, allow whitelisted worlds OR the existing letter world permission.
+        enabled: false
+        whitelist:
+          - worldname1
+          - worldname2
+    # Administrator sending is independent of the player enabled setting.
+    admin-mail:
+      send:
+        # New letters sent through Admin Tools.
+        enabled: true
+      command-send:
+        # New letters sent through administrator/console commands.
+        enabled: true
+      # Sender display supports legacy & colors, HEX colors, and supported restricted MiniMessage.
+      server-name: '&a&lServer'
+    # Default delivery delay in seconds; 0 sends immediately.
+    # Shared Admin Inbox mail uses its own delay for large mass-mail returns.
+    # Commands, API requests and scheduled tasks can override this delay.
+    # Delivery uses enqueue time plus this delay in wall-clock seconds, not server ticks.
+    delivery-delay-seconds: 5
+
+  # Book letters: controls player sending only, never existing mail claims.
+  book-letter:
+    enabled: true
+    # /mb send letter requires this flag AND book-letter.enabled; permissions do not bypass either.
+    player-command-send:
+      enabled: true
+      worlds:
+        # When enabled, allow whitelisted worlds OR the existing letter world permission.
+        enabled: false
+        whitelist:
+          - worldname1
+          - worldname2
+    # Administrator sending is independent of the player enabled setting.
+    admin-mail:
+      send:
+        # New letters sent through Admin Tools.
+        enabled: true
+      command-send:
+        # New letters sent through administrator/console commands.
+        enabled: true
+      # Sender display supports legacy & colors, HEX colors, and supported restricted MiniMessage.
+      server-name: '&a&lServer'
+    # Default delivery delay in seconds; 0 sends immediately.
+    # Shared Admin Inbox mail uses its own delay for large mass-mail returns.
+    # Commands, API requests and scheduled tasks can override this delay.
+    # Delivery uses enqueue time plus this delay in wall-clock seconds, not server ticks.
+    delivery-delay-seconds: 5
+
+# ============================================================
+# Packages
+# ============================================================
+# Packages can contain items and optional package experience.
+#
+# Cash On Delivery packages use Vault/economy when available.
+# ============================================================
+
+package:
+  # Enables or disables package sending.
+  enabled: true
+
+  # Enables /mailbox send package and /mb send package.
+  #
+  # Default: false.
+  # This does not affect mailbox-based Package sending.
+  player-command-send:
+    enabled: false
+    worlds:
+      enabled: false
+      whitelist:
+        - worldname1
+        - worldname2
+
+  # Controls new administrator-created Package sending.
+  admin-mail:
+    # Controls Package sending from Admin Tools.
+    # Does not control existing mail claims or API sending.
+    send:
+      enabled: true
+
+    # Controls Package sending from administrator and console commands.
+    # Does not control Admin Tools or API sending.
+    command-send:
+      enabled: true
+
+    # Display sender name for administrator/server Package mail.
+    server-name: '&a&lServer'
+
+  # Default package delivery delay in seconds; 0 sends immediately.
+  # Player/admin sending uses this default unless the request supplies a custom delay.
+  # Commands, API requests and scheduled tasks can override this delay.
+  # Delivery uses enqueue time plus this delay in wall-clock seconds, not server ticks.
+  # Shared Admin Inbox delivery uses its own delay for large return batches.
+  delivery-delay-seconds: 5
+
+  experience:
+    # Enables or disables adding experience to packages.
+    #
+    # Experience is stored as a special MailboxGUI package item
+    # using Bottle o' Enchanting as the default material.
+    enabled: true
+
+    # Maximum raw experience points a normal player may add to one
+    # package.
+    #
+    # -1 = no plugin cap.
+    #
+    # Normal players are still limited by how much experience they
+    # currently have. Admin package experience does not depend on
+    # the admin's personal experience amount.
+    max-experience-per-package: -1
+
+    # If true, normal player senders must already have the experience
+    # they add to a package.
+    #
+    # The experience is removed when the package is actually sent,
+    # not when the chat amount is typed.
+    withdraw-from-sender-on-send: true
+
+    item:
+      # Bukkit material used for the special package experience item.
+      #
+      # EXPERIENCE_BOTTLE = Bottle o' Enchanting.
+      material: EXPERIENCE_BOTTLE
+
+      # Display name for the experience item when it is inside a
+      # received package.
+      display-name: '&aExperience Package'
+
+      # Lore for the experience item when it is inside a received
+      # package.
+      #
+      # Compose GUIs use language-file lore instead so they can say
+      # "Right-click to remove experience" while receive GUIs say
+      # "Any click to claim."
+      #
+      # Available placeholders:
+      # %experience% = raw experience points stored in the item
+      lore:
+        - '&7Stored Experience: &a%experience%'
+        - '&e&lAny click to claim'
+
+      # Lore for the experience item only while previewing an unpaid
+      # COD package.
+      #
+      # This prevents the preview GUI from telling players they can
+      # claim XP before accepting the COD package.
+      #
+      # Available placeholders:
+      # %experience% = raw experience points stored in the item
+      cod-preview-lore:
+        - '&7Stored Experience: &a%experience%'
+        - '&cAccept COD Package before you can claim this XP'
+
+  cash-on-demand:
+    # Enables or disables Cash On Delivery packages globally.
+    #
+    # If false, both Vault/economy COD and item-currency COD are disabled.
+    enabled: true
+
+    # Enables or disables Vault/economy currency as a COD payment option.
+    #
+    # If Vault or an economy provider is not available, MailboxGUI hides
+    # only the Vault/economy COD option and can still allow item-currency COD.
+    vault-economy-currency: true
+
+    # Enables or disables item-currency payments as a COD payment option.
+    #
+    # Item-currency COD supports normal material names, XP entries, and
+    # saved item templates using t:<id>:# syntax.
+    item-currency: true
+
+    # If true, successful player-origin Vault/economy COD payments are returned
+    # to the sender as money mail.
+    #
+    # If false, successful player-origin Vault/economy COD payments are deposited
+    # directly into the sender's economy account.
+    #
+    # This setting controls player-origin payouts, not the admin/server sender.
+    # Admin COD payment returns use the request's Shared Admin Inbox return option;
+    # without that option, no player-sender payout is created for the admin/server.
+    send-reward-in-mail: true
+
+  lore:
+    # Lore shown on normal standard package icons.
+    #
+    # Available placeholders:
+    # %sender% = sender name shown on the package
+    standard-package:
+      - '&7From: &f%sender%'
+      - '&7Right-click to open'
+
+    # Lore shown on unpaid COD package icons.
+    #
+    # Available placeholders:
+    # %sender% = sender name shown on the package
+    cash-on-demand-package:
+      - '&7From: &f%sender%'
+      - '&7Right-click to preview contents'
+
+# ============================================================
+# Money Mail
+# ============================================================
+# Money mail requires a working economy/Vault setup.
+# ============================================================
+
+money:
+  # Enables or disables money mail.
+  enabled: true
+
+  # Enables /mailbox send money and /mb send money.
+  #
+  # Default: false.
+  # This does not affect mailbox-based Money Mail sending.
+  player-command-send:
+    enabled: false
+    worlds:
+      enabled: false
+      whitelist:
+        - worldname1
+        - worldname2
+
+  # Controls new administrator-created Money Mail sending.
+  admin-mail:
+    # Controls Money Mail sending from Admin Tools.
+    # Does not control existing mail claims or API sending.
+    send:
+      enabled: true
+
+    # Controls Money Mail sending from administrator and console commands.
+    # Does not control Admin Tools or API sending.
+    command-send:
+      enabled: true
+
+    # Display sender name for administrator/server Money Mail.
+    server-name: '&a&lServer'
+
+  # Default money-mail delivery delay in seconds; 0 sends immediately.
+  # Player/admin sending uses this default unless the request supplies a custom delay.
+  # Commands, API requests and scheduled tasks can override this delay.
+  # Delivery uses enqueue time plus this delay in wall-clock seconds, not server ticks.
+  # Shared Admin Inbox delivery uses its own delay for large return batches.
+  delivery-delay-seconds: 5
+
+  # Controls how MailboxGUI displays economy amounts in money mail,
+  # admin money mail, COD package prices, and COD return payments.
+  #
+  # PROVIDER = use the Vault economy provider's own format(amount) result.
+  # CUSTOM = use the custom-format below.
+  # RAW = show only the formatted number with no currency symbol/name.
+  display-format-mode: PROVIDER
+
+  # Used when display-format-mode is CUSTOM, and also used as the safe fallback
+  # if PROVIDER mode cannot get a valid formatted value from Vault.
+  #
+  # Available placeholders:
+  # %amount% = formatted number, such as 1,250.00
+  # %raw_amount% = raw decimal amount, such as 1250.0
+  # %currency_singular% = Vault provider singular currency name, if available
+  # %currency_plural% = Vault provider plural currency name, if available
+  custom-format: "$%amount%"
+
+  # Decimal format used for %amount% and RAW mode.
+  #
+  # Common examples:
+  # "#,##0.00" = 1,250.00
+  # "#,##0" = 1,250
+  # "0.00" = 1250.00
+  amount-format: "#,##0.00"
+
+# ============================================================
+# Admin Mail Sending
+# ============================================================
+# Controls how Admin Tools bulk mail audiences behave.
+# ============================================================
+
+admin-mail:
+  # If true, the admin who sends bulk admin mail is included in
+  # All Players and Online Players deliveries.
+  #
+  # This is useful for testing server-wide letters, packages,
+  # money mail, and package/COD behavior.
+  include-sender-in-bulk-audiences: true
+
+# ============================================================
+# Public Access Mailbox System
+# ============================================================
+# Public Access Mailboxes are shared access points to each player's own inbox.
+#
+# They are useful for:
+# - players who do not have a private mailbox yet
+# - spawn/mailroom access points
+# - servers that do not want to rely only on Citizens NPCs
+#
+# A valid Public Access Mailbox must use a supported mailbox container/style
+# with an associated sign. Use /mb guide to view the available styles.
+#
+# Public Access Mailboxes do not require a fence-post base.
+# Older post-office settings are migrated here without resetting owner values.
+# ============================================================
+
+public-mailbox:
+  # Enables or disables Public Access Mailbox.
+  #
+  # If false, Public Access Mailbox opening and registration tools
+  # are disabled.
+  enabled: true
+
+  mailboxes:
+    # Enables or disables Public Access Mailbox registration
+    # and opening.
+    enabled: true
+
+    # If true, any player may open a registered Public Access Mailbox.
+    #
+    # If false, players need:
+    # mailboxgui.player.postoffice.pobox
+    allow-any-player-open: true
+
+    # If true, Public Access Mailbox signs are refreshed on startup/reload
+    # when their saved world, container, and sign are physically available.
+    refresh-signs-on-load: true
+
+    # Shows a floating item above registered Public Access Mailboxes
+    # when the viewing player has unread mail.
+    #
+    # This notification is visible only to the player who has unchecked
+    # mail and is hidden from all other players using the same Public Access Mailbox.
+    #
+    # APPEARANCE OVERRIDES (gui.yml): icons.new-mail-notification.public
+    # Require gui-customization.enabled: true AND public.enabled: true there.
+    # - A valid, non-null public.material replaces ONLY the item setting below.
+    # - A null/omitted material retains this base material (PAPER by default).
+    # - public.custom-model-data and public.item-model add item metadata;
+    #   they do not replace any other config.yml setting. The model must exist
+    #   in the player's resource pack; item-model needs a supporting server API.
+    #
+    # NOT OVERRIDDEN: public-mailbox.mailboxes.new-mail-notification.enabled,
+    # public-mailbox.enabled, public-mailbox.mailboxes.enabled, saved Public Access Mailbox location, sign text,
+    # unread/expired-mail checks, owner-only visibility, pickup/despawn protection,
+    # or notification clearing. gui.yml does not move the item or change timers.
+    # World anchor, height, and refresh timing are controlled internally by MailboxGUI,
+    # not configurable here or in gui.yml. A pack's ground display transform controls
+    # how the model looks in the world, not the Public Access Mailbox's saved location.
+    new-mail-notification:
+      # Public notification toggle; also requires both public access parent toggles.
+      enabled: true
+      # Base non-air Minecraft item Material. Used unless an active valid gui.yml
+      # public.material overrides it; custom model metadata may still use this base.
+      item: PAPER
+
+    sign-format:
+      # Sign format used when a Public Access Mailbox is registered or refreshed.
+      #
+      # Available placeholders:
+      # %publicmailboxname% = Public Access Mailbox name entered by the admin
+      #
+      # Keep all four lines present.
+      line-1: '&6[&lMailbox&r&6]'
+      line-2: '%publicmailboxname%'
+      line-3: '&6Public Access'
+      line-4: '&7Right Click'
+
+# ============================================================
+# Dynmap Support
+# ============================================================
+# Dynmap support is optional.
+#
+# If Dynmap is installed and this section is enabled, MailboxGUI
+# creates a Dynmap marker layer for player mailboxes, public
+# mailboxes, and public access NPCs.
+#
+# If Dynmap is missing, MailboxGUI continues normally.
+# ============================================================
+
+dynmap:
+  # Enables or disables MailboxGUI Dynmap support.
+  enabled: true
+
+  marker-set:
+    # Internal Dynmap marker set ID.
+    #
+    # Keep this stable once markers exist on your map.
+    id: 'mailboxgui-mailboxes'
+
+    # Visible layer name in Dynmap's marker selector.
+    #
+    # This is the checkbox name players/admins can toggle.
+    label: 'Mailboxes/NPCs'
+
+    # If true, the Mailboxes/NPCs layer is hidden by default.
+    #
+    # If false, the layer is visible by default.
+    hide-by-default: false
+
+    # Dynmap layer priority.
+    #
+    # Higher values can appear higher in Dynmap's layer list.
+    layer-priority: 10
+
+  markers:
+    player-mailboxes:
+      # If true, registered player mailboxes appear on Dynmap.
+      enabled: true
+
+      # Dynmap marker icon ID for player mailboxes.
+      #
+      # If this icon is missing, MailboxGUI falls back to another
+      # available Dynmap icon.
+      icon-id: 'chest'
+
+      # Marker label shown on the map.
+      #
+      # Available placeholders:
+      # %player% = mailbox owner
+      # %number% = mailbox number for that owner
+      label-format: '%player% Mailbox #%number%'
+
+      # Marker description shown when clicking the marker.
+      #
+      # Basic HTML is supported by Dynmap descriptions.
+      #
+      # Available placeholders:
+      # %player% = mailbox owner
+      # %number% = mailbox number
+      # %world% = world name
+      # %status% = Loaded/Unloaded status text
+      description:
+        - '<b>MailboxGUI Player Mailbox</b>'
+        - 'Player: %player%'
+        - 'Mailbox: #%number%'
+        - 'World: %world%'
+        - 'Status: %status%'
+
+    public-mailboxes:
+      # If true, registered Public Access Mailboxes appear on Dynmap.
+      enabled: true
+
+      # Dynmap marker icon ID for Public Access Mailboxes.
+      icon-id: 'chest'
+
+      # Marker label shown on the map.
+      #
+      # Available placeholders:
+      # %publicmailboxname% = Public Access Mailbox name
+      label-format: 'Public Access Mailbox: %publicmailboxname%'
+
+      # Marker description shown when clicking the marker.
+      #
+      # Available placeholders:
+      # %publicmailboxname% = Public Access Mailbox name
+      # %world% = world name
+      # %status% = Loaded/Unloaded status text
+      description:
+        - '<b>MailboxGUI Public Access Mailbox</b>'
+        - 'Public Access Mailbox Name: %publicmailboxname%'
+        - 'World: %world%'
+        - 'Status: %status%'
+
+    public-access-npcs:
+      # If true, Citizens public access NPCs appear on Dynmap.
+      #
+      # Citizens must be installed and the NPC must be marked as a
+      # MailboxGUI public access NPC.
+      enabled: true
+
+      # Dynmap marker icon ID for public access NPCs.
+      #
+      # Dynmap's default "walk" marker icon is used for NPCs.
+      icon-id: 'walk'
+
+      # Marker label shown on the map.
+      #
+      # Available placeholders:
+      # %npc% = NPC name
+      # %id% = Citizens NPC ID
+      label-format: 'Public Access NPC: %npc%'
+
+      # Marker description shown when clicking the marker.
+      #
+      # Available placeholders:
+      # %npc% = NPC name
+      # %id% = Citizens NPC ID
+      # %world% = world name
+      description:
+        - '<b>MailboxGUI Public Access NPC</b>'
+        - 'NPC: %npc%'
+        - 'NPC ID: %id%'
+        - 'World: %world%'
+
+  update:
+    # If true, markers are refreshed when the plugin starts
+    # and Dynmap becomes available.
+    refresh-on-startup: true
+
+    # If true, markers are refreshed when MailboxGUI reloads.
+    refresh-on-reload: true
+
+    # If true, markers are refreshed after registering a mailbox.
+    refresh-on-register: true
+
+    # If true, markers are refreshed after unregistering a mailbox.
+    refresh-on-unregister: true
+
+# Update Checker
+# ============================================================
+# Checks for plugin updates from the MailboxGUI website release system.
+# ============================================================
+
+updates:
+  # Enables or disables the update checker.
+  enabled: true
+
+  # Release channel used by /mba update and automatic update notices.
+  # Valid values: release, beta, alpha.
+  # /mba updatecheck checks all three channels and explains how to select another channel.
+  release-channel: release
+
+  # If true, MailboxGUI checks for updates during startup.
+  check-on-startup: true
+
+  # If true, admins with the notify permission are told when
+  # an update is available when they join.
+  notify-admins-on-join: true

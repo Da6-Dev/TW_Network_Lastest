@@ -1,0 +1,244 @@
+sessions:
+  bf2b2ea5-688a-3bd3-8b1b-ffea352f9cc8:
+    origin-world: terrenos
+    origin-x: -44.671924235180576
+    origin-y: 63.0
+    origin-z: -38.89649708868216
+    origin-yaw: 57.750027
+    origin-pitch: 26.249998
+    origin-gamemode: CREATIVE
+    state: ACTIVE
+    origin-inventory:
+      storage-size: 36
+      storage:
+        '14':
+          ==: org.bukkit.inventory.ItemStack
+          DataVersion: 5023
+          id: minecraft:iron_sword
+          count: 1
+          components:
+            minecraft:custom_name: '{extra:[{bold:0b,color:"green",italic:0b,obfuscated:0b,strikethrough:0b,text:"Kit
+              Básico",underlined:0b}],text:""}'
+            minecraft:custom_data: '{PublicBukkitValues:{"tw-minas:pvp-kit-id":"basic","tw-minas:pvp-kit-item":1b}}'
+          schema_version: 1
+        '15':
+          ==: org.bukkit.inventory.ItemStack
+          DataVersion: 5023
+          id: minecraft:shield
+          count: 1
+          components:
+            minecraft:custom_name: '{extra:[{bold:0b,color:"green",italic:0b,obfuscated:0b,strikethrough:0b,text:"Kit
+              Básico",underlined:0b}],text:""}'
+            minecraft:custom_data: '{PublicBukkitValues:{"tw-minas:pvp-kit-id":"basic","tw-minas:pvp-kit-item":1b}}'
+          schema_version: 1
+        '16':
+          ==: org.bukkit.inventory.ItemStack
+          DataVersion: 5023
+          id: minecraft:iron_helmet
+          count: 1
+          components:
+            minecraft:custom_name: '{extra:[{bold:0b,color:"green",italic:0b,obfuscated:0b,strikethrough:0b,text:"Kit
+              Básico",underlined:0b}],text:""}'
+            minecraft:custom_data: '{PublicBukkitValues:{"tw-minas:pvp-kit-id":"basic","tw-minas:pvp-kit-item":1b}}'
+          schema_version: 1
+        '17':
+          ==: org.bukkit.inventory.ItemStack
+          DataVersion: 5023
+          id: minecraft:iron_chestplate
+          count: 1
+          components:
+            minecraft:custom_name: '{extra:[{bold:0b,color:"green",italic:0b,obfuscated:0b,strikethrough:0b,text:"Kit
+              Básico",underlined:0b}],text:""}'
+            minecraft:custom_data: '{PublicBukkitValues:{"tw-minas:pvp-kit-id":"basic","tw-minas:pvp-kit-item":1b}}'
+          schema_version: 1
+        '18':
+          ==: org.bukkit.inventory.ItemStack
+          DataVersion: 5023
+          id: minecraft:iron_leggings
+          count: 1
+          components:
+            minecraft:custom_name: '{extra:[{bold:0b,color:"green",italic:0b,obfuscated:0b,strikethrough:0b,text:"Kit
+              Básico",underlined:0b}],text:""}'
+            minecraft:custom_data: '{PublicBukkitValues:{"tw-minas:pvp-kit-id":"basic","tw-minas:pvp-kit-item":1b}}'
+          schema_version: 1
+        '19':
+          ==: org.bukkit.inventory.ItemStack
+          DataVersion: 5023
+          id: minecraft:iron_boots
+          count: 1
+          components:
+            minecraft:custom_name: '{extra:[{bold:0b,color:"green",italic:0b,obfuscated:0b,strikethrough:0b,text:"Kit
+              Básico",underlined:0b}],text:""}'
+            minecraft:custom_data: '{PublicBukkitValues:{"tw-minas:pvp-kit-id":"basic","tw-minas:pvp-kit-item":1b}}'
+          schema_version: 1
+        '20':
+          ==: org.bukkit.inventory.ItemStack
+          DataVersion: 5023
+          id: minecraft:bow
+          count: 1
+          components:
+            minecraft:custom_name: '{extra:[{bold:0b,color:"green",italic:0b,obfuscated:0b,strikethrough:0b,text:"Kit
+              Básico",underlined:0b}],text:""}'
+            minecraft:custom_data: '{PublicBukkitValues:{"tw-minas:pvp-kit-id":"basic","tw-minas:pvp-kit-item":1b}}'
+          schema_version: 1
+        '21':
+          ==: org.bukkit.inventory.ItemStack
+          DataVersion: 5023
+          id: minecraft:arrow
+          count: 24
+          components:
+            minecraft:custom_name: '{extra:[{bold:0b,color:"green",italic:0b,obfuscated:0b,strikethrough:0b,text:"Kit
+              Básico",underlined:0b}],text:""}'
+            minecraft:custom_data: '{PublicBukkitValues:{"tw-minas:pvp-kit-id":"basic","tw-minas:pvp-kit-item":1b}}'
+          schema_version: 1
+        '22':
+          ==: org.bukkit.inventory.ItemStack
+          DataVersion: 5023
+          id: minecraft:cooked_beef
+          count: 24
+          components:
+            minecraft:custom_name: '{extra:[{bold:0b,color:"green",italic:0b,obfuscated:0b,strikethrough:0b,text:"Kit
+              Básico",underlined:0b}],text:""}'
+            minecraft:custom_data: '{PublicBukkitValues:{"tw-minas:pvp-kit-id":"basic","tw-minas:pvp-kit-item":1b}}'
+          schema_version: 1
+        '23':
+          ==: org.bukkit.inventory.ItemStack
+          DataVersion: 5023
+          id: minecraft:golden_apple
+          count: 2
+          components:
+            minecraft:custom_name: '{extra:[{bold:0b,color:"green",italic:0b,obfuscated:0b,strikethrough:0b,text:"Kit
+              Básico",underlined:0b}],text:""}'
+            minecraft:custom_data: '{PublicBukkitValues:{"tw-minas:pvp-kit-id":"basic","tw-minas:pvp-kit-item":1b}}'
+          schema_version: 1
+      armor-size: 4
+    arena-inventory:
+      storage-size: 36
+      storage:
+        '0':
+          ==: org.bukkit.inventory.ItemStack
+          DataVersion: 5023
+          id: minecraft:diamond_pickaxe
+          count: 1
+          components:
+            minecraft:unbreakable: '{}'
+            minecraft:lore: '[{extra:[{bold:0b,color:"gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"Nível:
+              ",underlined:0b},{color:"white",italic:0b,text:"6"}],text:""},{extra:[{bold:0b,color:"gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"XP:
+              ",underlined:0b},{color:"white",italic:0b,text:"2550 / 6000"}],text:""},{extra:[{bold:0b,color:"gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"Progresso:
+              ",underlined:0b},{color:"green",italic:0b,text:"■■■■"},{color:"gray",italic:0b,text:"■■■■■■"}],text:""},"",{extra:[{bold:1b,color:"yellow",italic:0b,obfuscated:0b,strikethrough:0b,text:"Habilidades:",underlined:0b}],text:""},{extra:["
+              ",{bold:0b,color:"gray",italic:0b,obfuscated:0b,strikethrough:0b,text:"•
+              Sorteiro Lv. 15",underlined:0b}],text:""}]'
+            minecraft:tooltip_display: '{hidden_components:["minecraft:unbreakable"]}'
+            minecraft:enchantments: '{"minecraft:efficiency":255}'
+            minecraft:custom_name: '{extra:[{bold:1b,color:"red",italic:0b,obfuscated:0b,strikethrough:0b,text:"Picareta
+              de Natal ",underlined:0b},{bold:0b,color:"dark_gray",italic:0b,text:"[Lv.
+              6]"}],text:""}'
+            minecraft:custom_data: '{PublicBukkitValues:{"tw-minas:mine-pickaxe":1b}}'
+          schema_version: 1
+        '14':
+          ==: org.bukkit.inventory.ItemStack
+          DataVersion: 5023
+          id: minecraft:iron_sword
+          count: 1
+          components:
+            minecraft:custom_name: '{extra:[{bold:0b,color:"green",italic:0b,obfuscated:0b,strikethrough:0b,text:"Kit
+              Básico",underlined:0b}],text:""}'
+            minecraft:custom_data: '{PublicBukkitValues:{"tw-minas:pvp-kit-id":"basic","tw-minas:pvp-kit-item":1b}}'
+          schema_version: 1
+        '15':
+          ==: org.bukkit.inventory.ItemStack
+          DataVersion: 5023
+          id: minecraft:shield
+          count: 1
+          components:
+            minecraft:custom_name: '{extra:[{bold:0b,color:"green",italic:0b,obfuscated:0b,strikethrough:0b,text:"Kit
+              Básico",underlined:0b}],text:""}'
+            minecraft:custom_data: '{PublicBukkitValues:{"tw-minas:pvp-kit-id":"basic","tw-minas:pvp-kit-item":1b}}'
+          schema_version: 1
+        '16':
+          ==: org.bukkit.inventory.ItemStack
+          DataVersion: 5023
+          id: minecraft:iron_helmet
+          count: 1
+          components:
+            minecraft:custom_name: '{extra:[{bold:0b,color:"green",italic:0b,obfuscated:0b,strikethrough:0b,text:"Kit
+              Básico",underlined:0b}],text:""}'
+            minecraft:custom_data: '{PublicBukkitValues:{"tw-minas:pvp-kit-id":"basic","tw-minas:pvp-kit-item":1b}}'
+          schema_version: 1
+        '17':
+          ==: org.bukkit.inventory.ItemStack
+          DataVersion: 5023
+          id: minecraft:iron_chestplate
+          count: 1
+          components:
+            minecraft:custom_name: '{extra:[{bold:0b,color:"green",italic:0b,obfuscated:0b,strikethrough:0b,text:"Kit
+              Básico",underlined:0b}],text:""}'
+            minecraft:custom_data: '{PublicBukkitValues:{"tw-minas:pvp-kit-id":"basic","tw-minas:pvp-kit-item":1b}}'
+          schema_version: 1
+        '18':
+          ==: org.bukkit.inventory.ItemStack
+          DataVersion: 5023
+          id: minecraft:iron_leggings
+          count: 1
+          components:
+            minecraft:custom_name: '{extra:[{bold:0b,color:"green",italic:0b,obfuscated:0b,strikethrough:0b,text:"Kit
+              Básico",underlined:0b}],text:""}'
+            minecraft:custom_data: '{PublicBukkitValues:{"tw-minas:pvp-kit-id":"basic","tw-minas:pvp-kit-item":1b}}'
+          schema_version: 1
+        '19':
+          ==: org.bukkit.inventory.ItemStack
+          DataVersion: 5023
+          id: minecraft:iron_boots
+          count: 1
+          components:
+            minecraft:custom_name: '{extra:[{bold:0b,color:"green",italic:0b,obfuscated:0b,strikethrough:0b,text:"Kit
+              Básico",underlined:0b}],text:""}'
+            minecraft:custom_data: '{PublicBukkitValues:{"tw-minas:pvp-kit-id":"basic","tw-minas:pvp-kit-item":1b}}'
+          schema_version: 1
+        '20':
+          ==: org.bukkit.inventory.ItemStack
+          DataVersion: 5023
+          id: minecraft:bow
+          count: 1
+          components:
+            minecraft:custom_name: '{extra:[{bold:0b,color:"green",italic:0b,obfuscated:0b,strikethrough:0b,text:"Kit
+              Básico",underlined:0b}],text:""}'
+            minecraft:custom_data: '{PublicBukkitValues:{"tw-minas:pvp-kit-id":"basic","tw-minas:pvp-kit-item":1b}}'
+          schema_version: 1
+        '21':
+          ==: org.bukkit.inventory.ItemStack
+          DataVersion: 5023
+          id: minecraft:arrow
+          count: 24
+          components:
+            minecraft:custom_name: '{extra:[{bold:0b,color:"green",italic:0b,obfuscated:0b,strikethrough:0b,text:"Kit
+              Básico",underlined:0b}],text:""}'
+            minecraft:custom_data: '{PublicBukkitValues:{"tw-minas:pvp-kit-id":"basic","tw-minas:pvp-kit-item":1b}}'
+          schema_version: 1
+        '22':
+          ==: org.bukkit.inventory.ItemStack
+          DataVersion: 5023
+          id: minecraft:cooked_beef
+          count: 24
+          components:
+            minecraft:custom_name: '{extra:[{bold:0b,color:"green",italic:0b,obfuscated:0b,strikethrough:0b,text:"Kit
+              Básico",underlined:0b}],text:""}'
+            minecraft:custom_data: '{PublicBukkitValues:{"tw-minas:pvp-kit-id":"basic","tw-minas:pvp-kit-item":1b}}'
+          schema_version: 1
+        '23':
+          ==: org.bukkit.inventory.ItemStack
+          DataVersion: 5023
+          id: minecraft:golden_apple
+          count: 2
+          components:
+            minecraft:custom_name: '{extra:[{bold:0b,color:"green",italic:0b,obfuscated:0b,strikethrough:0b,text:"Kit
+              Básico",underlined:0b}],text:""}'
+            minecraft:custom_data: '{PublicBukkitValues:{"tw-minas:pvp-kit-id":"basic","tw-minas:pvp-kit-item":1b}}'
+          schema_version: 1
+      armor-size: 4
+    arena-world: mina_pvp
+    arena-x: -13.057081469880849
+    arena-y: 120.74313583138608
+    arena-z: -59.36752694062139
+    arena-yaw: -11.550092
+    arena-pitch: 34.350117

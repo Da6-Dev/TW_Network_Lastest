@@ -1,0 +1,197 @@
+# ============================================================
+# MailboxGUI Sounds Configuration
+# ============================================================
+# This file controls the plugin's configured GUI and mail sound roles.
+#
+# If a sound entry is blank or invalid, that sound will not play.
+#
+# Accepted sound name formats:
+# - Bukkit enum style: UI_BUTTON_CLICK
+# - Full namespaced key style: minecraft:block.chest.open
+# - Short key style: block.chest.open
+#
+# Internally, namespaced/short key styles are converted to Bukkit enum names.
+# Example: minecraft:block.chest.open -> BLOCK_CHEST_OPEN
+# Namespaced strings are aliases for supported Bukkit sounds, not arbitrary
+# resource-pack sound events. Available sounds depend on the server version.
+# /mba reload reloads this file. Volume and pitch apply only when that role plays;
+# entries do not enable mail alerts or bypass the player's notification preferences.
+# The legacy postoffice-* role keys below remain stable for saved configurations;
+# they now describe Public Access Mailbox actions.
+#
+# Version Notes:
+# - sounds-config-version is used by MailboxGUI to refresh this file
+#   when new bundled sound paths are added.
+# - Synchronization adds missing defaults while preserving existing sound choices,
+#   volumes, pitches and owner comments. Keep this file when upgrading.
+# ============================================================
+
+sounds-config-version: 3
+
+sounds:
+  # Master switch for all plugin sounds.
+  enabled: true
+
+  # ============================================================
+  # GUI Navigation
+  # ============================================================
+
+  main-menu-open:
+    # Sound used when the main mailbox menu opens.
+    sound: UI_BUTTON_CLICK
+    volume: 1.0
+    pitch: 1.0
+
+  inbox-open:
+    # Sound used when a player or admin opens an inbox-style view.
+    sound: BLOCK_CHEST_OPEN
+    volume: 1.0
+    pitch: 1.0
+
+  selector-open:
+    # Sound used when opening selector/list style GUIs.
+    sound: UI_BUTTON_CLICK
+    volume: 1.0
+    pitch: 1.1
+
+  compose-open:
+    # Sound used when opening compose-style menus and previews.
+    sound: UI_BUTTON_CLICK
+    volume: 1.0
+    pitch: 0.9
+
+  button-click:
+    # General button click fallback for future GUI actions.
+    sound: UI_BUTTON_CLICK
+    volume: 1.0
+    pitch: 1.0
+
+  cancel:
+    # Sound used when a compose/selector action is cancelled.
+    sound: UI_BUTTON_CLICK
+    volume: 0.8
+    pitch: 0.7
+
+  error:
+    # Sound used for denied/invalid actions.
+    sound: BLOCK_NOTE_BLOCK_BASS
+    volume: 0.8
+    pitch: 0.7
+
+  # ============================================================
+  # Player Mailboxes
+  # ============================================================
+
+  mailbox-register:
+    # Sound used when a normal player mailbox is registered.
+    sound: BLOCK_NOTE_BLOCK_PLING
+    volume: 1.0
+    pitch: 1.2
+
+  mailbox-unregister:
+    # Sound used when a normal player mailbox is unregistered.
+    sound: BLOCK_NOTE_BLOCK_PLING
+    volume: 1.0
+    pitch: 0.8
+
+  # ============================================================
+  # Public Access Mailboxes
+  # ============================================================
+
+  postoffice-mailbox-open:
+    # Sound used when a player opens MailboxGUI through a Public Access Mailbox.
+    sound: BLOCK_CHEST_OPEN
+    volume: 1.0
+    pitch: 1.1
+
+  postoffice-mailbox-register:
+    # Sound used when an admin registers a Public Access Mailbox.
+    sound: BLOCK_NOTE_BLOCK_PLING
+    volume: 1.0
+    pitch: 1.25
+
+  postoffice-mailbox-unregister:
+    # Sound used when an admin unregisters a Public Access Mailbox.
+    sound: BLOCK_NOTE_BLOCK_PLING
+    volume: 1.0
+    pitch: 0.75
+
+  # ============================================================
+  # Letters
+  # ============================================================
+
+  letter-send:
+    # Sound used when a letter is sent.
+    sound: ENTITY_ITEM_PICKUP
+    volume: 1.0
+    pitch: 1.1
+
+  # ============================================================
+  # Packages
+  # ============================================================
+
+  package-send:
+    # Sound used when a package is successfully sent.
+    sound: ENTITY_ITEM_PICKUP
+    volume: 1.0
+    pitch: 1.1
+
+  package-claim:
+    # Sound used when a package is successfully claimed or opened.
+    sound: ENTITY_ITEM_PICKUP
+    volume: 1.0
+    pitch: 1.0
+
+  package-cod-accept:
+    # Sound used when a COD package is accepted.
+    sound: ENTITY_EXPERIENCE_ORB_PICKUP
+    volume: 1.0
+    pitch: 1.0
+
+  package-experience-set:
+    # Sound used when experience is added or updated in a package compose GUI.
+    sound: ENTITY_EXPERIENCE_ORB_PICKUP
+    volume: 1.0
+    pitch: 1.2
+
+  package-experience-redeem:
+    # Sound used when a receiver redeems package experience.
+    sound: ENTITY_PLAYER_LEVELUP
+    volume: 0.8
+    pitch: 1.4
+
+  # ============================================================
+  # Mail Notifications
+  # ============================================================
+
+  online-mail-alert:
+    # Sound used when a player receives mail while online and has sound alerts enabled.
+    sound: BLOCK_NOTE_BLOCK_PLING
+    volume: 1.0
+    pitch: 1.4
+
+  # ============================================================
+  # Money Mail
+  # ============================================================
+
+  money-send:
+    # Sound used when money mail is sent.
+    sound: ENTITY_ITEM_PICKUP
+    volume: 1.0
+    pitch: 1.1
+
+  money-claim:
+    # Sound used when a money mail item is successfully claimed.
+    sound: ENTITY_EXPERIENCE_ORB_PICKUP
+    volume: 1.0
+    pitch: 1.0
+
+  # ============================================================
+  # Dynmap / System
+  # ============================================================
+
+  dynmap-refresh:
+    # Optional sound path reserved for future Dynmap marker refresh actions.
+    sound: UI_BUTTON_CLICK
+    volume: 0.8
+    pitch: 1.2

@@ -1,38 +1,13 @@
 {
   "stats": {
-    "minecraft:custom": {
-      "minecraft:time_since_rest": 440877,
-      "minecraft:walk_one_cm": 195280,
-      "minecraft:leave_game": 42,
-      "minecraft:mob_kills": 22,
-      "minecraft:damage_taken": 320,
-      "minecraft:damage_dealt": 6257,
-      "minecraft:play_time": 495079,
-      "minecraft:jump": 816,
-      "minecraft:time_since_death": 440857,
-      "minecraft:sprint_one_cm": 123318,
-      "minecraft:fall_one_cm": 12995,
-      "minecraft:total_world_time": 495079,
-      "minecraft:fly_one_cm": 1549923,
-      "minecraft:crouch_one_cm": 10217,
-      "minecraft:sneak_time": 7741,
-      "minecraft:deaths": 1
-    },
-    "minecraft:picked_up": {
-      "minecraft:dirt": 1
-    },
-    "minecraft:killed": {
-      "minecraft:pig": 19,
-      "minecraft:iron_golem": 3
-    },
     "minecraft:used": {
       "minecraft:spruce_fence": 1,
-      "minecraft:netherite_sword": 72,
+      "minecraft:netherite_sword": 119,
       "minecraft:spruce_stairs": 40,
       "minecraft:glass": 7,
-      "minecraft:spawner": 3,
+      "minecraft:spawner": 5,
       "minecraft:raw_copper_block": 5,
-      "minecraft:coal_block": 1,
+      "minecraft:coal_block": 3,
       "minecraft:stone_bricks": 37,
       "minecraft:torch": 1,
       "minecraft:dead_brain_coral_block": 4,
@@ -41,8 +16,8 @@
       "minecraft:polished_granite": 2,
       "minecraft:snow": 1,
       "minecraft:gray_stained_glass": 7,
-      "minecraft:spruce_planks": 21,
       "minecraft:blue_ice": 8,
+      "minecraft:spruce_planks": 21,
       "minecraft:lodestone": 1,
       "minecraft:stripped_spruce_wood": 13,
       "minecraft:cobblestone": 4,
@@ -50,13 +25,48 @@
       "minecraft:spruce_slab": 49,
       "minecraft:barrier": 10,
       "minecraft:smooth_red_sandstone": 7,
+      "minecraft:chest": 2,
       "minecraft:light_gray_stained_glass": 5,
       "minecraft:moss_block": 1,
       "minecraft:sandstone": 13,
       "minecraft:bedrock": 8
     },
+    "minecraft:dropped": {
+      "minecraft:netherite_sword": 1,
+      "minecraft:paper": 2,
+      "minecraft:tnt": 1,
+      "minecraft:diamond": 1,
+      "minecraft:emerald": 5
+    },
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 536210,
+      "minecraft:walk_one_cm": 358883,
+      "minecraft:leave_game": 52,
+      "minecraft:mob_kills": 46,
+      "minecraft:damage_taken": 320,
+      "minecraft:play_time": 590412,
+      "minecraft:damage_dealt": 8850,
+      "minecraft:jump": 981,
+      "minecraft:time_since_death": 536190,
+      "minecraft:drop": 6,
+      "minecraft:sprint_one_cm": 182165,
+      "minecraft:open_chest": 2,
+      "minecraft:fall_one_cm": 17720,
+      "minecraft:total_world_time": 590412,
+      "minecraft:fly_one_cm": 1807119,
+      "minecraft:crouch_one_cm": 11938,
+      "minecraft:sneak_time": 8674,
+      "minecraft:deaths": 1
+    },
     "minecraft:mined": {
       "minecraft:grass_block": 1
+    },
+    "minecraft:killed": {
+      "minecraft:iron_golem": 3,
+      "minecraft:pig": 43
+    },
+    "minecraft:picked_up": {
+      "minecraft:dirt": 1
     }
   },
   "DataVersion": 5023

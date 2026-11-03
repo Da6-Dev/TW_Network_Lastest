@@ -1,85 +1,475 @@
-[00:00:41] [Server thread/INFO]: Stopping server
-[00:00:41] [Server thread/INFO]: [Awesome Chat] Disabling AwesomeChat v1.0.10.1
-[00:00:41] [Server thread/INFO]: [Awesome Chat] AwesomeChat has been disabled!
-[00:00:41] [Server thread/INFO]: [DeluxeHub] Disabling DeluxeHub v3.8.6
-[00:00:41] [Server thread/INFO]: [DeluxeMenus] Disabling DeluxeMenus v1.14.1-Release
-[00:00:41] [Server thread/INFO]: [EssentialsC] Disabling EssentialsC v4.3.5
-[00:00:43] [Server thread/INFO]: [FancyHolograms] Disabling FancyHolograms v2.12.0
-[00:00:43] [Server thread/INFO]: [MiniMOTD] Disabling MiniMOTD v2.2.5
-[00:00:43] [Server thread/INFO]: [Multiverse-Inventories] Disabling Multiverse-Inventories v5.3.6
-[00:00:43] [FancyLogger/INFO]: [FancyHolograms] (Server thread) INFO: Successfully disabled FancyHolograms version 2.12.0
-[00:00:44] [Server thread/INFO]: [Multiverse-Inventories] - Disabled
-[00:00:44] [Server thread/INFO]: [ProCosmetics] Disabling ProCosmetics v2.0.9
-[00:00:44] [Server thread/INFO]: [tw-caixas] Disabling tw-caixas v1.0
-[00:00:44] [Server thread/INFO]: [VoidSpawnPlus] Disabling VoidSpawnPlus v1.2.0
-[00:00:44] [Server thread/INFO]: [VoidSpawnPlus] Spawn locations saved successfully.
-[00:00:44] [Server thread/INFO]: [VoidSpawnPlus] VoidSpawn has been disabled successfully!
-[00:00:44] [Server thread/INFO]: [TAB] Disabling TAB v6.2.1
-[00:00:44] [Server thread/INFO]: [TAB] Disabled in 24ms
-[00:00:44] [Server thread/INFO]: [FancyNpcs] Disabling FancyNpcs v2.12.1
-[00:00:44] [FancyLogger/INFO]: [FancyNpcs] (Server thread) INFO: FancyNpcs has been disabled.
-[00:00:44] [Server thread/INFO]: [WorldGuard] Disabling WorldGuard v7.0.20+2410-0b6c3f1
-[00:00:44] [Server thread/INFO]: [WorldGuard] Shutting down executor and cancelling any pending tasks...
-[00:00:44] [Server thread/INFO]: [tw-farms] Disabling tw-farms v1.0
-[00:00:44] [Server thread/INFO]: [tw-terrenos] Disabling tw-terrenos v1.0
-[00:00:44] [Server thread/INFO]: [tw-ranks] Disabling tw-ranks v1.0
-[00:00:44] [Server thread/INFO]: [tw-minas] Disabling tw-minas v1.0
-[00:00:44] [Server thread/INFO]: [tw-maquinas] Disabling tw-maquinas v1.0
-[00:00:44] [Server thread/INFO]: [tw-spawners] Disabling tw-spawners v1.0
-[00:00:44] [Server thread/INFO]: [RealMines] Disabling RealMines v1.9
-[00:00:44] [Server thread/INFO]: [tw-economia] Disabling tw-economia v1.0
-[00:00:44] [Server thread/INFO]: [Multiverse-Core] Disabling Multiverse-Core v5.8.1
-[00:00:44] [Server thread/INFO]: [Multiverse-Core] - Disabled
-[00:00:44] [Server thread/INFO]: [tw-core] Disabling tw-core v1.0
-[00:00:44] [Server thread/INFO]: [tw-core] [TW-Core] Salvando dados de todos os jogadores...
-[00:00:44] [Server thread/INFO]: [tw-core] Conexao com o banco encerrada com seguranca.
-[00:00:44] [Server thread/INFO]: [PlotSquared] Disabling PlotSquared v7.6.0
-[00:00:44] [Server thread/INFO]: [PlotSquared/SQLManager] All DB transactions during this session are being validated (This may take a while if corrections need to be made)
-[00:00:44] [Server thread/INFO]: [VoidGen] Disabling VoidGen v2.3.8
-[00:00:44] [Server thread/INFO]: [FastAsyncWorldEdit] Disabling FastAsyncWorldEdit v2.16.1+9e5e49e
-[00:00:44] [Server thread/INFO]: Unregistering com.sk89q.worldedit.bukkit.BukkitServerInterface from WorldEdit
-[00:00:44] [Server thread/INFO]: [Vault] Disabling Vault v2.20.3
-[00:00:44] [Server thread/INFO]: [PlaceholderAPI] Unregistered placeholder expansion vault
-[00:00:44] [Server thread/INFO]: [PlaceholderAPI] Reason: required plugin Vault was disabled.
-[00:00:44] [Server thread/INFO]: [LuckPerms] Disabling LuckPerms v5.5.71
-[00:00:44] [Server thread/INFO]: [PlaceholderAPI] Unregistered placeholder expansion luckperms
-[00:00:44] [Server thread/INFO]: [PlaceholderAPI] Reason: required plugin LuckPerms was disabled.
-[00:00:44] [Server thread/INFO]: [LuckPerms] Starting shutdown process...
-[00:00:44] [Server thread/INFO]: [LuckPerms] Closing storage...
-[00:00:45] [Server thread/INFO]: [LuckPerms] Goodbye!
-[00:00:45] [Server thread/INFO]: [PlaceholderAPI] Disabling PlaceholderAPI v2.12.3
-[00:00:45] [Server thread/INFO]: Saving players
-[00:00:45] [Server thread/INFO]: Saving worlds
-[00:00:45] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:overworld
-[00:00:45] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'minecraft:overworld'
-[00:00:45] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'minecraft:overworld'
-[00:00:45] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'minecraft:overworld'
-[00:00:45] [Server thread/INFO]: [ChunkHolderManager] Saved 0 block chunks, 0 entity chunks, 0 poi chunks in world 'minecraft:overworld' in 0,00s
-[00:00:45] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk I/O to halt for world 'minecraft:overworld'
-[00:00:45] [Server thread/INFO]: [ChunkHolderManager] Halted I/O scheduler for world 'minecraft:overworld'
-[00:00:45] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:the_nether
-[00:00:45] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'minecraft:the_nether'
-[00:00:45] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'minecraft:the_nether'
-[00:00:45] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'minecraft:the_nether'
-[00:00:45] [Server thread/INFO]: [ChunkHolderManager] Saved 0 block chunks, 0 entity chunks, 0 poi chunks in world 'minecraft:the_nether' in 0,00s
-[00:00:45] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk I/O to halt for world 'minecraft:the_nether'
-[00:00:45] [Server thread/INFO]: [ChunkHolderManager] Halted I/O scheduler for world 'minecraft:the_nether'
-[00:00:45] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:minas
-[00:00:45] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'minecraft:minas'
-[00:00:45] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'minecraft:minas'
-[00:00:45] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'minecraft:minas'
-[00:00:45] [Server thread/INFO]: [ChunkHolderManager] Saved 0 block chunks, 0 entity chunks, 0 poi chunks in world 'minecraft:minas' in 0,01s
-[00:00:45] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk I/O to halt for world 'minecraft:minas'
-[00:00:45] [Server thread/INFO]: [ChunkHolderManager] Halted I/O scheduler for world 'minecraft:minas'
-[00:00:45] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:terrenos
-[00:00:45] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'minecraft:terrenos'
-[00:00:45] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'minecraft:terrenos'
-[00:00:45] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'minecraft:terrenos'
-[00:00:45] [Server thread/INFO]: [ChunkHolderManager] Saved 0 block chunks, 0 entity chunks, 0 poi chunks in world 'minecraft:terrenos' in 0,00s
-[00:00:45] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk I/O to halt for world 'minecraft:terrenos'
-[00:00:45] [Server thread/INFO]: [ChunkHolderManager] Halted I/O scheduler for world 'minecraft:terrenos'
-[00:00:45] [Server thread/INFO]: Saving usercache.json
-[00:00:45] [Server thread/INFO]: Waiting for all RegionFile I/O tasks to complete...
-[00:00:45] [Server thread/INFO]: All RegionFile I/O tasks to complete
-[00:00:45] [Server thread/INFO]: [MoonriseCommon] Awaiting termination of worker pool for up to 60s...
-[00:00:45] [Server thread/INFO]: [MoonriseCommon] Awaiting termination of I/O pool for up to 60s...
+[23:33:28] [ServerMain/INFO]: [bootstrap] Running Java 25 (Java HotSpot(TM) 64-Bit Server VM 25.0.5.0.2+1-LTS-2; Oracle Corporation null) on Windows 11 10.0 (amd64)
+[23:33:28] [ServerMain/INFO]: [bootstrap] Loading Purpur 26.3-2652-HEAD@b5fae12 (2026-10-17T03:38:05Z) for Minecraft 26.3
+[23:33:29] [ServerMain/INFO]: [PluginInitializerManager] Initializing plugins...
+[23:33:30] [ServerMain/INFO]: [PluginInitializerManager] Initialized 32 plugins
+[23:33:30] [ServerMain/INFO]: [PluginInitializerManager] Paper plugins (3):
+ - FancyHolograms (2.12.0), FancyNpcs (2.12.1), MiniMOTD (2.2.5)
+[23:33:30] [ServerMain/INFO]: [PluginInitializerManager] Bukkit plugins (29):
+ - AwesomeChat (1.0.10.1), CombatLog (1.20), CommandWhitelist (2.13.1), DeluxeHub (3.8.6), DeluxeMenus (1.14.1-Release), EssentialsC (4.3.5), FastAsyncWorldEdit (2.16.2+eef5a6f), LuckPerms (5.5.71), MailboxGUI (6.1.0), Multiverse-Core (5.8.1), Multiverse-Inventories (5.3.6), PlaceholderAPI (2.12.3), PlotSquared (7.6.0), ProCosmetics (2.0.9), RealMines (1.9), TAB (6.2.1), Vault (2.20.3), VoidGen (2.3.8), VoidSpawnPlus (1.2.0), WorldGuard (7.0.20+2410-0b6c3f1), tw-caixas (1.0), tw-core (1.0), tw-economia (1.0), tw-farms (1.0), tw-maquinas (1.0), tw-minas (1.0), tw-ranks (1.0), tw-spawners (1.0), tw-terrenos (1.0)
+[23:33:33] [DataConverter MCTypeRegistry init thread/INFO]: [ca.spottedleaf.dataconverter.minecraft.datatypes.MCTypeRegistry] Initialising converters for DataConverter...
+[23:33:34] [ServerMain/INFO]: [com.destroystokyo.paper.profile.PaperServicesDiscoveryService] Environment: Environment[discoveryUrl=https://discovery.minecraftservices.com/minecraft/client, name=PROD]
+[23:33:34] [DataConverter MCTypeRegistry init thread/INFO]: [ca.spottedleaf.dataconverter.minecraft.datatypes.MCTypeRegistry] Finished initialising converters for DataConverter in 533,8ms
+[23:33:36] [Worker-Main-4/INFO]: Loaded 1866 advancements
+[23:33:36] [Server thread/INFO]: Starting minecraft server version 26.3
+[23:33:36] [Server thread/INFO]: Loading properties
+[23:33:37] [Server thread/INFO]: This server is running Purpur version 26.3-2652-HEAD@b5fae12 (2026-10-17T03:38:05Z) (Implementing API version 26.3.build.2652-stable)
+[23:33:37] [Server thread/INFO]: [spark] This server bundles the spark profiler. For more information please visit https://docs.papermc.io/paper/profiling
+[23:33:37] [Server thread/INFO]: Using 4 threads for Netty based IO
+[23:33:37] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[23:33:37] [Server thread/INFO]: [MoonriseCommon] Paper is using 3 worker threads, 1 I/O threads
+[23:33:37] [Server thread/INFO]: Default game type: SURVIVAL
+[23:33:37] [Server thread/INFO]: Generating keypair
+[23:33:38] [Server thread/INFO]: Starting Minecraft server on *:25565
+[23:33:38] [Server thread/INFO]: Paper: Using Java compression from Velocity.
+[23:33:38] [Server thread/INFO]: Paper: Using Java cipher from Velocity.
+[23:33:38] [Server thread/INFO]: [EssentialsC] Enabled FastStats Metrics and Error Tracking
+[23:33:38] [Server thread/INFO]: [SpigotLibraryLoader] [MailboxGUI] Loading 2 libraries... please wait
+[23:33:38] [Server thread/INFO]: [SpigotLibraryLoader] [MailboxGUI] Loaded library C:\Users\DaviPsss\OneDrive\Documentos\GitHub\Server Minecraft\TW_Network_Lastest\libraries\org\xerial\sqlite-jdbc\3.46.1.3\sqlite-jdbc-3.46.1.3.jar
+[23:33:38] [Server thread/INFO]: [SpigotLibraryLoader] [MailboxGUI] Loaded library C:\Users\DaviPsss\OneDrive\Documentos\GitHub\Server Minecraft\TW_Network_Lastest\libraries\com\mysql\mysql-connector-j\9.1.0\mysql-connector-j-9.1.0.jar
+[23:33:38] [Server thread/INFO]: [SpigotLibraryLoader] [MailboxGUI] Loaded library C:\Users\DaviPsss\OneDrive\Documentos\GitHub\Server Minecraft\TW_Network_Lastest\libraries\com\google\protobuf\protobuf-java\4.26.1\protobuf-java-4.26.1.jar
+[23:33:39] [Server thread/INFO]: [PlaceholderAPI] Loading server plugin PlaceholderAPI v2.12.3
+[23:33:39] [Server thread/INFO]: [LuckPerms] Loading server plugin LuckPerms v5.5.71
+[23:33:40] [Server thread/INFO]: [LuckPerms] Loading configuration...
+[23:33:40] [Server thread/INFO]: [Vault] Loading server plugin Vault v2.20.3
+[23:33:40] [Server thread/INFO]: [FastAsyncWorldEdit] Loading server plugin FastAsyncWorldEdit v2.16.2+eef5a6f
+[23:33:41] [Server thread/INFO]: Got request to register class com.sk89q.worldedit.bukkit.BukkitServerInterface with WorldEdit [com.sk89q.worldedit.extension.platform.PlatformManager@77833715]
+[23:33:41] [Server thread/INFO]: [VoidGen] Loading server plugin VoidGen v2.3.8
+[23:33:41] [Server thread/INFO]: [PlotSquared] Loading server plugin PlotSquared v7.6.0
+[23:33:41] [Server thread/INFO]: [tw-core] Loading server plugin tw-core v1.0
+[23:33:41] [Server thread/INFO]: [CoreLogging] Loading server plugin Multiverse-Core v5.8.1
+[23:33:41] [Server thread/INFO]: [WorldGuard] Loading server plugin WorldGuard v7.0.20+2410-0b6c3f1
+[23:33:41] [Server thread/INFO]: [TAB] Loading server plugin TAB v6.2.1
+[23:33:41] [Server thread/INFO]: [tw-economia] Loading server plugin tw-economia v1.0
+[23:33:41] [Server thread/INFO]: [InvLogging] Loading server plugin Multiverse-Inventories v5.3.6
+[23:33:41] [Server thread/INFO]: [CombatLog] Loading server plugin CombatLog v1.20
+[23:33:41] [Server thread/INFO]: [CombatLog] WorldGuard detected: custom flag 'allow-combat-entry' registered.
+[23:33:41] [Server thread/INFO]: [RealMines] Loading server plugin RealMines v1.9
+[23:33:41] [Server thread/INFO]: [EssentialsC] Loading server plugin EssentialsC v4.3.5
+[23:33:41] [Server thread/INFO]: [EssentialsC] Successfully hooked into Vault.
+[23:33:41] [Server thread/INFO]: [MailboxGUI] Loading server plugin MailboxGUI v6.1.0
+[23:33:41] [Server thread/INFO]: [tw-spawners] Loading server plugin tw-spawners v1.0
+[23:33:41] [Server thread/INFO]: [tw-maquinas] Loading server plugin tw-maquinas v1.0
+[23:33:41] [Server thread/INFO]: [tw-minas] Loading server plugin tw-minas v1.0
+[23:33:41] [Server thread/INFO]: [tw-ranks] Loading server plugin tw-ranks v1.0
+[23:33:41] [Server thread/INFO]: [tw-terrenos] Loading server plugin tw-terrenos v1.0
+[23:33:41] [Server thread/INFO]: [tw-farms] Loading server plugin tw-farms v1.0
+[23:33:41] [Server thread/INFO]: [FancyNpcs] Loading server plugin FancyNpcs v2.12.1
+[23:33:41] [Server thread/INFO]: [VoidSpawnPlus] Loading server plugin VoidSpawnPlus v1.2.0
+[23:33:41] [Server thread/INFO]: [tw-caixas] Loading server plugin tw-caixas v1.0
+[23:33:41] [Server thread/INFO]: [ProCosmetics] Loading server plugin ProCosmetics v2.0.9
+[23:33:42] [Server thread/INFO]: [ProCosmetics] Initializing...
+[23:33:42] [Server thread/INFO]: Environment: Environment[discoveryUrl=https://discovery.minecraftservices.com/minecraft/client, name=PROD]
+[23:33:43] [Server thread/INFO]: [ProCosmetics] Hooking into PlaceholderAPI...
+[23:33:43] [Server thread/INFO]: [PlaceholderAPI] Successfully registered internal expansion: procosmetics [1.0.0]
+[23:33:43] [Server thread/INFO]: [ProCosmetics] Hooking into WorldGuard...
+[23:33:43] [Server thread/INFO]: [MiniMOTD] Loading server plugin MiniMOTD v2.2.5
+[23:33:43] [Server thread/INFO]: [FancyHolograms] Loading server plugin FancyHolograms v2.12.0
+[23:33:43] [Server thread/INFO]: [DeluxeMenus] Loading server plugin DeluxeMenus v1.14.1-Release
+[23:33:43] [FancyLogger/INFO]: [FancyHolograms] (Server thread) INFO: Successfully loaded FancyHolograms version 2.12.0
+[23:33:43] [Server thread/WARN]: [DeluxeMenus] Could not setup a NMS hook for your server version! The following Item options will not work: nbt_int, nbt_ints, nbt_string and nbt_strings.
+[23:33:43] [Server thread/INFO]: [DeluxeHub] Loading server plugin DeluxeHub v3.8.6
+[23:33:43] [Server thread/INFO]: [CommandWhitelist] Loading server plugin CommandWhitelist v2.13.1
+[23:33:43] [Server thread/INFO]: [Awesome Chat] Loading server plugin AwesomeChat v1.0.10.1
+[23:33:43] [Server thread/INFO]: [LuckPerms] Enabling LuckPerms v5.5.71
+[23:33:43] [Server thread/INFO]:         __    
+[23:33:43] [Server thread/INFO]:   |    |__)   LuckPerms v5.5.71
+[23:33:43] [Server thread/INFO]:   |___ |      Running on Bukkit - Purpur
+[23:33:43] [Server thread/INFO]: 
+[23:33:43] [Server thread/INFO]: [LuckPerms] Loading storage provider... [H2]
+[23:33:44] [Server thread/INFO]: [LuckPerms] Loading internal permission managers...
+[23:33:44] [Server thread/INFO]: [LuckPerms] Performing initial data load...
+[23:33:44] [Server thread/INFO]: [LuckPerms] Successfully enabled. (took 1418ms)
+[23:33:44] [Server thread/INFO]: [Vault] Enabling Vault v2.20.3
+[23:33:44] [Server thread/INFO]: [Vault] Enabled Version 2.20.3
+[23:33:44] [Server thread/INFO]: [LuckPerms] Registered Vault permission & chat hook.
+[23:33:44] [Server thread/INFO]: [FastAsyncWorldEdit] Enabling FastAsyncWorldEdit v2.16.2+eef5a6f
+[23:33:44] [Server thread/INFO]: [com.fastasyncworldedit.core.Fawe] LZ4 Compression Binding loaded successfully
+[23:33:45] [Server thread/INFO]: [com.fastasyncworldedit.core.Fawe] ZSTD Compression Binding loaded successfully
+[23:33:45] [Server thread/INFO]: Registering commands with com.sk89q.worldedit.bukkit.BukkitServerInterface
+[23:33:45] [Server thread/INFO]: WEPIF: Vault detected! Using Vault for permissions
+[23:33:45] [Server thread/INFO]: Using com.sk89q.worldedit.bukkit.adapter.impl.fawe.v26_3.PaperweightFaweAdapter as the Bukkit adapter
+[23:33:46] [Server thread/INFO]: [VoidGen] Enabling VoidGen v2.3.8
+[23:33:46] [Server thread/INFO]: [VoidGen] Using an unknown version of VoidGen! It will switch to latest version build for.
+[23:33:46] [Server thread/INFO]: [PlotSquared] Enabling PlotSquared v7.6.0
+[23:33:46] [Server thread/INFO]: [PlotSquared/PlotSquared] Loaded caption map for namespace 'plotsquared': com.plotsquared.core.configuration.caption.LocalizedCaptionMap
+[23:33:47] [Server thread/INFO]: [PlotSquared/BukkitPlatform] Couldn't verify purchase :(
+[23:33:47] [Server thread/INFO]: [PlotSquared/PlotSquared] Connection to database established. Type: SQLite
+[23:33:47] [Server thread/INFO]: [PlotSquared/BukkitPlatform] PlotSquared hooked into WorldEdit
+[23:33:47] [Server thread/INFO]: [PlotSquared/BukkitPlatform] (UUID) Using LuckPerms as a complementary UUID service
+[23:33:47] [Server thread/INFO]: [PlotSquared/BukkitPlatform] (UUID) 1 UUIDs will be cached
+[23:33:47] [Server thread/INFO]: [PlaceholderAPI] Successfully registered internal expansion: plotsquared [3]
+[23:33:47] [Server thread/INFO]: [PlotSquared/BukkitPlatform] PlotSquared hooked into PlaceholderAPI
+[23:33:47] [Server thread/INFO]: [Awesome Chat] Enabling AwesomeChat v1.0.10.1
+[23:33:47] [Server thread/INFO]: [Awesome Chat] Config is up to date (v22).
+[23:33:47] [Server thread/INFO]: [Awesome Chat] Successfully hooked into LuckPerms
+[23:33:47] [Server thread/INFO]: [Awesome Chat] Successfully hooked into LuckPerms
+[23:33:47] [Server thread/WARN]: [Awesome Chat] PlaceholerAPI has not yet initialized, waiting to hook...
+[23:33:47] [Server thread/INFO]: [Awesome Chat] PrivateMessageManager loaded.
+[23:33:47] [Server thread/INFO]: [Awesome Chat] SocialSpyManager loaded.
+[23:33:47] [Server thread/INFO]: [Awesome Chat] ChatListener loaded.
+[23:33:47] [Server thread/INFO]: [Awesome Chat] [ChatFilter] Loaded 68 wildcard banned patterns from: plugins\AwesomeChat\modules\filter
+[23:33:47] [Server thread/INFO]: [Awesome Chat] ChatFilterManager loaded.
+[23:33:47] [Server thread/INFO]: [Awesome Chat] AutoBroadcasterManager loaded.
+[23:33:47] [Server thread/INFO]: [Awesome Chat] SoundManager loaded.
+[23:33:47] [Server thread/INFO]: [Awesome Chat] HoverManager loaded.
+[23:33:47] [Server thread/INFO]: [Awesome Chat] ChannelManager loaded. 3 channels registered.
+[23:33:47] [Server thread/INFO]: [Awesome Chat] IgnoreManager loaded.
+[23:33:47] [Server thread/INFO]: [Awesome Chat] MentionManager loaded.
+[23:33:47] [Server thread/INFO]: [Awesome Chat] ItemDisplayManager loaded.
+[23:33:47] [Server thread/INFO]: [Awesome Chat] ChatRadiusManager loaded.
+[23:33:47] [Server thread/INFO]: [Awesome Chat] ChatLogManager loaded (sqlite).
+[23:33:47] [Server thread/INFO]: [Awesome Chat] ChatColorManager loaded.
+[23:33:47] [Server thread/INFO]: [Awesome Chat] AwesomeChatAPI v1.0 loaded.
+[23:33:47] [Server thread/INFO]: [Awesome Chat] Attempting to hook into PlaceholderAPI...
+[23:33:47] [Server thread/INFO]: [Awesome Chat] AwesomeChat has been enabled!
+[23:33:47] [Server thread/WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+[23:33:47] [Server thread/WARN]: The server will make no attempt to authenticate usernames. Beware.
+[23:33:47] [Server thread/WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+[23:33:47] [Server thread/WARN]: To change this, set "online-mode" to "true" in the server.properties file.
+[23:33:47] [Server thread/INFO]: Preparing level "world"
+[23:33:48] [Server thread/INFO]: Loading 0 persistent chunks for level 'minecraft:overworld'...
+[23:33:48] [Server thread/INFO]: Prepared spawn area in 4 ms
+[23:33:48] [Server thread/INFO]: Loading 0 persistent chunks for level 'minecraft:the_nether'...
+[23:33:48] [Server thread/INFO]: Prepared spawn area in 13 ms
+[23:33:48] [Server thread/INFO]: Done preparing level "world" (0.823s)
+[23:33:48] [Server thread/INFO]: [PlaceholderAPI] Enabling PlaceholderAPI v2.12.3
+[23:33:48] [Server thread/INFO]: [PlaceholderAPI] Fetching available expansion information...
+[23:33:48] [Server thread/INFO]: [PlaceholderAPI] Successfully registered internal expansion: vaultunlocked [2.13.1]
+[23:33:48] [Server thread/INFO]: [Awesome Chat] Successfully hooked into PlaceholderAPI
+[23:33:48] [Server thread/INFO]: [tw-core] Enabling tw-core v1.0
+[23:33:48] [Server thread/INFO]: [tw-core] Iniciando conexao com o banco de dados...
+[23:33:48] [Server thread/ERROR]: [tw-core] [Server thread] INFO br.com.tw.core.libs.hikari.HikariDataSource - HikariPool-1 - Starting...
+[23:33:49] [Server thread/ERROR]: [tw-core] [Server thread] INFO br.com.tw.core.libs.hikari.pool.HikariPool - HikariPool-1 - Added connection br.com.tw.core.libs.postgresql.jdbc.PgConnection@2eaa17d9
+[23:33:49] [Server thread/ERROR]: [tw-core] [Server thread] INFO br.com.tw.core.libs.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[23:33:49] [Server thread/INFO]: [tw-core] Pool de conexoes estabelecida com sucesso!
+[23:33:49] [Server thread/INFO]: [tw-core] [TW-Core] Nucleo de dados carregado com sucesso!
+[23:33:49] [Server thread/INFO]: [Multiverse-Core] Enabling Multiverse-Core v5.8.1
+[23:33:50] [Server thread/INFO]: [VoidGen] 
+[23:33:50] [Server thread/INFO]: [VoidGen] > ——————————————————————[ world ]——————————————————————
+[23:33:50] [Server thread/INFO]: [VoidGen] > 
+[23:33:50] [Server thread/INFO]: [VoidGen] > Generator settings have not been set, we will use the default settings:
+[23:33:50] [Server thread/INFO]: [VoidGen] > {"biome":"the_void"}
+[23:33:50] [Server thread/INFO]: [VoidGen] > 
+[23:33:50] [Server thread/INFO]: [VoidGen] > ——————————————————————[ world ]——————————————————————
+[23:33:50] [Server thread/INFO]: [VoidGen] 
+[23:33:50] [Server thread/INFO]: [VoidGen] 
+[23:33:50] [Server thread/INFO]: [VoidGen] > ——————————————————————[ minas ]——————————————————————
+[23:33:50] [Server thread/INFO]: [VoidGen] > 
+[23:33:50] [Server thread/INFO]: [VoidGen] > Generator settings have not been set, we will use the default settings:
+[23:33:50] [Server thread/INFO]: [VoidGen] > {"biome":"the_void"}
+[23:33:50] [Server thread/INFO]: [VoidGen] > 
+[23:33:50] [Server thread/INFO]: [VoidGen] > ——————————————————————[ minas ]——————————————————————
+[23:33:50] [Server thread/INFO]: [VoidGen] 
+[23:33:50] [Server thread/INFO]: Loading 0 persistent chunks for level 'minecraft:minas'...
+[23:33:50] [Server thread/INFO]: Prepared spawn area in 11 ms
+[23:33:50] [Server thread/INFO]: [PlotSquared/PlotSquared] Detected world load for 'terrenos'
+[23:33:50] [Server thread/INFO]: [PlotSquared/PlotSquared] - generator: PlotSquared>PlotSquared
+[23:33:50] [Server thread/INFO]: [PlotSquared/PlotSquared] - plot world: com.plotsquared.core.generator.HybridPlotWorld
+[23:33:50] [Server thread/INFO]: [PlotSquared/PlotSquared] - plot area manager: com.plotsquared.core.generator.HybridPlotManager
+[23:33:50] [Server thread/INFO]: Loading 0 persistent chunks for level 'minecraft:terrenos'...
+[23:33:50] [Server thread/INFO]: Prepared spawn area in 7 ms
+[23:33:50] [Server thread/ERROR]: [Multiverse-Core] Failed to autoload world 'mina_pvp': Failure{reason=WORLD_FOLDER_INVALID}: World 'mina_pvp' folder contents does not seem to be a valid world! Make sure it contains the correct world structure of data and region folders.
+If the server software does something different with world folders, or you are very certain the world is valid, use '--skip-folder-check' flag.
+[23:33:51] [Server thread/INFO]: [PlaceholderAPI] Successfully registered internal expansion: multiverse-core [5.8.1]
+[23:33:51] [Server thread/INFO]: [Multiverse-Core] API service loaded!
+[23:33:51] [Server thread/INFO]: [Multiverse-Core] Version 5.8.1 (API v5.8) Enabled - By dumptruckman, Rigby, fernferret, lithium3141, main--, benwoo1110 and Zax71
+[23:33:51] [Server thread/INFO]: [VoidGen] VoidGen hooked into Multiverse!
+[23:33:51] [Server thread/INFO]: [WorldGuard] Enabling WorldGuard v7.0.20+2410-0b6c3f1
+[23:33:51] [Server thread/INFO]: [WorldGuard] (world) TNT ignition is PERMITTED.
+[23:33:51] [Server thread/INFO]: [WorldGuard] (world) Lighters are PERMITTED.
+[23:33:51] [Server thread/INFO]: [WorldGuard] (world) Lava fire is PERMITTED.
+[23:33:51] [Server thread/INFO]: [WorldGuard] (world) Fire spread is UNRESTRICTED.
+[23:33:51] [Server thread/INFO]: [WorldGuard] Loaded configuration for world 'world'
+[23:33:51] [Server thread/INFO]: [WorldGuard] (world_nether) TNT ignition is PERMITTED.
+[23:33:51] [Server thread/INFO]: [WorldGuard] (world_nether) Lighters are PERMITTED.
+[23:33:51] [Server thread/INFO]: [WorldGuard] (world_nether) Lava fire is PERMITTED.
+[23:33:51] [Server thread/INFO]: [WorldGuard] (world_nether) Fire spread is UNRESTRICTED.
+[23:33:51] [Server thread/INFO]: [WorldGuard] Loaded configuration for world 'world_nether'
+[23:33:51] [Server thread/INFO]: [WorldGuard] (minas) TNT ignition is PERMITTED.
+[23:33:51] [Server thread/INFO]: [WorldGuard] (minas) Lighters are PERMITTED.
+[23:33:51] [Server thread/INFO]: [WorldGuard] (minas) Lava fire is PERMITTED.
+[23:33:51] [Server thread/INFO]: [WorldGuard] (minas) Fire spread is UNRESTRICTED.
+[23:33:51] [Server thread/INFO]: [WorldGuard] Loaded configuration for world 'minas'
+[23:33:51] [Server thread/INFO]: [WorldGuard] (terrenos) TNT ignition is PERMITTED.
+[23:33:51] [Server thread/INFO]: [WorldGuard] (terrenos) Lighters are PERMITTED.
+[23:33:51] [Server thread/INFO]: [WorldGuard] (terrenos) Lava fire is PERMITTED.
+[23:33:51] [Server thread/INFO]: [WorldGuard] (terrenos) Fire spread is UNRESTRICTED.
+[23:33:51] [Server thread/INFO]: [WorldGuard] Loaded configuration for world 'terrenos'
+[23:33:51] [Server thread/INFO]: [WorldGuard] Loading region data...
+[23:33:51] [Server thread/INFO]: [TAB] Enabling TAB v6.2.1
+[23:33:51] [Server thread/INFO]: [TAB] Found NMS implementation: me.neznamy.tab.platforms.bukkit.paper_26_2.NMSImplementationProvider
+[23:33:51] [Server thread/INFO]: [TAB] Enabled in 299ms
+[23:33:51] [Server thread/INFO]: [tw-economia] Enabling tw-economia v1.0
+[23:33:51] [Server thread/INFO]: [PlaceholderAPI] Successfully registered internal expansion: tweco [1.0]
+[23:33:51] [Server thread/INFO]: [tw-economia] [TW-Economia] Motor de precos e multiplicadores iniciado com sucesso de forma independente!
+[23:33:51] [Server thread/INFO]: [Multiverse-Inventories] Enabling Multiverse-Inventories v5.3.6
+[23:33:52] [Server thread/INFO]: [PlaceholderAPI] Successfully registered internal expansion: multiverse-inventories [5.3.6]
+[23:33:52] [Server thread/INFO]: [Multiverse-Inventories] Loading player names map...
+[23:33:52] [Server thread/INFO]: [Multiverse-Inventories] Version 5.3.6 (API v5.3) Enabled - By dumptruckman and benwoo1110
+[23:33:52] [Server thread/INFO]: [CombatLog] Enabling CombatLog v1.20
+[23:33:52] [Server thread/INFO]: [PlaceholderAPI] Successfully registered internal expansion: combatlog [1.0]
+[23:33:52] [Server thread/INFO]: [CombatLog] PlaceholderAPI detected: placeholders registered.
+[23:33:52] [Server thread/INFO]: [RealMines] Enabling RealMines v1.9
+[23:33:52] [Server thread/INFO]: [RealMines]    _____           ____  ____
+[23:33:52] [Server thread/INFO]: [RealMines]   | ___ \         | |  \/  (_)  Version: 1.9
+[23:33:52] [Server thread/INFO]: [RealMines]   | |_/ /___  __ _| | .  . |_ _ __   ___  ___
+[23:33:52] [Server thread/INFO]: [RealMines]   |    // _ \/ _` | | |\/| | | '_ \ / _ \/ __|
+[23:33:52] [Server thread/INFO]: [RealMines]   | |\ \  __/ (_| | | |  | | | | | |  __/\__ \
+[23:33:52] [Server thread/INFO]: [RealMines]   \_| \_\___|\__,_|_\_|  |_/_|_| |_|\___||___/
+[23:33:52] [Server thread/INFO]: [RealMines]                          Made by: JoseGamer_PT
+[23:33:52] [Server thread/INFO]: [RealMines] Hooked into Vault!
+[23:33:52] [Server thread/INFO]: [RealMines] Loading Mines.
+[23:33:53] [Server thread/INFO]: Using com.sk89q.worldedit.bukkit.adapter.impl.fawe.v26_3.PaperweightStarlightRelighterFactory as relighter factory.
+[23:33:56] [Server thread/INFO]: [RealMines] Loaded 16 mines and 0 mine signs.
+[23:33:56] [Server thread/INFO]: [RealMines] Loaded 0 mine tasks.
+[23:33:56] [Server thread/INFO]: [RealMines] Loaded 5 achievements.
+[23:33:56] [Server thread/INFO]: [PlaceholderAPI] Successfully registered internal expansion: realmines [1.9]
+[23:33:56] [Server thread/INFO]: [RealMines] Hooked onto PlaceholderAPI!
+[23:33:56] [Server thread/INFO]: [RealMines] Using FAWE/WorldEdit for block placement.
+[23:33:56] [Server thread/INFO]: [RealMines] Finished loading in 4.462 seconds.
+[23:33:56] [Server thread/INFO]: [RealMines] <------------------ RealMines v1.9 ------------------>
+[23:33:56] [Server thread/INFO]: [EssentialsC] Enabling EssentialsC v4.3.5
+[23:33:56] [Server thread/INFO]: [EssentialsC] For more startup Information, enable debug
+[23:33:56] [Server thread/INFO]: [EssentialsC] 
+[23:33:56] [Server thread/INFO]: [EssentialsC]   ███████╗███████╗███████╗ ██████╗
+[23:33:56] [Server thread/INFO]: [EssentialsC]   ██╔════╝██╔════╝██╔════╝██╔════╝  EssentialsC
+[23:33:56] [Server thread/INFO]: [EssentialsC]   █████╗  ███████╗███████╗██║       v4.3.5
+[23:33:56] [Server thread/INFO]: [EssentialsC]   ██╔══╝  ╚════██║╚════██║██║       by _GodlyCow
+[23:33:56] [Server thread/INFO]: [EssentialsC]   ███████╗███████║███████║╚██████╗
+[23:33:56] [Server thread/INFO]: [EssentialsC]   ╚══════╝╚══════╝╚══════╝ ╚═════╝
+[23:33:56] [Server thread/INFO]: [EssentialsC] 
+[23:33:56] [Server thread/INFO]: [EssentialsC]   Platform  Paper
+[23:33:56] [Server thread/INFO]: [EssentialsC]   ANSI      Supported
+[23:33:56] [Server thread/INFO]: [EssentialsC] 
+[23:33:56] [Server thread/INFO]: [EssentialsC] Unregistered command: tpa
+[23:33:56] [Server thread/INFO]: [EssentialsC] Unregistered command: tpahere
+[23:33:56] [Server thread/INFO]: [EssentialsC] Unregistered command: tpaccept
+[23:33:56] [Server thread/INFO]: [EssentialsC] Unregistered command: tpdeny
+[23:33:56] [Server thread/INFO]: [EssentialsC] Unregistered command: tpcancel
+[23:33:56] [Server thread/INFO]: [EssentialsC] Unregistered command: tpaignore
+[23:33:56] [Server thread/INFO]: [EssentialsC] Unregistered command: tpatoggle
+[23:33:56] [Server thread/INFO]: [EssentialsC] Unregistered command: tpaqueue
+[23:33:56] [Server thread/INFO]: [EssentialsC] Unregistered command: home
+[23:33:56] [Server thread/INFO]: [EssentialsC] Unregistered command: sethome
+[23:33:56] [Server thread/INFO]: [EssentialsC] Unregistered command: delhome
+[23:33:56] [Server thread/INFO]: [EssentialsC] Unregistered command: homes
+[23:33:56] [Server thread/INFO]: [EssentialsC] Unregistered command: back
+[23:33:56] [Server thread/INFO]: [EssentialsC] Unregistered command: dback
+[23:33:57] [Server thread/INFO]: [EssentialsC] Unregistered command: ah
+[23:33:57] [Server thread/INFO]: [EssentialsC] Restored command /scoreboard from minecraft:scoreboard
+[23:33:57] [Server thread/INFO]: [EssentialsC] Unregistered command: scoreboard
+[23:33:57] [Server thread/INFO]: [EssentialsC] Unregistered command: rtp
+[23:33:57] [Server thread/INFO]: [EssentialsC] Unregistered command: trash
+[23:33:57] [Server thread/INFO]: [EssentialsC] Unregistered command: kit
+[23:33:57] [Server thread/INFO]: [EssentialsC] Unregistered command: kits
+[23:33:57] [Server thread/INFO]: [EssentialsC] Loaded 1658 Items from items.json
+[23:33:57] [Server thread/INFO]: [MailboxGUI] Enabling MailboxGUI v6.1.0
+[23:33:57] [Server thread/INFO]: 
+[23:33:57] [Server thread/INFO]: ╔════════════════════════════════════════════════════════════╗
+[23:33:57] [Server thread/INFO]: ║            ███╗   ███╗  ██████╗ ██╗   ██╗ ██╗             ║
+[23:33:57] [Server thread/INFO]: ║            ████╗ ████║ ██╔════╝ ██║   ██║ ██║             ║
+[23:33:57] [Server thread/INFO]: ║            ██╔████╔██║ ██║  ███╗██║   ██║ ██║             ║
+[23:33:57] [Server thread/INFO]: ║            ██║╚██╔╝██║ ██║   ██║██║   ██║ ██║             ║
+[23:33:57] [Server thread/INFO]: ║            ██║ ╚═╝ ██║ ╚██████╔╝╚██████╔╝ ██║             ║
+[23:33:57] [Server thread/INFO]: ║            ╚═╝     ╚═╝  ╚═════╝  ╚═════╝  ╚═╝             ║
+[23:33:57] [Server thread/INFO]: ╚════════════════════════════════════════════════════════════╝
+[23:33:57] [Server thread/INFO]: 
+[23:33:57] [pool-22-thread-1/INFO]: [PlotSquared/BukkitPlatform] (UUID) PlotSquared will fetch UUIDs in groups of 200
+[23:33:57] [pool-22-thread-1/INFO]: [PlotSquared/BukkitPlatform] (UUID) PlotSquared has cached all UUIDs
+[23:33:59] [Server thread/INFO]: [MailboxGUI] [GUI] customization=false | definitions=0 | valid-item-models=0 | invalid-assignments=0 | item-model-api=available
+[23:33:59] [Server thread/INFO]: [PlaceholderAPI] Successfully registered internal expansion: mailboxgui [6.1.0]
+[23:33:59] [Server thread/INFO]: [MailboxGUI] MailboxGUI v6.1.0 enabled successfully on Purpur 26.3.
+[23:33:59] [Server thread/INFO]: [MailboxGUI] Storage: SQLITE | Edition FREE | Network OFF | Players 2 | Mail 0 | Player Mailboxes 0 | Public Access Mailboxes 0
+[23:33:59] [Server thread/INFO]: [tw-spawners] Enabling tw-spawners v1.0
+[23:33:59] [Server thread/INFO]: [tw-spawners] [TW-Spawners] Sistema de spawners, stacking e hologramas iniciado com sucesso!
+[23:33:59] [Server thread/INFO]: [tw-maquinas] Enabling tw-maquinas v1.0
+[23:33:59] [Server thread/INFO]: [tw-maquinas] [TW-Maquinas] Sistema de maquinas e hologramas nativos ativado com sucesso!
+[23:33:59] [Server thread/INFO]: [tw-minas] Enabling tw-minas v1.0
+[23:33:59] [Server thread/INFO]: [VoidGen] 
+[23:33:59] [Server thread/INFO]: [VoidGen] > ——————————————————————[ mina_pvp ]——————————————————————
+[23:33:59] [Server thread/INFO]: [VoidGen] > 
+[23:33:59] [Server thread/INFO]: [VoidGen] > Generator settings have not been set, we will use the default settings:
+[23:33:59] [Server thread/INFO]: [VoidGen] > {"biome":"the_void"}
+[23:33:59] [Server thread/INFO]: [VoidGen] > 
+[23:33:59] [Server thread/INFO]: [VoidGen] > ——————————————————————[ mina_pvp ]——————————————————————
+[23:33:59] [Server thread/INFO]: [VoidGen] 
+[23:33:59] [Server thread/INFO]: Loading 0 persistent chunks for level 'minecraft:mina_pvp'...
+[23:33:59] [Server thread/INFO]: Prepared spawn area in 4 ms
+[23:33:59] [Server thread/INFO]: [WorldGuard] Default configuration file written: config_world.yml
+[23:33:59] [Server thread/INFO]: [WorldGuard] Default configuration file written: blacklist.txt
+[23:33:59] [Server thread/INFO]: [WorldGuard] (mina_pvp) TNT ignition is PERMITTED.
+[23:33:59] [Server thread/INFO]: [WorldGuard] (mina_pvp) Lighters are PERMITTED.
+[23:33:59] [Server thread/INFO]: [WorldGuard] (mina_pvp) Lava fire is PERMITTED.
+[23:33:59] [Server thread/INFO]: [WorldGuard] (mina_pvp) Fire spread is UNRESTRICTED.
+[23:33:59] [Server thread/INFO]: [WorldGuard] Loaded configuration for world 'mina_pvp'
+[23:33:59] [Server thread/INFO]: Keep spawn in memory feature has been removed by Minecraft in 1.21.9+ and will no longer have any effect when set to true.
+[23:34:00] [Server thread/INFO]: [tw-minas] [TW-Minas] Motor de mineracao, Cartinhas (Missoes) e Eventos carregados com sucesso!
+[23:34:00] [Server thread/INFO]: [tw-ranks] Enabling tw-ranks v1.0
+[23:34:00] [Server thread/INFO]: [PlaceholderAPI] Successfully registered internal expansion: tw [1.0]
+[23:34:00] [Server thread/INFO]: [tw-ranks] [TW-Ranks] PlaceholderAPI detetado! Variaveis %tw_rank%, %tw_prestigio% e %tw_tokens% ativadas.
+[23:34:00] [Server thread/INFO]: [tw-ranks] [TW-Ranks] Sistema de progressao iniciado!
+[23:34:00] [Server thread/INFO]: [tw-terrenos] Enabling tw-terrenos v1.0
+[23:34:00] [Server thread/INFO]: [tw-terrenos] Integração com PlotSquared ativada.
+[23:34:00] [Server thread/INFO]: [tw-farms] Enabling tw-farms v1.0
+[23:34:00] [Server thread/INFO]: [tw-farms] [TW-Farms] Plantações físicas, boosters de crescimento e armazéns ativados.
+[23:34:00] [Server thread/INFO]: [FancyNpcs] Enabling FancyNpcs v2.12.1
+[23:34:01] [FancyLogger/INFO]: [FancyNpcs] (Server thread) INFO: FancyNpcs (2.12.1) has been enabled.
+[23:34:01] [Server thread/INFO]: [VoidSpawnPlus] Enabling VoidSpawnPlus v1.2.0
+[23:34:01] [Server thread/INFO]: [VoidSpawnPlus] Configuration loaded successfully! Monitoring 4 world(s).
+[23:34:01] [Server thread/INFO]: [VoidSpawnPlus] Loaded 2 spawn location(s).
+[23:34:01] [Server thread/INFO]: [VoidSpawnPlus] VoidSpawn has been enabled successfully!
+[23:34:01] [Server thread/INFO]: [tw-caixas] Enabling tw-caixas v1.0
+[23:34:01] [Server thread/INFO]: [tw-caixas] [TW-Caixas] Chaves virtuais, pity, forja e caixas físicas ativados.
+[23:34:01] [Server thread/INFO]: [ProCosmetics] Enabling ProCosmetics v2.0.9
+[23:34:01] [Server thread/INFO]: [WorldGuard] Registering session handler se.filledev.procosmetics.worldguard.WorldGuardManager
+[23:34:01] [Server thread/INFO]: [ProCosmetics] Initialized!
+[23:34:01] [Server thread/INFO]: [MiniMOTD] Enabling MiniMOTD v2.2.5
+[23:34:01] [Server thread/INFO]: [FancyHolograms] Enabling FancyHolograms v2.12.0
+[23:34:01] [FancyLogger/INFO]: [FancyHolograms] (Server thread) INFO: Successfully enabled FancyHolograms version 2.12.0
+[23:34:01] [Server thread/INFO]: [DeluxeMenus] Enabling DeluxeMenus v1.14.1-Release
+[23:34:01] [Server thread/INFO]: [DeluxeMenus] Successfully hooked into PlaceholderAPI!
+[23:34:01] [Server thread/INFO]: [DeluxeMenus] Successfully hooked into Vault!
+[23:34:01] [Server thread/INFO]: [DeluxeMenus] Registered command: menu for menu: principal
+[23:34:01] [Server thread/INFO]: [DeluxeMenus] 1 GUI menus loaded!
+[23:34:01] [Server thread/INFO]: [PlaceholderAPI] Successfully registered internal expansion: deluxemenus [1.14.1-Release]
+[23:34:01] [Server thread/INFO]: [DeluxeMenus] You are running the latest version of DeluxeMenus!
+[23:34:01] [Server thread/INFO]: [DeluxeHub] Enabling DeluxeHub v3.8.6
+[23:34:01] [Server thread/INFO]: [DeluxeHub]  _   _            _          _    _ 
+[23:34:01] [Server thread/INFO]: [DeluxeHub] | \ |_ |  | | \/ |_ |_| | | |_)   _)
+[23:34:01] [Server thread/INFO]: [DeluxeHub] |_/ |_ |_ |_| /\ |_ | | |_| |_)   _)
+[23:34:01] [Server thread/INFO]: [DeluxeHub] 
+[23:34:01] [Server thread/INFO]: [DeluxeHub] Version: 3.8.6
+[23:34:01] [Server thread/INFO]: [DeluxeHub] Author: ItzSave & ItsLewizzz
+[23:34:01] [Server thread/INFO]: [DeluxeHub] 
+[23:34:01] [Server thread/INFO]: [DeluxeHub]  Hooked into PlaceholderAPI
+[23:34:01] [Server thread/INFO]: [DeluxeHub] Loaded custom menu 'serverselector'.
+[23:34:01] [Server thread/INFO]: [DeluxeHub] Loaded 10 plugin modules.
+[23:34:01] [Server thread/INFO]: [DeluxeHub] 
+[23:34:01] [Server thread/INFO]: [DeluxeHub] Successfully loaded in 151ms
+[23:34:01] [Server thread/INFO]: [CommandWhitelist] Enabling CommandWhitelist v2.13.1
+[23:34:01] [Server thread/INFO]: [spark] Starting background profiler...
+[23:34:01] [Server thread/INFO]: [spark] The async-profiler engine is not supported for your os/arch (windows11/amd64), so the built-in Java engine will be used instead.
+[23:34:01] [Server thread/INFO]: [PlaceholderAPI] Placeholder expansion registration initializing...
+[23:34:02] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:overworld
+[23:34:02] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:the_nether
+[23:34:02] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:minas
+[23:34:02] [User Authenticator #0/INFO]: UUID of player TW_Player is 6d49e954-86f2-3524-b5ef-3439c7c26d66
+[23:34:02] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:terrenos
+[23:34:02] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:mina_pvp
+[23:34:02] [Server thread/INFO]: Running delayed init tasks
+[23:34:02] [Server thread/INFO]: [com.fastasyncworldedit.bukkit.regions.WorldGuardFeature] Plugin 'WorldGuard' found. Using it now.
+[23:34:02] [Server thread/INFO]: [com.fastasyncworldedit.bukkit.FaweBukkit] Attempting to use plugin 'WorldGuard'
+[23:34:02] [Server thread/INFO]: [com.fastasyncworldedit.bukkit.regions.plotsquared.PlotSquaredFeature] Optimizing PlotSquared
+[23:34:02] [Server thread/INFO]: [com.fastasyncworldedit.bukkit.FaweBukkit] Plugin 'PlotSquared' v7 found. Using it now.
+[23:34:02] [Server thread/INFO]: [VoidGen] 
+[23:34:02] [Server thread/INFO]: [VoidGen] > ——————————————————————[ CheckingPlotSquaredGenerator ]——————————————————————
+[23:34:02] [Server thread/INFO]: [VoidGen] > 
+[23:34:02] [Server thread/INFO]: [VoidGen] > Generator settings have not been set, we will use the default settings:
+[23:34:02] [Server thread/INFO]: [VoidGen] > {"biome":"the_void"}
+[23:34:02] [Server thread/INFO]: [VoidGen] > 
+[23:34:02] [Server thread/INFO]: [VoidGen] > ——————————————————————[ CheckingPlotSquaredGenerator ]——————————————————————
+[23:34:02] [Server thread/INFO]: [VoidGen] 
+[23:34:02] [Server thread/INFO]: Done (34.416s)! For help, type "help"
+[23:34:02] [Server thread/INFO]: [PlaceholderAPI] Successfully registered internal expansion: essc [4.3.5]
+[23:34:02] [Server thread/INFO]: [EssentialsC] ================================
+[23:34:02] [Server thread/INFO]: [EssentialsC] EssentialsC - Up To Date
+[23:34:02] [Server thread/INFO]: [EssentialsC] --------------------------------
+[23:34:02] [Server thread/INFO]: [EssentialsC] Running version: 4.3.5
+[23:34:02] [Server thread/INFO]: [EssentialsC] ================================
+[23:34:02] [Server thread/INFO]: [PlaceholderAPI] Successfully registered external expansion: luckperms [5.4-R2]
+[23:34:02] [Server thread/INFO]: [PlaceholderAPI] Successfully registered external expansion: player [2.0.9]
+[23:34:02] [Server thread/INFO]: [PlaceholderAPI] Successfully registered external expansion: server [2.7.3]
+[23:34:02] [Server thread/INFO]: [PlaceholderAPI] Successfully registered external expansion: vault [1.8.3]
+[23:34:02] [Server thread/INFO]: 4 placeholder hook(s) registered!
+[23:34:02] [Craft Scheduler Thread - 0 - CombatLog/INFO]: [CombatLog] A new version is available!
+[23:34:02] [Craft Scheduler Thread - 0 - CombatLog/INFO]: [CombatLog] Current: 1.20 | Latest: 1.20+26.3
+[23:34:02] [Craft Scheduler Thread - 0 - CombatLog/INFO]: [CombatLog] https://modrinth.com/plugin/simple-combatlog/versions
+[23:34:02] [Server thread/INFO]: [HorriblePlayerLoginEventHack] You have plugins listening to the PlayerLoginEvent, this will cause re-configuration APIs to be unavailable: [LuckPerms, RealMines, DeluxeMenus, WorldGuard]
+[23:34:02] [Craft Scheduler Thread - 24 - ProCosmetics/INFO]: [ProCosmetics] There is a newer version available for ProCosmetics. Currently running 2.0.9 and the latest release is 2.0.6.
+[23:34:03] [Craft Scheduler Thread - 20 - RealMines/INFO]: [RealMines] The plugin is updated to the latest version.
+[23:34:04] [Server thread/INFO]: [+] TW_Player entrou no saguão.
+[23:34:04] [Server thread/INFO]: TW_Player[/127.0.0.1:59387] logged in with entity id 1 at ([minecraft:overworld]306.03693156898004, 87.0, 257.76229794465377)
+[23:34:04] [Server thread/INFO]: [LP] Outro comando está sendo executado, aguarde terminar...
+[23:34:04] [Server thread/INFO]: [LP] Outro comando está sendo executado, aguarde terminar...
+[23:34:04] [Server thread/INFO]: [LP] Outro comando está sendo executado, aguarde terminar...
+[23:34:04] [Server thread/INFO]: [LP] Outro comando está sendo executado, aguarde terminar...
+[23:34:04] [Server thread/INFO]: [LP] Outro comando está sendo executado, aguarde terminar...
+[23:34:04] [Server thread/INFO]: [LP] Outro comando está sendo executado, aguarde terminar...
+[23:34:04] [Server thread/INFO]: [LP] Outro comando está sendo executado, aguarde terminar...
+[23:34:04] [Server thread/INFO]: [LP] Outro comando está sendo executado, aguarde terminar...
+[23:34:04] [Server thread/INFO]: [LP] Outro comando está sendo executado, aguarde terminar...
+[23:34:04] [Server thread/INFO]: [LP] Outro comando está sendo executado, aguarde terminar...
+[23:34:04] [Server thread/INFO]: [LP] Outro comando está sendo executado, aguarde terminar...
+[23:34:04] [Server thread/INFO]: [LP] Outro comando está sendo executado, aguarde terminar...
+[23:34:04] [Server thread/INFO]: [LP] Outro comando está sendo executado, aguarde terminar...
+[23:34:04] [luckperms-command-executor/INFO]: [LP] tw_player não herda mais as permissões de default no contexto global.
+[23:34:04] [luckperms-command-executor/INFO]: [LP] tw_player não herda de sino no contexto global.
+[23:34:04] [luckperms-command-executor/INFO]: [LP] tw_player não herda de biscoito no contexto global.
+[23:34:04] [luckperms-command-executor/INFO]: [LP] tw_player não herda de duende no contexto global.
+[23:34:04] [luckperms-command-executor/INFO]: [LP] tw_player não herda de rena no contexto global.
+[23:34:04] [luckperms-command-executor/INFO]: [LP] tw_player não herda de treno no contexto global.
+[23:34:04] [luckperms-command-executor/INFO]: [LP] tw_player não herda de quebranozes no contexto global.
+[23:34:04] [luckperms-command-executor/INFO]: [LP] tw_player não herda de estrela no contexto global.
+[23:34:04] [luckperms-command-executor/INFO]: [LP] tw_player não herda de noel no contexto global.
+[23:34:04] [luckperms-command-executor/INFO]: [LP] tw_player não herda de noel no contexto global.
+[23:34:04] [luckperms-command-executor/INFO]: [LP] tw_player já herda de neve (Neve) no contexto global.
+[23:34:04] [luckperms-command-executor/INFO]: [LP] tw_player não herda de grinch no contexto global.
+[23:34:04] [luckperms-command-executor/INFO]: [LP] tw_player não herda de yeti no contexto global.
+[23:34:04] [luckperms-command-executor/INFO]: [LP] tw_player não herda de krampus no contexto global.
+[23:34:08] [Server thread/INFO]: [LP] Outro comando está sendo executado, aguarde terminar...
+[23:34:08] [luckperms-command-executor/INFO]: [LP] Definir tw-minas.kits.vip a true para vip_festivo (VIP Festivo) no contexto global.
+[23:34:08] [luckperms-command-executor/INFO]: [LP] Definir tw-minas.kits.vip a true para vip_nevasca (VIP Nevasca) no contexto global.
+[23:34:08] [Server thread/INFO]: [LP] Outro comando está sendo executado, aguarde terminar...
+[23:34:08] [Server thread/INFO]: [LP] Outro comando está sendo executado, aguarde terminar...
+[23:34:08] [luckperms-command-executor/INFO]: [LP] Definir tw-minas.kits.vip a true para vip_polar (VIP Polar) no contexto global.
+[23:34:08] [luckperms-command-executor/INFO]: [LP] Definir tw-minas.kits.prestige a true para grinch (Grinch) no contexto global.
+[23:34:08] [luckperms-command-executor/INFO]: [LP] Definir tw-minas.kits.prestige a true para yeti (Yeti) no contexto global.
+[23:34:09] [luckperms-command-executor/INFO]: [LP] Definir tw-minas.kits.prestige a true para krampus (Krampus) no contexto global.
+[23:34:15] [Server thread/INFO]: TW_Player issued server command: /menu
+[23:34:16] [Server thread/INFO]: TW_Player issued server command: /kits
+[23:34:27] [Server thread/INFO]: TW_Player issued server command: /kits
+[23:34:52] [Server thread/INFO]: TW_Player issued server command: /minapvp
+[23:34:56] [Server thread/INFO]: TW_Player issued server command: /mina
+[23:38:41] [Server thread/INFO]: TW_Player lost connection: Disconnected
+[23:38:41] [Server thread/INFO]: [-] TW_Player saiu.
+[23:39:44] [User Authenticator #1/INFO]: UUID of player TeDabliukk is bf2b2ea5-688a-3bd3-8b1b-ffea352f9cc8
+[23:39:44] [Server thread/INFO]: [+] TeDabliukk entrou no saguão.
+[23:39:44] [Server thread/INFO]: TeDabliukk[/127.0.0.1:61959] logged in with entity id 5 at ([minecraft:overworld]306.5203901394929, 87.0, 257.352990139703)
+[23:39:44] [Server thread/INFO]: [LP] Outro comando está sendo executado, aguarde terminar...
+[23:39:44] [Server thread/INFO]: [LP] Outro comando está sendo executado, aguarde terminar...
+[23:39:44] [Server thread/INFO]: [LP] Outro comando está sendo executado, aguarde terminar...
+[23:39:44] [Server thread/INFO]: [LP] Outro comando está sendo executado, aguarde terminar...
+[23:39:44] [luckperms-command-executor/INFO]: [LP] tedabliukk não herda de default no contexto global.
+[23:39:44] [Server thread/INFO]: [LP] Outro comando está sendo executado, aguarde terminar...
+[23:39:44] [Server thread/INFO]: [LP] Outro comando está sendo executado, aguarde terminar...
+[23:39:44] [Server thread/INFO]: [LP] Outro comando está sendo executado, aguarde terminar...
+[23:39:44] [Server thread/INFO]: [LP] Outro comando está sendo executado, aguarde terminar...
+[23:39:44] [luckperms-command-executor/INFO]: [LP] tedabliukk não herda de neve no contexto global.
+[23:39:44] [Server thread/INFO]: [LP] Outro comando está sendo executado, aguarde terminar...
+[23:39:44] [Server thread/INFO]: [LP] Outro comando está sendo executado, aguarde terminar...
+[23:39:44] [Server thread/INFO]: [LP] Outro comando está sendo executado, aguarde terminar...
+[23:39:44] [Server thread/INFO]: [LP] Outro comando está sendo executado, aguarde terminar...
+[23:39:44] [luckperms-command-executor/INFO]: [LP] tedabliukk não herda de sino no contexto global.
+[23:39:44] [Server thread/INFO]: [LP] Outro comando está sendo executado, aguarde terminar...
+[23:39:44] [luckperms-command-executor/INFO]: [LP] tedabliukk não herda de biscoito no contexto global.
+[23:39:44] [luckperms-command-executor/INFO]: [LP] tedabliukk não herda de duende no contexto global.
+[23:39:44] [luckperms-command-executor/INFO]: [LP] tedabliukk não herda de rena no contexto global.
+[23:39:44] [luckperms-command-executor/INFO]: [LP] tedabliukk não herda de quebranozes no contexto global.
+[23:39:44] [luckperms-command-executor/INFO]: [LP] tedabliukk não herda de estrela no contexto global.
+[23:39:44] [luckperms-command-executor/INFO]: [LP] tedabliukk não herda de noel no contexto global.
+[23:39:44] [luckperms-command-executor/INFO]: [LP] tedabliukk não herda de noel no contexto global.
+[23:39:44] [luckperms-command-executor/INFO]: [LP] tedabliukk já herda de treno (Trenó) no contexto global.
+[23:39:44] [luckperms-command-executor/INFO]: [LP] tedabliukk não herda de grinch no contexto global.
+[23:39:44] [luckperms-command-executor/INFO]: [LP] tedabliukk não herda de yeti no contexto global.
+[23:39:44] [luckperms-command-executor/INFO]: [LP] tedabliukk não herda de krampus no contexto global.
+[23:39:51] [Server thread/INFO]: TeDabliukk issued server command: /menu
+[23:39:52] [Server thread/INFO]: TeDabliukk issued server command: /mina
+[23:40:08] [Server thread/INFO]: TeDabliukk issued server command: /lobby
+[23:41:16] [Server thread/INFO]: TeDabliukk issued server command: /kits
+[23:41:27] [Server thread/INFO]: TeDabliukk issued server command: /gamemode creative
+[23:41:43] [Server thread/INFO]: TeDabliukk issued server command: /terreno
+[23:41:43] [Server thread/INFO]: [PlotSquared/PlotPlayer] Registered class org.bukkit.craftbukkit.entity.CraftPlayer as with converter for interface org.bukkit.entity.Player
+[23:41:49] [Server thread/INFO]: TeDabliukk issued server command: /gamemode creative
+[23:42:09] [Server thread/INFO]: TeDabliukk issued server command: /echest
+[23:42:20] [Server thread/INFO]: TeDabliukk issued server command: /minapvp
+[23:42:27] [Server thread/INFO]: TeDabliukk issued server command: /gamemode creative

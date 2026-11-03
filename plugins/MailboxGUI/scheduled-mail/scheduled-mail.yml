@@ -1,0 +1,292 @@
+# ============================================================
+# MailboxGUI Scheduled Mail
+# ============================================================
+# File location after the plugin starts:
+# plugins/MailboxGUI/scheduled-mail/scheduled-mail.yml
+#
+# This file lets server owners schedule MailboxGUI mail to send
+# at a specific server date/time. Mail is sent through the same
+# MailboxGUI systems as admin/API mail, so normal recipient checks,
+# notifications, expiration, package limits, COD validation, item
+# templates, and Shared Admin Inbox COD return behavior still apply.
+# The task's due time starts sending. Mail then uses its normal config.yml
+# delivery delay, measured from enqueue time using the server's wall clock.
+# Optional per-task delivery-delay-seconds overrides that delay; 0 is immediate.
+# Full inboxes can still queue mail. Scheduling is not a guarantee of immediate claiming.
+#
+# Paper letters and optional package/COD/money messages use the
+# shared message rules: at most 256 visible characters, wrapped
+# at 28 visible characters per line, at most 17 body lines TOTAL.
+# Automatic wrapping, /n, and blank lines share this limit; a two-line
+# paragraph leaves 15 further lines, not 16 extra /n tags.
+# Legacy '&' color/format codes are preserved
+# and do not count toward visible length. /n inserts a manual break;
+# //n displays literal /n. Actual LF line breaks are also supported
+# (use a YAML block scalar with |- to avoid an extra trailing break).
+# Book Letter pages use their own book limits, not these body limits.
+# Sender names and text support legacy &, HEX (&#4498DB or <#4498DB>)
+# and supported restricted visual MiniMessage colors/styles; no separate formatting toggle is needed.
+# Interactive click/hover/command tags and custom font tags are not supported.
+# Quote formatted strings; # outside quotes starts a YAML comment.
+# Example sender: "&#4498DB&lServer"
+# Example paper/package/money message: "<#4498DB>Welcome!</#4498DB>/n<bold>Enjoy your rewards.</bold>"
+# These are display styles only; never apply formatting to keys, item IDs or recipient IDs.
+# Book first-page layout and locale date formatting are customized in language/messages_*.yml
+# with book-letter-information-page and book-letter-date-time-pattern, not this schedule file.
+# Keep YAML keys, type names, item syntax and commands in English.
+# Example dates below are illustrative. Set your intended date/time and review
+# catch-up-missed before enabling a sample task whose first date is already past.
+#
+# Upgrade safety: retain this file and your enabled tasks/settings.
+# Free-to-Premium upgrades do not require deleting configuration or
+# language files. Back up the complete plugin data folder first;
+# review UPGRADE-SAFETY.txt before changing editions or storage.
+#
+# Main layout:
+#
+# scheduled-mail:
+#   task-id:
+#     enabled: true/false
+#     type: PAPER_LETTER | BOOK_LETTER | PACKAGE | MONEY
+#     from: "&a&lServer"
+#     send-date: "yyyy-MM-dd"
+#     send-time: "HH:mm:ss"
+#     timezone: server or an IANA timezone such as America/New_York
+#     repeat: none | daily | weekly | monthly | every:<duration>
+#     catch-up-missed: true/false
+#     notify-recipients: true/false
+#     expire-after: none or a duration such as 30m, 12h, 7d
+#     recipients:
+#       mode: PLAYERS | ALL_WITH_MAILBOX_DATA | ALL_WITH_REGISTERED_MAILBOX | ONLINE_PLAYERS | PERMISSION
+#
+# Setting details:
+#
+# enabled:
+#   true  = task can run.
+#   false = task is ignored until enabled with config edit or /mba scheduledmail enable <id>.
+#
+# type:
+#   PAPER_LETTER = sends a Paper Letter with its message body in lore.
+#   BOOK_LETTER  = sends a written Book Letter.
+#   PACKAGE      = sends a standard Package or COD Package if package.cod.enabled is true.
+#   MONEY        = sends Vault/economy Money Mail.
+#
+# from:
+#   Display name shown in the mail lore. Minecraft color codes using '&' are supported.
+#
+# send-date:
+#   Optional first scheduled send date.
+#   Format must be: yyyy-MM-dd
+#   Example: "2026-08-01"
+#   Required for repeat: none, weekly, monthly, and every:<duration>.
+#   Also recommended for daily schedules when you want a specific start date.
+#
+# send-time:
+#   Required scheduled send time.
+#   Format must be: HH:mm:ss
+#   Example: "18:00:00"
+#   If send-time is set without send-date, the task repeats daily at that time.
+#
+# timezone:
+#   server = use the server JVM timezone.
+#   You may also use an IANA timezone, for example:
+#   America/New_York, America/Los_Angeles, UTC, Europe/London
+#
+# repeat:
+#   none       = one scheduled run only.
+#   daily      = repeats once per day after the first send date/time.
+#   weekly     = repeats once per week after the first send date/time.
+#   monthly    = repeats once per month after the first send date/time.
+#   every:<duration> = repeats by duration. Examples: every:6h, every:30m, every:7d
+#   If send-date is omitted, only repeat: daily is valid. If repeat is omitted with only send-time, daily is used.
+#
+# catch-up-missed:
+#   true  = if the server was offline at the scheduled time, send once when the plugin starts.
+#   false = runs missed by more than the one-minute grace are skipped; repeating
+#           tasks wait for their next due time. One-time skipped tasks do not repeat.
+#   /mba scheduledmail reload rereads tasks without immediately running startup catch-up.
+#   Normal scheduled processing continues; use /mba scheduledmail run <id> for an immediate test.
+#
+# notify-recipients:
+#   true  = recipients receive normal MailboxGUI notifications.
+#   false = deliver silently without recipient notification messages/sounds.
+#
+# expire-after:
+#   none = mail does not expire.
+#   Duration examples: 30m, 12h, 3d
+#   Expiration starts when mail is delivered, not when it is first scheduled.
+#   Expired COD Packages can return to the Shared Admin Inbox if configured below.
+#
+# recipients.mode:
+#   PLAYERS = send only to listed players/UUIDs under recipients.players.
+#   ALL_WITH_MAILBOX_DATA = send to every player with MailboxGUI data.
+#   ALL_WITH_REGISTERED_MAILBOX = send only to players with at least one registered physical mailbox.
+#   ONLINE_PLAYERS = send only to online players who have MailboxGUI data when the task runs.
+#   PERMISSION = send to online players with recipients.permission and MailboxGUI data.
+#
+# recipients.players:
+#   Used only with mode: PLAYERS.
+#   Accepts player names or UUIDs.
+#
+# recipients.permission:
+#   Used only with mode: PERMISSION.
+#
+# recipients.online-only:
+#   Used only with mode: PERMISSION.
+#   Currently permission checks are online-player only.
+#
+# Package item syntax:
+#   MATERIAL:amount
+#   xp:amount
+#   t:template-id:amount
+#   template:template-id:amount
+#
+# letter.message:
+#   PAPER_LETTER uses the shared message rules above.
+#   Example: "&aWelcome!/n&fEnjoy the event."
+#
+# package.message:
+#   Optional message attached to a standard or COD Package.
+#   Uses the shared message rules above, including /n and //n.
+#   Omit this setting or use an empty value to send the Package without a message.
+#
+# money.message:
+#   Optional message attached to Money Mail.
+#   Uses the shared message rules above, including /n and //n.
+#   Omit this setting or use an empty value to send Money Mail without a message.
+#
+# COD package settings:
+#   package.cod.enabled:
+#     true/false. If true, the package becomes a COD Package.
+#
+#   package.cod.vault:
+#     Vault/economy price. Use 0.0 for no Vault payment.
+#
+#   package.cod.item-currency:
+#     Item-currency payment list using the same package item syntax above.
+#
+#   package.cod.return-to-admin-inbox.payments:
+#     true = successful COD payments return to the Shared Admin Inbox.
+#
+#   package.cod.return-to-admin-inbox.declined-or-expired:
+#     true = declined or expired COD Package contents return to the Shared Admin Inbox.
+#
+# Admin commands:
+#   /mba scheduledmail reload
+#   /mba scheduledmail list
+#   /mba scheduledmail info <id>
+#   /mba scheduledmail run <id>
+#   /mba scheduledmail enable <id>
+#   /mba scheduledmail disable <id>
+#
+# Permissions:
+#   mailboxgui.admin.scheduledmail
+#   mailboxgui.admin.scheduledmail.reload
+#   mailboxgui.admin.scheduledmail.run
+#   mailboxgui.admin.scheduledmail.manage
+# ============================================================
+
+scheduled-mail: {}
+
+# ============================================================
+# Commented Examples
+# ============================================================
+#
+# To use an example, replace the empty line above:
+# scheduled-mail: {}
+#
+# with an uncommented scheduled-mail section like the examples below.
+
+# scheduled-mail:
+#   event-paper-letter:
+#     enabled: false
+#     type: PAPER_LETTER
+#     from: "&a&lServer"
+#     send-date: "2026-08-01"
+#     send-time: "18:00:00"
+#     timezone: server
+#     repeat: none
+#     catch-up-missed: true
+#     notify-recipients: true
+#     expire-after: none
+#     recipients:
+#       mode: PLAYERS
+#       players:
+#         - Rismr1
+#     letter:
+#       message: "&aThanks for joining!/n&fEnjoy the event."
+#
+#   weekly-vip-money:
+#     enabled: false
+#     type: MONEY
+#     from: "&6&lVIP Rewards"
+#     send-date: "2026-08-02"
+#     send-time: "12:00:00"
+#     timezone: server
+#     repeat: weekly
+#     catch-up-missed: true
+#     notify-recipients: true
+#     expire-after: 14d
+#     recipients:
+#       mode: PERMISSION
+#       permission: "mailboxgui.scheduled.vip"
+#       online-only: true
+#     money:
+#       amount: 100.00
+#       message: "&aYour weekly reward!/n&fThanks for your support."
+#
+#   event-package:
+#     enabled: false
+#     type: PACKAGE
+#     from: "&b&lEvent"
+#     send-date: "2026-08-03"
+#     send-time: "20:00:00"
+#     timezone: server
+#     repeat: none
+#     catch-up-missed: true
+#     notify-recipients: true
+#     expire-after: 3d
+#     recipients:
+#       mode: ONLINE_PLAYERS
+#     package:
+#       message: "&bYour event rewards!/n&fUse //n for literal text."
+#       contents:
+#         - DIAMOND:3
+#         - EMERALD:5
+#         - xp:250
+#       cod:
+#         enabled: false
+#         vault: 0.0
+#         item-currency: []
+#         return-to-admin-inbox:
+#           payments: false
+#           declined-or-expired: false
+#
+#   event-cod-package:
+#     enabled: false
+#     type: PACKAGE
+#     from: "&c&lAuction"
+#     send-date: "2026-08-04"
+#     send-time: "18:00:00"
+#     timezone: server
+#     repeat: none
+#     catch-up-missed: true
+#     notify-recipients: true
+#     expire-after: 2d
+#     recipients:
+#       mode: PLAYERS
+#       players:
+#         - Rismr1
+#     package:
+#       message: "&eAuction package ready!/n&fPayment is due on claim."
+#       contents:
+#         - DIAMOND_BLOCK:1
+#         - xp:500
+#       cod:
+#         enabled: true
+#         vault: 250.00
+#         item-currency:
+#           - EMERALD:10
+#         return-to-admin-inbox:
+#           payments: true
+#           declined-or-expired: true

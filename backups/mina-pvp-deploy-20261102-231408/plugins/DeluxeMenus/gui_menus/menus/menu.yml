@@ -1,0 +1,130 @@
+menu_title: '&8» &6&lMENU PRINCIPAL &8| &eRankup'
+open_command:
+  - menu
+  - ajuda
+register_command: true
+size: 45
+
+items:
+  # Moldura decorativa
+  'painel_borda':
+    material: BLACK_STAINED_GLASS_PANE
+    slots:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 17
+      - 27
+      - 35
+      - 36
+      - 37
+      - 38
+      - 39
+      - 41
+      - 42
+      - 43
+      - 44
+    display_name: ' '
+
+  # Perfil do Jogador
+  'perfil':
+    material: head-%player_name%
+    slot: 4
+    display_name: '&e&lSEU PERFIL'
+    lore:
+      - '&7Jogador: &f%player_name%'
+      - '&7Saldo: &a$%vault_eco_balance_formatted%'
+      - '&7Grupo: &b%luckperms_primary_group_name%'
+      - ''
+      - '&7Evolua seu rank para minerar'
+      - '&7em áreas mais lucrativas!'
+
+  # Central de Mineracao do TW-Minas
+  'minas':
+    material: DIAMOND_PICKAXE
+    slot: 20
+    display_name: '&b&lIR MINERAR'
+    lore:
+      - '&7Abra a central de mineracao do servidor.'
+      - '&7Ela leva voce a melhor mina liberada.'
+      - ''
+      - '&eClique para abrir a central!'
+    left_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+      - '[player] mina'
+    right_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+      - '[player] mina'
+  # Kits do Jogador
+  'kits':
+    material: CHEST
+    slot: 22
+    display_name: '&c&lKITS DA MINA PVP'
+    lore:
+      - '&7Resgate seu kit de combate'
+      - '&7básico, VIP ou prestígio.'
+      - ''
+      - '&eCooldown individual de 1 hora.'
+      - '&eClique para abrir os kits PvP!'
+    left_click_commands:
+      - '[sound] BLOCK_CHEST_OPEN'
+      - '[close]'
+      - '[player] kits'
+    right_click_commands:
+      - '[sound] BLOCK_CHEST_OPEN'
+      - '[close]'
+      - '[player] kits'
+
+  # Loja / Mercado
+  'loja':
+    material: EMERALD
+    slot: 24
+    display_name: '&6&lMERCADO & LOJA'
+    lore:
+      - '&7Compre melhorias, blocos raros'
+      - '&7e venda os seus minérios.'
+      - ''
+      - '&eClique para abrir o mercado!'
+    left_click_commands:
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+      - '[close]'
+      - '[player] shop'
+    right_click_commands:
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+      - '[close]'
+      - '[player] shop'
+
+  # Cosméticos de Lobby
+  'cosmeticos':
+    material: NETHER_STAR
+    slot: 31
+    display_name: '&d&lCOSMÉTICOS'
+    lore:
+      - '&7Ative efeitos de partículas,'
+      - '&7chapéus e animais de estimação.'
+      - ''
+      - '&eClique para abrir o ProCosmetics!'
+    left_click_commands:
+      - '[sound] ENTITY_PLAYER_LEVELUP'
+      - '[close]'
+      - '[player] cosmetics<delay=5>'
+    right_click_commands:
+      - '[sound] ENTITY_PLAYER_LEVELUP'
+      - '[close]'
+      - '[player] cosmetics<delay=5>'
+
+  # Botão Fechar
+  'fechar':
+    material: BARRIER
+    slot: 40
+    display_name: '&c&lFechar'
+    left_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+      - '[close]'

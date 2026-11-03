@@ -907,3 +907,74 @@
 1792850580851:dm reload
 1792850587225:vs reload
 1792865667695:stop
+1793667244673:lp group default permission set realmines.tp true
+1793667246104:lp group default permission set realmines.carvao.break true
+1793667258041:lp reloadconfig
+1793668112146:lp user TW_Player permission check realmines.tp
+1793668113597:lp user TW_Player permission check realmines.carvao.break
+1793668243584:lp user TW_Player permission check mv.access.minas
+1793668256652:lp group default permission set mv.access.minas true
+1793668264476:lp user TW_Player permission check mv.access.minas
+1793668278308:lp reload
+1793668282792:lp reloadconfig
+1793668476112:lp group default permission set realmines.tp.carvao true
+1793668553312:lp group default permission set mv.access.minas true
+1793668700562:lp group default permission set multiverse.access.minas true
+1793668708652:lp user TW_Player permission check multiverse.access.minas
+1793668750630:lp group default permission set multiverse.access.minas true
+1793668771352:lp user TW_Player permission check multiverse.access.minas
+1793669019256:lp group default permission set realmines.tp true
+1793669019263:lp group default permission set multiverse.access.minas true
+1793669019268:lp group default permission set realmines.tp.carvao true
+1793669020537:lp group default permission set realmines.carvao.break true
+1793669026365:lp group neve parent add default
+1793669026370:lp group sino parent add neve
+1793669026373:lp group biscoito parent add sino
+1793669026377:lp group duende parent add biscoito
+1793669026380:lp group rena parent add duende
+1793669026382:lp group treno parent add rena
+1793669026385:lp group quebranozes parent add treno
+1793669026388:lp group estrela parent add quebranozes
+1793669027053:lp group noel parent add estrela
+1793669033055:lp group neve permission set realmines.tp.neve true
+1793669033060:lp group neve permission set realmines.neve.break true
+1793669033066:lp group sino permission set realmines.tp.sino true
+1793669033070:lp group sino permission set realmines.sino.break true
+1793669033074:lp group biscoito permission set realmines.tp.biscoito true
+1793669033079:lp group biscoito permission set realmines.biscoito.break true
+1793669033084:lp group duende permission set realmines.tp.duende true
+1793669033088:lp group duende permission set realmines.duende.break true
+1793669033093:lp group rena permission set realmines.tp.rena true
+1793669033097:lp group rena permission set realmines.rena.break true
+1793669033100:lp group treno permission set realmines.tp.treno true
+1793669033104:lp group treno permission set realmines.treno.break true
+1793669033111:lp group quebranozes permission set realmines.tp.quebranozes true
+1793669033120:lp group quebranozes permission set realmines.quebranozes.break true
+1793669033124:lp group estrela permission set realmines.tp.estrela true
+1793669033129:lp group estrela permission set realmines.estrela.break true
+1793669033133:lp group noel permission set realmines.tp.noel true
+1793669033545:lp group noel permission set realmines.noel.break true
+1793669039370:lp group grinch parent add default
+1793669039375:lp group yeti parent add grinch
+1793669039378:lp group krampus parent add yeti
+1793669039382:lp group grinch permission set realmines.tp.grinch true
+1793669039388:lp group grinch permission set realmines.grinch.break true
+1793669039392:lp group yeti permission set realmines.tp.yeti true
+1793669039396:lp group yeti permission set realmines.yeti.break true
+1793669039401:lp group krampus permission set realmines.tp.krampus true
+1793669039919:lp group krampus permission set realmines.krampus.break true
+1793669044225:lp group vip_festivo parent add default
+1793669044229:lp group vip_nevasca parent add vip_festivo
+1793669044232:lp group vip_polar parent add vip_nevasca
+1793669044238:lp group vip_festivo permission set realmines.tp.vip_festivo true
+1793669044242:lp group vip_festivo permission set realmines.vip_festivo.break true
+1793669044247:lp group vip_nevasca permission set realmines.tp.vip_nevasca true
+1793669044251:lp group vip_nevasca permission set realmines.vip_nevasca.break true
+1793669044255:lp group vip_polar permission set realmines.tp.vip_polar true
+1793669044708:lp group vip_polar permission set realmines.vip_polar.break true
+1793673248181:lp group vip_festivo permission set tw-minas.kits.vip true
+1793673248191:lp group vip_nevasca permission set tw-minas.kits.vip true
+1793673248201:lp group vip_polar permission set tw-minas.kits.vip true
+1793673248210:lp group grinch permission set tw-minas.kits.prestige true
+1793673248217:lp group yeti permission set tw-minas.kits.prestige true
+1793673249190:lp group krampus permission set tw-minas.kits.prestige true

@@ -43,7 +43,6 @@ spawners:
     chance-token: 0.5
 
 limits:
-  max-spawner-stack: 1000000
   max-owned-spawners: 100
   max-spawners-per-plot: 25
   plot-world: terrenos
@@ -52,10 +51,8 @@ limits:
   max-speed-level: 19
   max-loot-level: 100
   max-amount-level: 10000
-  max-spawn-per-cycle: 10000
   max-entities-per-spawner: 32
-  max-stack-purchase: 1000
 
 confirmation:
   price-threshold: 250000.0
-config-version: 2
+config-version: 3

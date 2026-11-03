@@ -1,7 +1,89 @@
+minecraft:mina_pvp:
+  adjust-spawn: true
+  alias: '&c&lTW &f&lMINA PVP'
+  allow-advancement-grant: false
+  allow-flight: false
+  allow-weather: false
+  anchor-respawn: false
+  auto-heal: true
+  auto-load: true
+  bed-respawn: false
+  biome: ''
+  difficulty: hard
+  entry-fee:
+    enabled: false
+    amount: 0.0
+    currency: '@vault-economy'
+  gamemode: survival
+  generator: VoidGen
+  hidden: false
+  hunger: true
+  keep-spawn-in-memory: true
+  meta: {}
+  player-limit: -1
+  portal-form: none
+  pvp: true
+  respawn-world: ''
+  scale: 1.0
+  spawn-location:
+    ==: MVSpawnLocation
+    x: 0.5
+    y: 101.0
+    z: 0.5
+    pitch: 0.0
+    yaw: 0.0
+  spawning:
+    monster:
+      spawn: false
+      tick-rate: '@unset'
+      spawn-limit: '@unset'
+      exceptions: []
+    animal:
+      spawn: false
+      tick-rate: '@unset'
+      spawn-limit: '@unset'
+      exceptions: []
+    water_animal:
+      spawn: false
+      tick-rate: '@unset'
+      spawn-limit: '@unset'
+      exceptions: []
+    water_ambient:
+      spawn: false
+      tick-rate: '@unset'
+      spawn-limit: '@unset'
+      exceptions: []
+    water_underground_creature:
+      spawn: false
+      tick-rate: '@unset'
+      spawn-limit: '@unset'
+      exceptions: []
+    ambient:
+      spawn: false
+      tick-rate: '@unset'
+      spawn-limit: '@unset'
+      exceptions: []
+    axolotl:
+      spawn: false
+      tick-rate: '@unset'
+      spawn-limit: '@unset'
+      exceptions: []
+    misc:
+      spawn: false
+      tick-rate: '@unset'
+      spawn-limit: '@unset'
+      exceptions: []
+  world-blacklist: []
+  read-only:
+    environment: normal
+    generator-settings: ''
+    legacy-world-name: mina_pvp
+    seed: 793660847404048705
+  version: 1.3
 minecraft:minas:
   adjust-spawn: true
   alias: ''
-  allow-advancement-grant: true
+  allow-advancement-grant: false
   allow-flight: true
   allow-weather: false
   anchor-respawn: false
@@ -165,7 +247,7 @@ minecraft:overworld:
 minecraft:terrenos:
   adjust-spawn: true
   alias: ''
-  allow-advancement-grant: true
+  allow-advancement-grant: false
   allow-flight: true
   allow-weather: false
   anchor-respawn: true

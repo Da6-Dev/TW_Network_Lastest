@@ -1,6 +1,6 @@
 postgresql:
   host: "localhost"
-  port: 3306
+  port: 5432
   database: "tw_network_db"
   # Prefer the TW_DssB_USERNAME and TW_DB_PASSWORD environment variables on production servers.
   username: "postgres"

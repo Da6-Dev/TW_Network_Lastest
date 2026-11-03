@@ -7,6 +7,7 @@ groups:
     worlds:
     - world
     - world_nether
+    - terrenos
     shares:
     - all
   minas:
@@ -14,8 +15,8 @@ groups:
     - minas
     shares:
     - all
-  terrenos:
+  mina_pvp:
     worlds:
-    - terrenos
+    - mina_pvp
     shares:
     - all

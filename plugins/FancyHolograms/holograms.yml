@@ -21,16 +21,21 @@ holograms:
     shadow_radius: 0.0
     shadow_strength: 1.0
     text:
-    - <gold><bold>SERVIDOR RANKUP</bold></gold>
-    - <gray>Bem-vindo ao saguão principal, <yellow>%player_name%</yellow>!</gray>
-    - 'O teu Rank: %luckperms_prefix%'
-    - '<gray>Saldo: <green>$%vault_eco_balance_formatted%</green></gray>'
-    - <yellow>Clique no NPC ou digite <white>/menu</white> para progredir!</yellow>
-    text_shadow: false
+    - <gradient:#FFD700:#FFA500><bold>✦ TW NETWORK ✦</bold></gradient>
+    - <gray><italic>A sua jornada começa aqui!</italic></gray>
+    - ''
+    - <white>Olá, <yellow><bold>%player_name%</bold></yellow>! Seja bem-vindo.
+    - ''
+    - <gray>┌ <gold>★</gold> <b>Seu Rank:</b> %luckperms_prefix%
+    - <gray>└ <green>⛃</green> <b>Saldo:</b> <green>$%vault_eco_balance_formatted%</green>
+    - ''
+    - <yellow>⚡ Interaja com o <gold><bold>NPC</bold></gold> ou digite <white><bold>/menu</bold></white>!
+    text_shadow: true
     see_through: false
     text_alignment: center
-    update_text_interval: -1
+    update_text_interval: 20
     background: transparent
+  
   npc-menu:
     type: TEXT
     location:
@@ -43,18 +48,23 @@ holograms:
     visibility_distance: -1
     visibility: ALL
     persistent: true
-    scale_x: 1.2
-    scale_y: 1.2
-    scale_z: 1.2
+    scale_x: 1.1
+    scale_y: 1.1
+    scale_z: 1.1
     translation_x: 0.0
     translation_y: 0.0
     translation_z: 0.0
     shadow_radius: 0.0
     shadow_strength: 1.0
     text:
-    - <yellow><bold>CLICA PARA ABRIR</bold></yellow>
-    - <gray>Minas • Kits • Mercado</gray>
-    text_shadow: false
+    - <gradient:#55FFFF:#00AAFF><bold>⚡ MENU PRINCIPAL ⚡</bold></gradient>
+    - <dark_gray>• • • • • • • • • • •</dark_gray>
+    - <gray>Minas <dark_gray>•</dark_gray> <white>Kits</white> <dark_gray>•</dark_gray>
+      Mercado</gray>
+    - ''
+    - <yellow><bold>CLIQUE PARA ABRIR</bold></yellow>
+    - <gold>⮞ <white><italic>(Botão Direito)</italic></white> ⮜</gold>
+    text_shadow: true
     see_through: false
     text_alignment: center
     update_text_interval: -1

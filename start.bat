@@ -9,10 +9,10 @@ title Purpur Server Console
 set "JAR_NAME=purpur.jar"
 
 :: Quantidade de memória RAM (alocar o mesmo valor em Xms e Xmx evita pausas de expansão de heap)
-set "RAM=2G"
+set "RAM=6G"
 
 :: Caminho do Java (use "java" se já estiver no PATH ou aponte para o java.exe desejado, ex: "C:\...\bin\java.exe")
-set "JAVA_CMD=C:\Program Files\Eclipse Adoptium\jdk-25.0.4.101-hotspot\bin\java.exe"
+set "JAVA_CMD=java"
 
 :: ====================================================================
 :: LOOP DE INICIALIZAÇÃO E AUTO-RESTART

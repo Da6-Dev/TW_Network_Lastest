@@ -1,0 +1,72 @@
+config-version: 4
+
+combat-log:
+  timer:
+    duration-seconds: 15
+    display: actionbar
+  restrictions:
+    elytra:
+      disabled-in-combat: true
+    teleporting:
+      disabled-in-combat: true
+      allow-enderpearl: false
+    mending:
+      disabled-in-combat: true
+    riptide:
+      stop: false
+      cooldown: 10000
+  punishment:
+    damage: 0.0
+    logout:
+      mode: kill
+      commands: []
+  triggers:
+    tag-mode: both
+    start-below-health: 0
+    enderpearl:
+      set-combat-on-land: true
+      only-if-already-in-combat: false
+    untag-on-kill: true
+    explosions:
+      set-combat-on-explosion: true
+  ignored-worlds:
+    - world
+    - world_nether
+    - world_the_end
+    - terrenos
+    - minas
+  command-restrictions:
+    mode: blacklist
+    commands:
+      - tpa
+      - spawn
+      - warp
+      - warps
+      - minapvp
+      - pvp
+      - pvpsair
+      - mine
+      - mina
+      - mvtp
+      - tp
+      - home
+  combat-zone:
+    enabled: false
+    radius: 10
+  tag-effects: []
+  worldguard:
+    safe-zone-barrier:
+      enabled: true
+      material: RED_STAINED_GLASS
+      radius: 1
+      view-distance: 8
+      height: 3
+
+anti-kill-abuse:
+  enabled: false
+  limits:
+    max-kills: 5
+    remove-kill-after-seconds: 60
+  punish-commands:
+    - "kick {killer} Kill-Abuse detected!"
+    - "ban {killer}"
