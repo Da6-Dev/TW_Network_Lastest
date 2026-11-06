@@ -11,3 +11,6 @@ metas_list_page_size: 15
 gui_menus:
   principal:
     file: menus/menu.yml
+  minas:
+    file: menus/minas.yml
+

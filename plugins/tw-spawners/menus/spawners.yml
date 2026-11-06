@@ -1,0 +1,281 @@
+# ==============================================================================
+# TW Network — Configuração Padronizada de Menu: Mercado de Spawners (tw-spawners)
+# Em conformidade estrita com o Design System (R1) e Arquitetura de Navegação (R2)
+# ==============================================================================
+
+title: '&8➔ &#7FB4F4&lMERCADO DE SPAWNERS'
+size: 54
+
+items:
+  # Moldura de vidro decorativa (Design System: 54 slots)
+  'moldura':
+    material: BLACK_STAINED_GLASS_PANE
+    slots:
+      # Linha 1
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      # Linha 2 (Laterais e divisórias)
+      - 9
+      - 16
+      - 17
+      # Linha 3 (Laterais)
+      - 18
+      - 26
+      # Linha 4 (Laterais e divisórias)
+      - 27
+      - 33
+      - 34
+      - 35
+      # Linha 5 (Faixa divisória inferior)
+      - 36
+      - 37
+      - 38
+      - 39
+      - 40
+      - 41
+      - 42
+      - 43
+      - 44
+      # Linha 6 (Borda inferior)
+      - 46
+      - 47
+      - 48
+      - 50
+      - 51
+      - 52
+      - 53
+    name: ' '
+
+  # 1. Spawner de Porco (Slot 10)
+  'spawner_porco':
+    slot: 10
+    material: PIG_SPAWN_EGG
+    name: '&#7FB4F4&lSPAWNER DE PORCO'
+    lore:
+      - '&7Gerador básico de suínos para abates.'
+      - '&7Rende dinheiro inicial e tokens de treino.'
+      - ''
+      - '&7Requisito: &fRank Carvão'
+      - '&7Custo: &e$100.000 &8| &a$800/abate'
+      - ''
+      - '&a▶ Clique para adquirir'
+    commands:
+      - '[player] spawners comprar pig'
+    action: '[player] spawners comprar pig'
+
+  # 2. Spawner de Vaca (Slot 11)
+  'spawner_vaca':
+    slot: 11
+    material: COW_SPAWN_EGG
+    name: '&#7FB4F4&lSPAWNER DE VACA'
+    lore:
+      - '&7Gerador bovino com produção elevada.'
+      - '&7Drop de couro, carne e tokens de rank.'
+      - ''
+      - '&7Requisito: &fRank Neve'
+      - '&7Custo: &e$2.500.000 &8| &a$18.000/abate'
+      - ''
+      - '&a▶ Clique para adquirir'
+    commands:
+      - '[player] spawners comprar cow'
+    action: '[player] spawners comprar cow'
+
+  # 3. Spawner de Aranha (Slot 12)
+  'spawner_aranha':
+    slot: 12
+    material: SPIDER_SPAWN_EGG
+    name: '&#7FB4F4&lSPAWNER DE ARANHA'
+    lore:
+      - '&7Gerador aracnídeo com geração de teias.'
+      - '&7Excelente taxa de tokens por ciclo.'
+      - ''
+      - '&7Requisito: &fRank Sino'
+      - '&7Custo: &e$65.000.000 &8| &a$450.000/abate'
+      - ''
+      - '&a▶ Clique para adquirir'
+    commands:
+      - '[player] spawners comprar spider'
+    action: '[player] spawners comprar spider'
+
+  # 4. Spawner de Zumbi (Slot 13)
+  'spawner_zumbi':
+    slot: 13
+    material: ZOMBIE_SPAWN_EGG
+    name: '&#7FB4F4&lSPAWNER DE ZUMBI'
+    lore:
+      - '&7Horda de mortos-vivos com drop de ferro'
+      - '&7e alta densidade de almas coletáveis.'
+      - ''
+      - '&7Requisito: &fRank Biscoito'
+      - '&7Custo: &e$1.200.000.000 &8| &a$9.000.000/abate'
+      - ''
+      - '&a▶ Clique para adquirir'
+    commands:
+      - '[player] spawners comprar zombie'
+    action: '[player] spawners comprar zombie'
+
+  # 5. Spawner de Blaze (Slot 14)
+  'spawner_blaze':
+    slot: 14
+    material: BLAZE_SPAWN_EGG
+    name: '&#7FB4F4&lSPAWNER DE BLAZE'
+    lore:
+      - '&7Entidades ígneas do nether com alto valor.'
+      - '&7Produz grande quantidade de almas místicas.'
+      - ''
+      - '&7Requisito: &fRank Duende'
+      - '&7Custo: &e$40.000.000.000 &8| &a$320.000.000/abate'
+      - ''
+      - '&a▶ Clique para adquirir'
+    commands:
+      - '[player] spawners comprar blaze'
+    action: '[player] spawners comprar blaze'
+
+  # 6. Spawner de Iron Golem (Slot 15)
+  'spawner_iron_golem':
+    slot: 15
+    material: IRON_BLOCK
+    name: '&#7FB4F4&lSPAWNER DE GOLEM DE FERRO'
+    lore:
+      - '&7O mais poderoso gerador convencional.'
+      - '&7Rendimento bilionário com barras puras.'
+      - ''
+      - '&7Requisito: &fRank Rena'
+      - '&7Custo: &e$1.500.000.000.000 &8| &a$12.000.000.000/abate'
+      - ''
+      - '&a▶ Clique para adquirir'
+    commands:
+      - '[player] spawners comprar irongolem'
+    action: '[player] spawners comprar irongolem'
+
+  # Booster de Abates Menor (Slot 28)
+  'booster_abates_1':
+    slot: 28
+    material: EXPERIENCE_BOTTLE
+    name: '&#7FB4F4&lBOOSTER DE ABATES 1.5x'
+    lore:
+      - '&7Aumenta o ganho financeiro obtido'
+      - '&7em cada criatura abatida em seu lote.'
+      - ''
+      - '&7Duração: &f1 hora'
+      - '&7Multiplicador: &e1.5x'
+      - ''
+      - '&a▶ Clique para comprar booster'
+    commands:
+      - '[player] spawners comprar booster1'
+    action: '[player] spawners comprar booster1'
+
+  # Booster de Abates Maior (Slot 29)
+  'booster_abates_2':
+    slot: 29
+    material: DRAGON_BREATH
+    name: '&#7FB4F4&lBOOSTER DE ABATES 2.0x'
+    lore:
+      - '&7Dobra o lucro de todos os abates'
+      - '&7executados nos seus geradores.'
+      - ''
+      - '&7Duração: &f2 horas'
+      - '&7Multiplicador: &e2.0x'
+      - ''
+      - '&a▶ Clique para comprar booster'
+    commands:
+      - '[player] spawners comprar booster2'
+    action: '[player] spawners comprar booster2'
+
+  # Ímã de Almas (Slot 30)
+  'ima_de_almas':
+    slot: 30
+    material: NETHER_STAR
+    name: '&#7FB4F4&lÍMÃ DIVINO DE ALMAS'
+    lore:
+      - '&7Dobra a taxa de obtenção de Almas'
+      - '&7utilizadas para forjar chaves virtuais.'
+      - ''
+      - '&7Almas em Conta: &d%tw_souls%'
+      - '&7Efeito: &d2x Almas por abate'
+      - ''
+      - '&a▶ Clique para adquirir talismã'
+    commands:
+      - '[player] spawners comprar soulmagnet'
+    action: '[player] spawners comprar soulmagnet'
+
+  # Informações de Operação (Slot 31)
+  'info_spawners':
+    slot: 31
+    material: BOOK
+    name: '&#7FB4F4&lMODO VIRTUAL VS FÍSICO'
+    lore:
+      - '&7Alterne entre modo virtual (sem entidades,'
+      - '&7zero lag, cofre passivo) e modo físico.'
+      - ''
+      - '&7Limite de Empilhamento: &f10.000 por bloco'
+      - '&7Auto-Sell: &aDisponível a cada 10s'
+      - ''
+      - '&a▶ Clique para consultar detalhes'
+    commands:
+      - '[player] spawners'
+    action: '[player] spawners'
+
+  # Sinergia com Forja de Caixas (Slot 32)
+  'atalho_forja_almas':
+    slot: 32
+    material: TRIPWIRE_HOOK
+    name: '&#7FB4F4&lFORJA DE CAIXAS &8• &dAlmas'
+    lore:
+      - '&7Utilize as Almas conquistadas nos abates'
+      - '&7para forjar Chaves Divinas exclusivas.'
+      - ''
+      - '&7Suas Almas: &d%tw_souls%'
+      - '&7Destino: &fForja de Chaves'
+      - ''
+      - '&a▶ Clique para abrir a forja'
+    commands:
+      - '[player] key forja'
+    action: '[player] key forja'
+
+  # Botão Universal de Retorno (Slot 45 - Design System)
+  'voltar':
+    slot: 45
+    material: ARROW
+    name: '&e➔ &lVoltar ao Menu'
+    lore:
+      - '&7Retorne à central principal de navegação'
+      - '&7para escolher outro subsistema.'
+      - ''
+      - '&7Destino: &eMenu Principal'
+      - ''
+      - '&e▶ Clique para voltar'
+    commands:
+      - '[openguimenu] principal'
+    left_click_commands:
+      - '[openguimenu] principal'
+    right_click_commands:
+      - '[openguimenu] principal'
+    action: '[menu] principal'
+
+  # Botão Universal de Fechamento (Slot 49 - Design System)
+  'fechar':
+    slot: 49
+    material: BARRIER
+    name: '&c➔ &lFechar'
+    lore:
+      - '&7Encerre a visualização desta interface'
+      - '&7e retorne à sua jogatina.'
+      - ''
+      - '&7Ação: &cFechar GUI'
+      - ''
+      - '&c▶ Clique para fechar'
+    commands:
+      - '[close]'
+    left_click_commands:
+      - '[close]'
+    right_click_commands:
+      - '[close]'
+    action: '[close]'

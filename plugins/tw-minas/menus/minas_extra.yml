@@ -1,0 +1,312 @@
+# ==============================================================================
+# TW Network — Configuração Padronizada de Menu: Oficina e Missões (tw-minas)
+# Em conformidade estrita com o Design System (R1) e Arquitetura de Navegação (R2)
+# ==============================================================================
+
+title: '&8➔ &#7FB4F4&lOFICINA & MISSÕES'
+size: 54
+
+items:
+  # Moldura de vidro decorativa (Design System: 54 slots)
+  'moldura':
+    material: BLACK_STAINED_GLASS_PANE
+    slots:
+      # Linha 1
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      # Linha 2 (Laterais)
+      - 9
+      - 17
+      # Linha 3 (Laterais e divisórias)
+      - 18
+      - 22
+      - 24
+      - 26
+      # Linha 4 (Faixa intermediária)
+      - 27
+      - 28
+      - 29
+      - 30
+      - 31
+      - 32
+      - 33
+      - 34
+      - 35
+      # Linha 5 (Faixa divisória inferior)
+      - 36
+      - 37
+      - 38
+      - 39
+      - 40
+      - 41
+      - 42
+      - 43
+      - 44
+      # Linha 6 (Borda inferior)
+      - 46
+      - 47
+      - 48
+      - 50
+      - 51
+      - 52
+      - 53
+    name: ' '
+
+  # ========================================================
+  # SEÇÃO 1: OFICINA DOS DUENDES (UPGRADES DE PICARETA)
+  # ========================================================
+
+  # 1. Fortuna (Slot 10)
+  'upgrade_fortuna':
+    slot: 10
+    material: GOLD_INGOT
+    name: '&#7FB4F4&lUPGRADE: FORTUNA'
+    lore:
+      - '&7Aumenta consideravelmente a quantia de drops'
+      - '&7recebida ao quebrar blocos nas minas.'
+      - ''
+      - '&7Nível Atual: &f%tw_pickaxe_fortune%'
+      - '&7Preço do Upgrade: &e1.500 Tokens'
+      - ''
+      - '&a▶ Clique para aprimorar fortuna'
+    commands:
+      - '[player] mina oficina upgrade fortuna'
+    action: '[player] mina oficina upgrade fortuna'
+
+  # 2. Eficiência (Slot 11)
+  'upgrade_eficiencia':
+    slot: 11
+    material: FEATHER
+    name: '&#7FB4F4&lUPGRADE: EFICIÊNCIA'
+    lore:
+      - '&7Acelera a velocidade de quebra da sua picareta'
+      - '&7garantindo fluidez constante de mineração.'
+      - ''
+      - '&7Nível Atual: &f%tw_pickaxe_efficiency%'
+      - '&7Preço do Upgrade: &e1.000 Tokens'
+      - ''
+      - '&a▶ Clique para aprimorar eficiência'
+    commands:
+      - '[player] mina oficina upgrade eficiencia'
+    action: '[player] mina oficina upgrade eficiencia'
+
+  # 3. Explosão Sísmica (Slot 12)
+  'upgrade_explosao':
+    slot: 12
+    material: TNT
+    name: '&#7FB4F4&lUPGRADE: EXPLOSÃO SÍSMICA'
+    lore:
+      - '&7Detona blocos adjacentes em raio 3x3'
+      - '&7coletando todos os recursos simultaneamente.'
+      - ''
+      - '&7Chance de Ativação: &f15%'
+      - '&7Preço do Upgrade: &e5.000 Tokens'
+      - ''
+      - '&a▶ Clique para aprimorar explosão'
+    commands:
+      - '[player] mina oficina upgrade explosao'
+    action: '[player] mina oficina upgrade explosao'
+
+  # 4. Broca Laser (Slot 13)
+  'upgrade_laser':
+    slot: 13
+    material: PRISMARINE_CRYSTALS
+    name: '&#7FB4F4&lUPGRADE: BROCA LASER'
+    lore:
+      - '&7Dispara feixe concentrado em linha reta'
+      - '&7quebrando até 5 blocos à sua frente.'
+      - ''
+      - '&7Alcance: &f5 Blocos'
+      - '&7Preço do Upgrade: &e10.000 Tokens'
+      - ''
+      - '&a▶ Clique para aprimorar laser'
+    commands:
+      - '[player] mina oficina upgrade laser'
+    action: '[player] mina oficina upgrade laser'
+
+  # 5. Auto-Sell de Minérios (Slot 14)
+  'upgrade_autosell':
+    slot: 14
+    material: EMERALD
+    name: '&#7FB4F4&lUPGRADE: VENDA AUTOMÁTICA'
+    lore:
+      - '&7Vende automaticamente todos os minérios'
+      - '&7quebrados sem lotar seu inventário.'
+      - ''
+      - '&7Status: &aAtivado'
+      - '&7Multiplicador de Venda: &f1.0x'
+      - ''
+      - '&a▶ Clique para alternar auto-sell'
+    commands:
+      - '[player] mina oficina autosell'
+    action: '[player] mina oficina autosell'
+
+  # 6. Missões & Cartinhas (Slot 15)
+  'missoes_cartinhas':
+    slot: 15
+    material: MAP
+    name: '&#7FB4F4&lMISSÕES & CARTINHAS'
+    lore:
+      - '&7Consulte o álbum de missões da temporada'
+      - '&7e resgate recompensas de escavação.'
+      - ''
+      - '&7Missões Ativas: &f3 tarefas'
+      - '&7Status: &aDisponível'
+      - ''
+      - '&a▶ Clique para ver missões'
+    commands:
+      - '[player] mina missoes'
+    action: '[player] mina missoes'
+
+  # 7. Arena Mina PvP (Slot 16)
+  'arena_pvp':
+    slot: 16
+    material: DIAMOND_SWORD
+    name: '&#7FB4F4&lARENA MINA PVP &8• &cCombate'
+    lore:
+      - '&7Área hostil de mineração com drops em dobro'
+      - '&7onde o combate entre jogadores é liberado.'
+      - ''
+      - '&7Inventário: &eIsolado com segurança'
+      - '&7Regra: &cPerda de itens de combate ao morrer'
+      - ''
+      - '&a▶ Clique para entrar na arena'
+    commands:
+      - '[player] minapvp'
+    action: '[player] minapvp'
+
+  # ========================================================
+  # SEÇÃO 2: ÁLBUM DE CARTINHAS E MISSÕES
+  # ========================================================
+
+  # Cartinha Comum (Slot 19)
+  'cartinha_comum':
+    slot: 19
+    material: PAPER
+    name: '&#7FB4F4&lMISSÃO: INICIAÇÃO MINEIRA'
+    lore:
+      - '&7Quebre 1.000 blocos em qualquer mina'
+      - '&7para concluir esta missão comum.'
+      - ''
+      - '&7Progresso: &f%tw_mission_common%/1000'
+      - '&7Recompensa: &e$50.000 &7+ &b100 Tokens'
+      - ''
+      - '&a▶ Clique para resgatar recompensa'
+    commands:
+      - '[player] mina missoes resgatar comum'
+    action: '[player] mina missoes resgatar comum'
+
+  # Cartinha Rara (Slot 20)
+  'cartinha_rara':
+    slot: 20
+    material: BOOK
+    name: '&#7FB4F4&lMISSÃO: ESCAVAÇÃO PROFUNDA'
+    lore:
+      - '&7Quebre 10.000 blocos nas minas de rank'
+      - '&7para conquistar esta cartinha rara.'
+      - ''
+      - '&7Progresso: &f%tw_mission_rare%/10000'
+      - '&7Recompensa: &e$500.000 &7+ &b1 Caixa Mineira'
+      - ''
+      - '&a▶ Clique para resgatar recompensa'
+    commands:
+      - '[player] mina missoes resgatar rara'
+    action: '[player] mina missoes resgatar rara'
+
+  # Cartinha Lendária (Slot 21)
+  'cartinha_lendaria':
+    slot: 21
+    material: NAME_TAG
+    name: '&#7FB4F4&lMISSÃO: LENDA DO SUBSOLO'
+    lore:
+      - '&7Quebre 100.000 blocos ao longo da temporada'
+      - '&7para desbloquear o buff definitivo.'
+      - ''
+      - '&7Progresso: &f%tw_mission_legendary%/100000'
+      - '&7Recompensa: &6Bônus Permanente de 1.1x'
+      - ''
+      - '&a▶ Clique para resgatar recompensa'
+    commands:
+      - '[player] mina missoes resgatar lendaria'
+    action: '[player] mina missoes resgatar lendaria'
+
+  # Top Mineradores / Ranking (Slot 23)
+  'top_mineradores':
+    slot: 23
+    material: GOLD_BLOCK
+    name: '&#7FB4F4&lTOP MINERADORES'
+    lore:
+      - '&7Quadro dos maiores mineradores da temporada'
+      - '&7com premiações em dinheiro e tags nobres.'
+      - ''
+      - '&7Seus Blocos Quebrados: &e%tw_blocks_mined%'
+      - '&7Posição Atual: &fClassificado'
+      - ''
+      - '&a▶ Clique para ver o ranking'
+    commands:
+      - '[player] mina ranking'
+    action: '[player] mina ranking'
+
+  # Meta Comunitária / Happy Hour (Slot 25)
+  'meta_comunitaria':
+    slot: 25
+    material: BEACON
+    name: '&#7FB4F4&lMETA GLOBAL &8• &dHappy Hour'
+    lore:
+      - '&7Barra colaborativa onde toda a comunidade'
+      - '&7quebra blocos para disparar evento de 2x.'
+      - ''
+      - '&7Progresso Global: &a%tw_happyhour_progress%/1.000.000'
+      - '&7Multiplicador no Evento: &d2.0x Tokens'
+      - ''
+      - '&a▶ Clique para ver a meta global'
+    commands:
+      - '[player] mina meta'
+    action: '[player] mina meta'
+
+  # Botão Universal de Retorno (Slot 45 - Design System 54 slots)
+  'voltar':
+    slot: 45
+    material: ARROW
+    name: '&e➔ &lVoltar ao Menu'
+    lore:
+      - '&7Retorne à central principal de navegação'
+      - '&7para escolher outro subsistema.'
+      - ''
+      - '&7Destino: &eMenu Principal'
+      - ''
+      - '&e▶ Clique para voltar'
+    commands:
+      - '[openguimenu] principal'
+    left_click_commands:
+      - '[openguimenu] principal'
+    right_click_commands:
+      - '[openguimenu] principal'
+    action: '[menu] principal'
+
+  # Botão Universal de Fechamento (Slot 49 - Design System 54 slots)
+  'fechar':
+    slot: 49
+    material: BARRIER
+    name: '&c➔ &lFechar'
+    lore:
+      - '&7Encerre a visualização desta interface'
+      - '&7e retorne à sua jogatina.'
+      - ''
+      - '&7Ação: &cFechar GUI'
+      - ''
+      - '&c▶ Clique para fechar'
+    commands:
+      - '[close]'
+    left_click_commands:
+      - '[close]'
+    right_click_commands:
+      - '[close]'
+    action: '[close]'

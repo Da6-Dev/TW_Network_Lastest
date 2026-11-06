@@ -1,0 +1,296 @@
+# ==============================================================================
+# TW Network — Configuração Padronizada de Menu: Fábrica de Máquinas (tw-maquinas)
+# Em conformidade estrita com o Design System (R1) e Arquitetura de Navegação (R2)
+# ==============================================================================
+
+title: '&8➔ &#7FB4F4&lFÁBRICA DE MÁQUINAS'
+size: 54
+
+items:
+  # Moldura de vidro decorativa (Design System: 54 slots)
+  'moldura':
+    material: BLACK_STAINED_GLASS_PANE
+    slots:
+      # Linha 1
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      # Linha 2 (Laterais)
+      - 9
+      - 17
+      # Linha 3 (Laterais)
+      - 18
+      - 26
+      # Linha 4 (Laterais e divisórias)
+      - 27
+      - 33
+      - 34
+      - 35
+      # Linha 5 (Faixa divisória inferior)
+      - 36
+      - 37
+      - 38
+      - 39
+      - 40
+      - 41
+      - 42
+      - 43
+      - 44
+      # Linha 6 (Borda inferior)
+      - 46
+      - 47
+      - 48
+      - 50
+      - 51
+      - 52
+      - 53
+    name: ' '
+
+  # 1. Máquina Carvão (Slot 10)
+  'maquina_carvao':
+    slot: 10
+    material: COAL_BLOCK
+    name: '&#7FB4F4&lMÁQUINA CARVÃO &8[Nível 1]'
+    lore:
+      - '&7Gerador industrial inicial movido a carvão.'
+      - '&7Gera renda passiva contínua em seu terreno.'
+      - ''
+      - '&7Custo: &e$50.000'
+      - '&7Rendimento: &a$1.200 &7a cada &f10s'
+      - ''
+      - '&a▶ Clique para adquirir'
+    commands:
+      - '[player] maquinas comprar carvao'
+    action: '[player] maquinas comprar carvao'
+
+  # 2. Máquina Neve (Slot 11)
+  'maquina_neve':
+    slot: 11
+    material: SNOW_BLOCK
+    name: '&#7FB4F4&lMÁQUINA NEVE &8[Nível 2]'
+    lore:
+      - '&7Gerador criogênico de alta eficiência.'
+      - '&7Multiplica seus lucros no início de jogo.'
+      - ''
+      - '&7Custo: &e$1.500.000'
+      - '&7Rendimento: &a$35.000 &7a cada &f10s'
+      - ''
+      - '&a▶ Clique para adquirir'
+    commands:
+      - '[player] maquinas comprar neve'
+    action: '[player] maquinas comprar neve'
+
+  # 3. Máquina Sino (Slot 12)
+  'maquina_sino':
+    slot: 12
+    material: GOLD_BLOCK
+    name: '&#7FB4F4&lMÁQUINA SINO &8[Nível 3]'
+    lore:
+      - '&7Estrutura dourada com ciclo otimizado.'
+      - '&7Rendimento milionário para seu lote.'
+      - ''
+      - '&7Custo: &e$45.000.000'
+      - '&7Rendimento: &a$1.100.000 &7a cada &f10s'
+      - ''
+      - '&a▶ Clique para adquirir'
+    commands:
+      - '[player] maquinas comprar sino'
+    action: '[player] maquinas comprar sino'
+
+  # 4. Máquina Biscoito (Slot 13)
+  'maquina_biscoito':
+    slot: 13
+    material: HAY_BLOCK
+    name: '&#7FB4F4&lMÁQUINA BISCOITO &8[Nível 4]'
+    lore:
+      - '&7Fábrica automatizada de alta velocidade.'
+      - '&7Ciclo acelerado para máxima produção.'
+      - ''
+      - '&7Custo: &e$800.000.000'
+      - '&7Rendimento: &a$20.000.000 &7a cada &f8s'
+      - ''
+      - '&a▶ Clique para adquirir'
+    commands:
+      - '[player] maquinas comprar biscoito'
+    action: '[player] maquinas comprar biscoito'
+
+  # 5. Máquina Duende (Slot 14)
+  'maquina_duende':
+    slot: 14
+    material: EMERALD_BLOCK
+    name: '&#7FB4F4&lMÁQUINA DUENDE &8[Nível 5]'
+    lore:
+      - '&7Engenharia mágica de ponta.'
+      - '&7Produz bilhões de moedas continuamente.'
+      - ''
+      - '&7Custo: &e$25.000.000.000'
+      - '&7Rendimento: &a$650.000.000 &7a cada &f8s'
+      - ''
+      - '&a▶ Clique para adquirir'
+    commands:
+      - '[player] maquinas comprar duende'
+    action: '[player] maquinas comprar duende'
+
+  # 6. Máquina Rena (Slot 15)
+  'maquina_rena':
+    slot: 15
+    material: REDSTONE_BLOCK
+    name: '&#7FB4F4&lMÁQUINA RENA &8[Nível 6]'
+    lore:
+      - '&7Usina termonuclear de redstone puro.'
+      - '&7Ciclo ultrarrápido com produção colossal.'
+      - ''
+      - '&7Custo: &e$750.000.000.000'
+      - '&7Rendimento: &a$22.000.000.000 &7a cada &f6s'
+      - ''
+      - '&a▶ Clique para adquirir'
+    commands:
+      - '[player] maquinas comprar rena'
+    action: '[player] maquinas comprar rena'
+
+  # 7. Máquina Noel (Slot 16)
+  'maquina_noel':
+    slot: 16
+    material: BEACON
+    name: '&#7FB4F4&lMÁQUINA NOEL &8[Nível MAX]'
+    lore:
+      - '&7O ápice absoluto da tecnologia industrial.'
+      - '&7Gera trilhões a cada poucos segundos.'
+      - ''
+      - '&7Custo: &e$25.000.000.000.000.000'
+      - '&7Rendimento: &a$850.000.000.000.000 &7a cada &f5s'
+      - ''
+      - '&a▶ Clique para adquirir'
+    commands:
+      - '[player] maquinas comprar noel'
+    action: '[player] maquinas comprar noel'
+
+  # Combustível I (Slot 28)
+  'combustivel_1':
+    slot: 28
+    material: COAL
+    name: '&#7FB4F4&lCOMBUSTÍVEL BÁSICO I'
+    lore:
+      - '&7Combustível padrão para manter suas'
+      - '&7máquinas operando sem interrupções.'
+      - ''
+      - '&7Quantidade: &f100 unidades'
+      - '&7Preço: &e$5.000'
+      - ''
+      - '&a▶ Clique para comprar combustível'
+    commands:
+      - '[player] maquinas comprar fuel1'
+    action: '[player] maquinas comprar fuel1'
+
+  # Combustível II (Slot 29)
+  'combustivel_2':
+    slot: 29
+    material: BLAZE_POWDER
+    name: '&#7FB4F4&lCOMBUSTÍVEL REFINADO II'
+    lore:
+      - '&7Pó de blaze purificado de média duração.'
+      - '&7Ideal para médias e grandes indústrias.'
+      - ''
+      - '&7Quantidade: &f500 unidades'
+      - '&7Preço: &e$50.000'
+      - ''
+      - '&a▶ Clique para comprar combustível'
+    commands:
+      - '[player] maquinas comprar fuel2'
+    action: '[player] maquinas comprar fuel2'
+
+  # Combustível III (Slot 30)
+  'combustivel_3':
+    slot: 30
+    material: NETHER_STAR
+    name: '&#7FB4F4&lCOMBUSTÍVEL NUCLEAR III'
+    lore:
+      - '&7Núcleo atômico de longa duração.'
+      - '&7Alimenta indústrias por longos períodos.'
+      - ''
+      - '&7Quantidade: &f2.000 unidades'
+      - '&7Preço: &e$500.000'
+      - ''
+      - '&a▶ Clique para comprar combustível'
+    commands:
+      - '[player] maquinas comprar fuel3'
+    action: '[player] maquinas comprar fuel3'
+
+  # Guia & Instruções (Slot 31)
+  'instrucoes_maquinas':
+    slot: 31
+    material: BOOK
+    name: '&#7FB4F4&lCOMO FUNCIONAM AS MÁQUINAS'
+    lore:
+      - '&7Posicione o bloco da máquina em seu lote'
+      - '&7e abasteça com combustível pelo painel.'
+      - ''
+      - '&7Saque: &aAtômico e Instantâneo'
+      - '&7Segurança: &fSalvo no PostgreSQL'
+      - ''
+      - '&a▶ Clique para consultar detalhes'
+    commands:
+      - '[player] maquinas'
+    action: '[player] maquinas'
+
+  # Sinergia com Terrenos (Slot 32)
+  'atalho_terrenos':
+    slot: 32
+    material: GRASS_BLOCK
+    name: '&#7FB4F4&lSEUS TERRENOS'
+    lore:
+      - '&7Máquinas operam exclusivamente quando'
+      - '&7colocadas em seu terreno protegido.'
+      - ''
+      - '&7Destino: &fAgência de Terrenos'
+      - ''
+      - '&a▶ Clique para ir aos terrenos'
+    commands:
+      - '[player] terrenos'
+    action: '[player] terrenos'
+
+  # Botão Universal de Retorno (Slot 45 - Design System)
+  'voltar':
+    slot: 45
+    material: ARROW
+    name: '&e➔ &lVoltar ao Menu'
+    lore:
+      - '&7Retorne à central principal de navegação'
+      - '&7para escolher outro subsistema.'
+      - ''
+      - '&7Destino: &eMenu Principal'
+      - ''
+      - '&e▶ Clique para voltar'
+    commands:
+      - '[openguimenu] principal'
+    left_click_commands:
+      - '[openguimenu] principal'
+    right_click_commands:
+      - '[openguimenu] principal'
+    action: '[menu] principal'
+
+  # Botão Universal de Fechamento (Slot 49 - Design System)
+  'fechar':
+    slot: 49
+    material: BARRIER
+    name: '&c➔ &lFechar'
+    lore:
+      - '&7Encerre a visualização desta interface'
+      - '&7e retorne à sua jogatina.'
+      - ''
+      - '&7Ação: &cFechar GUI'
+      - ''
+      - '&c▶ Clique para fechar'
+    commands:
+      - '[close]'
+    left_click_commands:
+      - '[close]'
+    right_click_commands:
+      - '[close]'
+    action: '[close]'

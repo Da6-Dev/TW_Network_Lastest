@@ -31,6 +31,10 @@ groups:
     - menu
     - ajuda
     - mine
+    - minaslista
+    - minhasminas
+    - shop
+    - cosmetics
     - rankup
     - rankupmax
     - prestigio
@@ -38,6 +42,9 @@ groups:
     - rank
     - terreno
     - terrenos
+    - plot
+    - plots
+    - p
     - maquinas
     - maquina
     - spawners

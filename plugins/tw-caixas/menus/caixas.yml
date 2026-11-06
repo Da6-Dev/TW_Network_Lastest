@@ -1,0 +1,249 @@
+# ==============================================================================
+# TW Network — Configuração Padronizada de Menu: Chaves e Caixas (tw-caixas)
+# Em conformidade estrita com o Design System (R1) e Arquitetura de Navegação (R2)
+# ==============================================================================
+
+title: '&8➔ &#7FB4F4&lCHAVES & CAIXAS VIRTUAIS'
+size: 54
+
+items:
+  # Moldura de vidro decorativa (Design System: 54 slots)
+  'moldura':
+    material: BLACK_STAINED_GLASS_PANE
+    slots:
+      # Linha 1
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      # Linha 2 (Laterais e divisórias)
+      - 9
+      - 15
+      - 16
+      - 17
+      # Linha 3 (Laterais)
+      - 18
+      - 26
+      # Linha 4 (Laterais e divisórias)
+      - 27
+      - 29
+      - 31
+      - 33
+      - 35
+      # Linha 5 (Faixa divisória inferior)
+      - 36
+      - 37
+      - 38
+      - 39
+      - 40
+      - 41
+      - 42
+      - 43
+      - 44
+      # Linha 6 (Borda inferior)
+      - 46
+      - 47
+      - 48
+      - 50
+      - 51
+      - 52
+      - 53
+    name: ' '
+
+  # 1. Caixa Mineira (Slot 10)
+  'caixa_mineira':
+    slot: 10
+    material: IRON_PICKAXE
+    name: '&#7FB4F4&lCAIXA MINEIRA'
+    lore:
+      - '&7Conquistada quebrando blocos nas minas.'
+      - '&7Recompensas para impulsionar sua mineração.'
+      - ''
+      - '&7Drop: &f0.1% na mineração'
+      - '&7Prêmios: &eDinheiro, Carga Sísmica, Broca'
+      - ''
+      - '&a▶ Clique para abrir ou inspecionar'
+    commands:
+      - '[player] key abrir mineira'
+    action: '[player] key abrir mineira'
+
+  # 2. Caixa Sanguinária (Slot 11)
+  'caixa_sanguinaria':
+    slot: 11
+    material: NETHERITE_SWORD
+    name: '&#7FB4F4&lCAIXA SANGUINÁRIA'
+    lore:
+      - '&7Obtida ao abater criaturas nos spawners.'
+      - '&7Contém Almas, tokens e amuletos de combate.'
+      - ''
+      - '&7Drop: &f0.05% nos geradores'
+      - '&7Prêmios: &dAlmas, Tokens, Ímã Divino'
+      - ''
+      - '&a▶ Clique para abrir ou inspecionar'
+    commands:
+      - '[player] key abrir sanguinaria'
+    action: '[player] key abrir sanguinaria'
+
+  # 3. Caixa Tecnológica (Slot 12)
+  'caixa_tecnologica':
+    slot: 12
+    material: REDSTONE_TORCH
+    name: '&#7FB4F4&lCAIXA TECNOLÓGICA'
+    lore:
+      - '&7Fornecida pelos ciclos das suas máquinas.'
+      - '&7Upgrades e certificados de overclock.'
+      - ''
+      - '&7Drop: &f0.03% por ciclo'
+      - '&7Prêmios: &eBaterias, Overclock 24h, Tokens'
+      - ''
+      - '&a▶ Clique para abrir ou inspecionar'
+    commands:
+      - '[player] key abrir tecnologica'
+    action: '[player] key abrir tecnologica'
+
+  # 4. Caixa da Natureza (Slot 13)
+  'caixa_natureza':
+    slot: 13
+    material: WHEAT
+    name: '&#7FB4F4&lCAIXA DA NATUREZA'
+    lore:
+      - '&7Recompensa de colheitas em larga escala.'
+      - '&7Itens de agricultura avançada e alquimia.'
+      - ''
+      - '&7Drop: &f0.1% em colheitas no silo'
+      - '&7Prêmios: &aFertilizante Súbito, Foice Dourada'
+      - ''
+      - '&a▶ Clique para abrir ou inspecionar'
+    commands:
+      - '[player] key abrir natureza'
+    action: '[player] key abrir natureza'
+
+  # 5. Caixa Divina (Slot 14)
+  'caixa_divina':
+    slot: 14
+    material: NETHER_STAR
+    name: '&#7FB4F4&lCAIXA DIVINA &8[Lendária]'
+    lore:
+      - '&7A mais gloriosa caixa misteriosa da rede.'
+      - '&7Prêmios lendários e itens de prestígio.'
+      - ''
+      - '&7Obtenção: &dForja de Chaves &8(Almas)'
+      - '&7Prêmios: &6Selo da Fortuna, Orbe de Prestígio'
+      - ''
+      - '&a▶ Clique para abrir ou inspecionar'
+    commands:
+      - '[player] key abrir divina'
+    action: '[player] key abrir divina'
+
+  # Abertura em Massa (Slot 28)
+  'abertura_massa':
+    slot: 28
+    material: CHEST_MINECART
+    name: '&#7FB4F4&lABERTURA EM MASSA'
+    lore:
+      - '&7Abra dezenas de chaves de forma instantânea'
+      - '&7sem precisar assistir às animações individuais.'
+      - ''
+      - '&7Opções: &f10x, 50x ou Todas as Chaves'
+      - '&7Modo: &aUltra Rápido'
+      - ''
+      - '&a▶ Clique para abrir em lote'
+    commands:
+      - '[player] key abrir massa'
+    action: '[player] key abrir massa'
+
+  # Forja de Chaves (Slot 30)
+  'forja_chaves':
+    slot: 30
+    material: ANVIL
+    name: '&#7FB4F4&lFORJA DE CHAVES DIVINAS'
+    lore:
+      - '&7Una chaves convencionais e Almas místicas'
+      - '&7para forjar Chaves Divinas de alta raridade.'
+      - ''
+      - '&7Suas Almas: &d%tw_souls%'
+      - '&7Status: &aDisponível'
+      - ''
+      - '&a▶ Clique para abrir a forja'
+    commands:
+      - '[player] key forja'
+    action: '[player] key forja'
+
+  # Correio de Recompensas (Slot 32)
+  'correio_recompensas':
+    slot: 32
+    material: ENDER_CHEST
+    name: '&#7FB4F4&lCORREIO DE RECOMPENSAS'
+    lore:
+      - '&7Itens de caixas abertas com inventário cheio'
+      - '&7são salvos com segurança em seu correio.'
+      - ''
+      - '&7Tabela: &ftw_crate_mail'
+      - '&7Segurança: &aPersistência no PostgreSQL'
+      - ''
+      - '&a▶ Clique para resgatar entregas'
+    commands:
+      - '[player] key correio'
+    action: '[player] key correio'
+
+  # Pity System & Probabilidades (Slot 34)
+  'pity_system':
+    slot: 34
+    material: BOOK
+    name: '&#7FB4F4&lPITY SYSTEM & PROBABILIDADES'
+    lore:
+      - '&7Garantia de premiação lendária a cada'
+      - '&750 aberturas consecutivas sem prêmio raro.'
+      - ''
+      - '&7Seu Contador Pity: &e%tw_crate_pity%/50'
+      - '&7Transparência: &fTaxas públicas e justas'
+      - ''
+      - '&a▶ Clique para consultar chances'
+    commands:
+      - '[player] caixas'
+    action: '[player] caixas'
+
+  # Botão Universal de Retorno (Slot 45 - Design System)
+  'voltar':
+    slot: 45
+    material: ARROW
+    name: '&e➔ &lVoltar ao Menu'
+    lore:
+      - '&7Retorne à central principal de navegação'
+      - '&7para escolher outro subsistema.'
+      - ''
+      - '&7Destino: &eMenu Principal'
+      - ''
+      - '&e▶ Clique para voltar'
+    commands:
+      - '[openguimenu] principal'
+    left_click_commands:
+      - '[openguimenu] principal'
+    right_click_commands:
+      - '[openguimenu] principal'
+    action: '[menu] principal'
+
+  # Botão Universal de Fechamento (Slot 49 - Design System)
+  'fechar':
+    slot: 49
+    material: BARRIER
+    name: '&c➔ &lFechar'
+    lore:
+      - '&7Encerre a visualização desta interface'
+      - '&7e retorne à sua jogatina.'
+      - ''
+      - '&7Ação: &cFechar GUI'
+      - ''
+      - '&c▶ Clique para fechar'
+    commands:
+      - '[close]'
+    left_click_commands:
+      - '[close]'
+    right_click_commands:
+      - '[close]'
+    action: '[close]'

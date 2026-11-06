@@ -1,13 +1,16 @@
-menu_title: '&8» &b&lMINAS'
+menu_title: '&8➔ &b&lMINAS'
 open_command:
   - minaslista
   - minhasminas
+register_command: true
 size: 54
 
 items:
+  # Moldura de vidro decorativa (Design System)
   'borda':
     material: BLACK_STAINED_GLASS_PANE
     slots:
+      # Linha 1 (Borda superior)
       - 0
       - 1
       - 2
@@ -17,16 +20,20 @@ items:
       - 6
       - 7
       - 8
+      # Linha 2 (Laterais)
       - 9
       - 17
+      # Linha 3 (Laterais)
       - 18
       - 26
+      # Linha 4 (Laterais e divisórias)
       - 27
       - 30
       - 32
       - 33
       - 34
       - 35
+      # Linha 5 (Faixa divisória inferior)
       - 36
       - 37
       - 38
@@ -36,7 +43,7 @@ items:
       - 42
       - 43
       - 44
-      - 45
+      # Linha 6 (Borda inferior)
       - 46
       - 47
       - 48
@@ -46,14 +53,24 @@ items:
       - 53
     display_name: ' '
 
+  # ========================================================
+  # MINAS DE RANKS (10 MINAS) COM ESTADO DUPLO (DESBLOQUEADA / BLOQUEADA)
+  # ========================================================
+
+  # 1. Mina Carvão (Slot 10)
   'mina_carvao':
     material: COAL_ORE
     slot: 10
-    display_name: '&8&lMINA CARVAO'
+    priority: 1
+    display_name: '&#7FB4F4&lMINA CARVÃO &a✔'
     lore:
-      - '&7Acesso liberado pelo rank Carvao.'
+      - '&7Mina inicial de recursos e minérios.'
+      - '&7Colete carvão, pedra e tokens básicos.'
       - ''
-      - '&eClique para ir ao spawn da mina.'
+      - '&7Requisito: &fRank Carvão'
+      - '&7Status: &aDesbloqueada'
+      - ''
+      - '&a▶ Clique para teleportar'
     view_requirement:
       requirements:
         permission:
@@ -66,14 +83,38 @@ items:
       - '[close]'
       - '[player] mine tp carvao'
 
+  'mina_carvao_bloqueada':
+    material: GRAY_DYE
+    slot: 10
+    priority: 2
+    display_name: '&c&lMINA CARVÃO &c✖'
+    lore:
+      - '&7Mina inicial de recursos e minérios.'
+      - '&7Requer evolução para acesso.'
+      - ''
+      - '&7Requisito: &cRank Carvão'
+      - '&7Status: &cBloqueada'
+      - ''
+      - '&c✕ Bloqueado - Requer o rank Carvão (/rankup)'
+    left_click_commands:
+      - '[sound] ENTITY_VILLAGER_NO'
+    right_click_commands:
+      - '[sound] ENTITY_VILLAGER_NO'
+
+  # 2. Mina Neve (Slot 11)
   'mina_neve':
     material: ICE
     slot: 11
-    display_name: '&f&lMINA NEVE'
+    priority: 1
+    display_name: '&#7FB4F4&lMINA NEVE &a✔'
     lore:
-      - '&7Acesso liberado pelo rank Neve.'
+      - '&7Área congelada rica em minérios claros'
+      - '&7e recompensas aprimoradas de mineração.'
       - ''
-      - '&eClique para ir ao spawn da mina.'
+      - '&7Requisito: &fRank Neve'
+      - '&7Status: &aDesbloqueada'
+      - ''
+      - '&a▶ Clique para teleportar'
     view_requirement:
       requirements:
         permission:
@@ -86,14 +127,38 @@ items:
       - '[close]'
       - '[player] mine tp neve'
 
+  'mina_neve_bloqueada':
+    material: GRAY_DYE
+    slot: 11
+    priority: 2
+    display_name: '&c&lMINA NEVE &c✖'
+    lore:
+      - '&7Área congelada rica em minérios claros'
+      - '&7e recompensas aprimoradas de mineração.'
+      - ''
+      - '&7Requisito: &cRank Neve'
+      - '&7Status: &cBloqueada'
+      - ''
+      - '&c✕ Bloqueado - Requer o rank Neve (/rankup)'
+    left_click_commands:
+      - '[sound] ENTITY_VILLAGER_NO'
+    right_click_commands:
+      - '[sound] ENTITY_VILLAGER_NO'
+
+  # 3. Mina Sino (Slot 12)
   'mina_sino':
     material: GOLD_ORE
     slot: 12
-    display_name: '&e&lMINA SINO'
+    priority: 1
+    display_name: '&#7FB4F4&lMINA SINO &a✔'
     lore:
-      - '&7Acesso liberado pelo rank Sino.'
+      - '&7Mina dourada com alto rendimento de ouro'
+      - '&7e tokens festivos para sua oficina.'
       - ''
-      - '&eClique para ir ao spawn da mina.'
+      - '&7Requisito: &fRank Sino'
+      - '&7Status: &aDesbloqueada'
+      - ''
+      - '&a▶ Clique para teleportar'
     view_requirement:
       requirements:
         permission:
@@ -106,14 +171,38 @@ items:
       - '[close]'
       - '[player] mine tp sino'
 
+  'mina_sino_bloqueada':
+    material: GRAY_DYE
+    slot: 12
+    priority: 2
+    display_name: '&c&lMINA SINO &c✖'
+    lore:
+      - '&7Mina dourada com alto rendimento de ouro'
+      - '&7e tokens festivos para sua oficina.'
+      - ''
+      - '&7Requisito: &cRank Sino'
+      - '&7Status: &cBloqueada'
+      - ''
+      - '&c✕ Bloqueado - Requer o rank Sino (/rankup)'
+    left_click_commands:
+      - '[sound] ENTITY_VILLAGER_NO'
+    right_click_commands:
+      - '[sound] ENTITY_VILLAGER_NO'
+
+  # 4. Mina Biscoito (Slot 13)
   'mina_biscoito':
     material: IRON_ORE
     slot: 13
-    display_name: '&6&lMINA BISCOITO'
+    priority: 1
+    display_name: '&#7FB4F4&lMINA BISCOITO &a✔'
     lore:
-      - '&7Acesso liberado pelo rank Biscoito.'
+      - '&7Mina adocicada rica em ferro fundido'
+      - '&7e minérios essenciais para evolução.'
       - ''
-      - '&eClique para ir ao spawn da mina.'
+      - '&7Requisito: &fRank Biscoito'
+      - '&7Status: &aDesbloqueada'
+      - ''
+      - '&a▶ Clique para teleportar'
     view_requirement:
       requirements:
         permission:
@@ -126,14 +215,38 @@ items:
       - '[close]'
       - '[player] mine tp biscoito'
 
+  'mina_biscoito_bloqueada':
+    material: GRAY_DYE
+    slot: 13
+    priority: 2
+    display_name: '&c&lMINA BISCOITO &c✖'
+    lore:
+      - '&7Mina adocicada rica em ferro fundido'
+      - '&7e minérios essenciais para evolução.'
+      - ''
+      - '&7Requisito: &cRank Biscoito'
+      - '&7Status: &cBloqueada'
+      - ''
+      - '&c✕ Bloqueado - Requer o rank Biscoito (/rankup)'
+    left_click_commands:
+      - '[sound] ENTITY_VILLAGER_NO'
+    right_click_commands:
+      - '[sound] ENTITY_VILLAGER_NO'
+
+  # 5. Mina Duende (Slot 14)
   'mina_duende':
     material: LAPIS_ORE
     slot: 14
-    display_name: '&a&lMINA DUENDE'
+    priority: 1
+    display_name: '&#7FB4F4&lMINA DUENDE &a✔'
     lore:
-      - '&7Acesso liberado pelo rank Duende.'
+      - '&7Mina dos artífices com lápis-lazúli místico'
+      - '&7e grande taxa de drop de fragmentos raros.'
       - ''
-      - '&eClique para ir ao spawn da mina.'
+      - '&7Requisito: &fRank Duende'
+      - '&7Status: &aDesbloqueada'
+      - ''
+      - '&a▶ Clique para teleportar'
     view_requirement:
       requirements:
         permission:
@@ -146,14 +259,38 @@ items:
       - '[close]'
       - '[player] mine tp duende'
 
+  'mina_duende_bloqueada':
+    material: GRAY_DYE
+    slot: 14
+    priority: 2
+    display_name: '&c&lMINA DUENDE &c✖'
+    lore:
+      - '&7Mina dos artífices com lápis-lazúli místico'
+      - '&7e grande taxa de drop de fragmentos raros.'
+      - ''
+      - '&7Requisito: &cRank Duende'
+      - '&7Status: &cBloqueada'
+      - ''
+      - '&c✕ Bloqueado - Requer o rank Duende (/rankup)'
+    left_click_commands:
+      - '[sound] ENTITY_VILLAGER_NO'
+    right_click_commands:
+      - '[sound] ENTITY_VILLAGER_NO'
+
+  # 6. Mina Rena (Slot 15)
   'mina_rena':
     material: REDSTONE_ORE
     slot: 15
-    display_name: '&c&lMINA RENA'
+    priority: 1
+    display_name: '&#7FB4F4&lMINA RENA &a✔'
     lore:
-      - '&7Acesso liberado pelo rank Rena.'
+      - '&7Mina energizada com veios de redstone'
+      - '&7e excelente valor de venda no mercado.'
       - ''
-      - '&eClique para ir ao spawn da mina.'
+      - '&7Requisito: &fRank Rena'
+      - '&7Status: &aDesbloqueada'
+      - ''
+      - '&a▶ Clique para teleportar'
     view_requirement:
       requirements:
         permission:
@@ -166,14 +303,38 @@ items:
       - '[close]'
       - '[player] mine tp rena'
 
+  'mina_rena_bloqueada':
+    material: GRAY_DYE
+    slot: 15
+    priority: 2
+    display_name: '&c&lMINA RENA &c✖'
+    lore:
+      - '&7Mina energizada com veios de redstone'
+      - '&7e excelente valor de venda no mercado.'
+      - ''
+      - '&7Requisito: &cRank Rena'
+      - '&7Status: &cBloqueada'
+      - ''
+      - '&c✕ Bloqueado - Requer o rank Rena (/rankup)'
+    left_click_commands:
+      - '[sound] ENTITY_VILLAGER_NO'
+    right_click_commands:
+      - '[sound] ENTITY_VILLAGER_NO'
+
+  # 7. Mina Trenó (Slot 16)
   'mina_treno':
     material: DIAMOND_BLOCK
     slot: 16
-    display_name: '&4&lMINA TRENO'
+    priority: 1
+    display_name: '&#7FB4F4&lMINA TRENÓ &a✔'
     lore:
-      - '&7Acesso liberado pelo rank Treno.'
+      - '&7Mina de alta velocidade repleta de blocos'
+      - '&7de diamante e tokens maciços.'
       - ''
-      - '&eClique para ir ao spawn da mina.'
+      - '&7Requisito: &fRank Trenó'
+      - '&7Status: &aDesbloqueada'
+      - ''
+      - '&a▶ Clique para teleportar'
     view_requirement:
       requirements:
         permission:
@@ -186,14 +347,38 @@ items:
       - '[close]'
       - '[player] mine tp treno'
 
+  'mina_treno_bloqueada':
+    material: GRAY_DYE
+    slot: 16
+    priority: 2
+    display_name: '&c&lMINA TRENÓ &c✖'
+    lore:
+      - '&7Mina de alta velocidade repleta de blocos'
+      - '&7de diamante e tokens maciços.'
+      - ''
+      - '&7Requisito: &cRank Trenó'
+      - '&7Status: &cBloqueada'
+      - ''
+      - '&c✕ Bloqueado - Requer o rank Trenó (/rankup)'
+    left_click_commands:
+      - '[sound] ENTITY_VILLAGER_NO'
+    right_click_commands:
+      - '[sound] ENTITY_VILLAGER_NO'
+
+  # 8. Mina Quebra-Nozes (Slot 19)
   'mina_quebranozes':
     material: PRISMARINE
     slot: 19
-    display_name: '&5&lMINA QUEBRA-NOZES'
+    priority: 1
+    display_name: '&#7FB4F4&lMINA QUEBRA-NOZES &a✔'
     lore:
-      - '&7Acesso liberado pelo rank Quebra-Nozes.'
+      - '&7Estrutura sólida de prismarinho reforçado'
+      - '&7com alta densidade de recursos industriais.'
       - ''
-      - '&eClique para ir ao spawn da mina.'
+      - '&7Requisito: &fRank Quebra-Nozes'
+      - '&7Status: &aDesbloqueada'
+      - ''
+      - '&a▶ Clique para teleportar'
     view_requirement:
       requirements:
         permission:
@@ -206,14 +391,38 @@ items:
       - '[close]'
       - '[player] mine tp quebranozes'
 
+  'mina_quebranozes_bloqueada':
+    material: GRAY_DYE
+    slot: 19
+    priority: 2
+    display_name: '&c&lMINA QUEBRA-NOZES &c✖'
+    lore:
+      - '&7Estrutura sólida de prismarinho reforçado'
+      - '&7com alta densidade de recursos industriais.'
+      - ''
+      - '&7Requisito: &cRank Quebra-Nozes'
+      - '&7Status: &cBloqueada'
+      - ''
+      - '&c✕ Bloqueado - Requer o rank Quebra-Nozes (/rankup)'
+    left_click_commands:
+      - '[sound] ENTITY_VILLAGER_NO'
+    right_click_commands:
+      - '[sound] ENTITY_VILLAGER_NO'
+
+  # 9. Mina Estrela (Slot 20)
   'mina_estrela':
     material: COPPER_ORE
     slot: 20
-    display_name: '&e&lMINA ESTRELA'
+    priority: 1
+    display_name: '&#7FB4F4&lMINA ESTRELA &a✔'
     lore:
-      - '&7Acesso liberado pelo rank Estrela.'
+      - '&7Mina cósmica de cobre puro com taxa'
+      - '&7astronômica de ganhos em dinheiro.'
       - ''
-      - '&eClique para ir ao spawn da mina.'
+      - '&7Requisito: &fRank Estrela'
+      - '&7Status: &aDesbloqueada'
+      - ''
+      - '&a▶ Clique para teleportar'
     view_requirement:
       requirements:
         permission:
@@ -226,14 +435,38 @@ items:
       - '[close]'
       - '[player] mine tp estrela'
 
+  'mina_estrela_bloqueada':
+    material: GRAY_DYE
+    slot: 20
+    priority: 2
+    display_name: '&c&lMINA ESTRELA &c✖'
+    lore:
+      - '&7Mina cósmica de cobre puro com taxa'
+      - '&7astronômica de ganhos em dinheiro.'
+      - ''
+      - '&7Requisito: &cRank Estrela'
+      - '&7Status: &cBloqueada'
+      - ''
+      - '&c✕ Bloqueado - Requer o rank Estrela (/rankup)'
+    left_click_commands:
+      - '[sound] ENTITY_VILLAGER_NO'
+    right_click_commands:
+      - '[sound] ENTITY_VILLAGER_NO'
+
+  # 10. Mina Noel (Slot 21)
   'mina_noel':
     material: DEEPSLATE_COPPER_ORE
     slot: 21
-    display_name: '&c&lMINA NOEL'
+    priority: 1
+    display_name: '&#7FB4F4&lMINA NOEL &a✔'
     lore:
-      - '&7Acesso liberado pelo rank Noel.'
+      - '&7Ápice da progressão regular de minas.'
+      - '&7Recompensas máximas para mineradores veteranos.'
       - ''
-      - '&eClique para ir ao spawn da mina.'
+      - '&7Requisito: &fRank Noel'
+      - '&7Status: &aDesbloqueada'
+      - ''
+      - '&a▶ Clique para teleportar'
     view_requirement:
       requirements:
         permission:
@@ -246,14 +479,42 @@ items:
       - '[close]'
       - '[player] mine tp noel'
 
+  'mina_noel_bloqueada':
+    material: GRAY_DYE
+    slot: 21
+    priority: 2
+    display_name: '&c&lMINA NOEL &c✖'
+    lore:
+      - '&7Ápice da progressão regular de minas.'
+      - '&7Recompensas máximas para mineradores veteranos.'
+      - ''
+      - '&7Requisito: &cRank Noel'
+      - '&7Status: &cBloqueada'
+      - ''
+      - '&c✕ Bloqueado - Requer o rank Noel (/rankup)'
+    left_click_commands:
+      - '[sound] ENTITY_VILLAGER_NO'
+    right_click_commands:
+      - '[sound] ENTITY_VILLAGER_NO'
+
+  # ========================================================
+  # MINAS VIPS (3 MINAS) COM ESTADO DUPLO
+  # ========================================================
+
+  # 11. Mina VIP Polar (Slot 22)
   'mina_vip_polar':
     material: DEEPSLATE_GOLD_ORE
     slot: 22
-    display_name: '&b&lMINA VIP POLAR'
+    priority: 1
+    display_name: '&#7FB4F4&lMINA VIP POLAR &a✔'
     lore:
-      - '&7Acesso liberado pelo grupo VIP Polar.'
+      - '&7Mina exclusiva para apoiadores VIP Polar'
+      - '&7com regeneração acelerada e multiplicadores.'
       - ''
-      - '&eClique para ir ao spawn da mina.'
+      - '&7Requisito: &bVIP Polar'
+      - '&7Status: &aDesbloqueada'
+      - ''
+      - '&a▶ Clique para teleportar'
     view_requirement:
       requirements:
         permission:
@@ -266,14 +527,38 @@ items:
       - '[close]'
       - '[player] mine tp vip_polar'
 
+  'mina_vip_polar_bloqueada':
+    material: GRAY_DYE
+    slot: 22
+    priority: 2
+    display_name: '&c&lMINA VIP POLAR &c✖'
+    lore:
+      - '&7Mina exclusiva para apoiadores VIP Polar'
+      - '&7com regeneração acelerada e multiplicadores.'
+      - ''
+      - '&7Requisito: &cVIP Polar'
+      - '&7Status: &cBloqueada'
+      - ''
+      - '&c✕ Bloqueado - Requer VIP Polar (/loja)'
+    left_click_commands:
+      - '[sound] ENTITY_VILLAGER_NO'
+    right_click_commands:
+      - '[sound] ENTITY_VILLAGER_NO'
+
+  # 12. Mina VIP Nevasca (Slot 23)
   'mina_vip_nevasca':
     material: DEEPSLATE_LAPIS_ORE
     slot: 23
-    display_name: '&9&lMINA VIP NEVASCA'
+    priority: 1
+    display_name: '&#7FB4F4&lMINA VIP NEVASCA &a✔'
     lore:
-      - '&7Acesso liberado pelo grupo VIP Nevasca.'
+      - '&7Mina exclusiva para apoiadores VIP Nevasca'
+      - '&7com rendimento excepcional de tokens.'
       - ''
-      - '&eClique para ir ao spawn da mina.'
+      - '&7Requisito: &bVIP Nevasca'
+      - '&7Status: &aDesbloqueada'
+      - ''
+      - '&a▶ Clique para teleportar'
     view_requirement:
       requirements:
         permission:
@@ -286,14 +571,38 @@ items:
       - '[close]'
       - '[player] mine tp vip_nevasca'
 
+  'mina_vip_nevasca_bloqueada':
+    material: GRAY_DYE
+    slot: 23
+    priority: 2
+    display_name: '&c&lMINA VIP NEVASCA &c✖'
+    lore:
+      - '&7Mina exclusiva para apoiadores VIP Nevasca'
+      - '&7com rendimento excepcional de tokens.'
+      - ''
+      - '&7Requisito: &cVIP Nevasca'
+      - '&7Status: &cBloqueada'
+      - ''
+      - '&c✕ Bloqueado - Requer VIP Nevasca (/loja)'
+    left_click_commands:
+      - '[sound] ENTITY_VILLAGER_NO'
+    right_click_commands:
+      - '[sound] ENTITY_VILLAGER_NO'
+
+  # 13. Mina VIP Festivo (Slot 24)
   'mina_vip_festivo':
     material: NETHER_GOLD_ORE
     slot: 24
-    display_name: '&6&lMINA VIP FESTIVO'
+    priority: 1
+    display_name: '&#7FB4F4&lMINA VIP FESTIVO &a✔'
     lore:
-      - '&7Acesso liberado pelo grupo VIP Festivo.'
+      - '&7Mina de ouro supremo do grupo VIP Festivo'
+      - '&7com os maiores bônus passivos do servidor.'
       - ''
-      - '&eClique para ir ao spawn da mina.'
+      - '&7Requisito: &6VIP Festivo'
+      - '&7Status: &aDesbloqueada'
+      - ''
+      - '&a▶ Clique para teleportar'
     view_requirement:
       requirements:
         permission:
@@ -306,14 +615,42 @@ items:
       - '[close]'
       - '[player] mine tp vip_festivo'
 
+  'mina_vip_festivo_bloqueada':
+    material: GRAY_DYE
+    slot: 24
+    priority: 2
+    display_name: '&c&lMINA VIP FESTIVO &c✖'
+    lore:
+      - '&7Mina de ouro supremo do grupo VIP Festivo'
+      - '&7com os maiores bônus passivos do servidor.'
+      - ''
+      - '&7Requisito: &cVIP Festivo'
+      - '&7Status: &cBloqueada'
+      - ''
+      - '&c✕ Bloqueado - Requer VIP Festivo (/loja)'
+    left_click_commands:
+      - '[sound] ENTITY_VILLAGER_NO'
+    right_click_commands:
+      - '[sound] ENTITY_VILLAGER_NO'
+
+  # ========================================================
+  # MINAS DE PRESTÍGIO (3 MINAS) COM ESTADO DUPLO
+  # ========================================================
+
+  # 14. Mina Grinch (Slot 25)
   'mina_grinch':
     material: AMETHYST_BLOCK
     slot: 25
-    display_name: '&2&lMINA GRINCH'
+    priority: 1
+    display_name: '&#7FB4F4&lMINA GRINCH &a✔'
     lore:
-      - '&7Acesso liberado pelo prestigio Grinch.'
+      - '&7Mina lendária do Prestígio Grinch (1.5x)'
+      - '&7com ametistas brilhantes e almas extras.'
       - ''
-      - '&eClique para ir ao spawn da mina.'
+      - '&7Requisito: &2Prestígio Grinch'
+      - '&7Status: &aDesbloqueada'
+      - ''
+      - '&a▶ Clique para teleportar'
     view_requirement:
       requirements:
         permission:
@@ -326,14 +663,38 @@ items:
       - '[close]'
       - '[player] mine tp grinch'
 
+  'mina_grinch_bloqueada':
+    material: GRAY_DYE
+    slot: 25
+    priority: 2
+    display_name: '&c&lMINA GRINCH &c✖'
+    lore:
+      - '&7Mina lendária do Prestígio Grinch (1.5x)'
+      - '&7com ametistas brilhantes e almas extras.'
+      - ''
+      - '&7Requisito: &cPrestígio Grinch'
+      - '&7Status: &cBloqueada'
+      - ''
+      - '&c✕ Bloqueado - Requer Prestígio Grinch (/prestigio)'
+    left_click_commands:
+      - '[sound] ENTITY_VILLAGER_NO'
+    right_click_commands:
+      - '[sound] ENTITY_VILLAGER_NO'
+
+  # 15. Mina Yeti (Slot 28)
   'mina_yeti':
     material: SMOOTH_BASALT
     slot: 28
-    display_name: '&b&lMINA YETI'
+    priority: 1
+    display_name: '&#7FB4F4&lMINA YETI &a✔'
     lore:
-      - '&7Acesso liberado pelo prestigio Yeti.'
+      - '&7Caverna mítica do Prestígio Yeti (2.0x)'
+      - '&7com blocos vulcânicos e riqueza absoluta.'
       - ''
-      - '&eClique para ir ao spawn da mina.'
+      - '&7Requisito: &bPrestígio Yeti'
+      - '&7Status: &aDesbloqueada'
+      - ''
+      - '&a▶ Clique para teleportar'
     view_requirement:
       requirements:
         permission:
@@ -346,14 +707,38 @@ items:
       - '[close]'
       - '[player] mine tp yeti'
 
+  'mina_yeti_bloqueada':
+    material: GRAY_DYE
+    slot: 28
+    priority: 2
+    display_name: '&c&lMINA YETI &c✖'
+    lore:
+      - '&7Caverna mítica do Prestígio Yeti (2.0x)'
+      - '&7com blocos vulcânicos e riqueza absoluta.'
+      - ''
+      - '&7Requisito: &cPrestígio Yeti'
+      - '&7Status: &cBloqueada'
+      - ''
+      - '&c✕ Bloqueado - Requer Prestígio Yeti (/prestigio)'
+    left_click_commands:
+      - '[sound] ENTITY_VILLAGER_NO'
+    right_click_commands:
+      - '[sound] ENTITY_VILLAGER_NO'
+
+  # 16. Mina Krampus (Slot 29)
   'mina_krampus':
     material: NETHER_BRICKS
     slot: 29
-    display_name: '&4&lMINA KRAMPUS'
+    priority: 1
+    display_name: '&#7FB4F4&lMINA KRAMPUS &a✔'
     lore:
-      - '&7Acesso liberado pelo prestigio Krampus.'
+      - '&7Dimensão sombria do Prestígio Krampus (3.0x)'
+      - '&7o maior multiplicador de toda a rede.'
       - ''
-      - '&eClique para ir ao spawn da mina.'
+      - '&7Requisito: &4Prestígio Krampus'
+      - '&7Status: &aDesbloqueada'
+      - ''
+      - '&a▶ Clique para teleportar'
     view_requirement:
       requirements:
         permission:
@@ -366,22 +751,75 @@ items:
       - '[close]'
       - '[player] mine tp krampus'
 
+  'mina_krampus_bloqueada':
+    material: GRAY_DYE
+    slot: 29
+    priority: 2
+    display_name: '&c&lMINA KRAMPUS &c✖'
+    lore:
+      - '&7Dimensão sombria do Prestígio Krampus (3.0x)'
+      - '&7o maior multiplicador de toda a rede.'
+      - ''
+      - '&7Requisito: &cPrestígio Krampus'
+      - '&7Status: &cBloqueada'
+      - ''
+      - '&c✕ Bloqueado - Requer Prestígio Krampus (/prestigio)'
+    left_click_commands:
+      - '[sound] ENTITY_VILLAGER_NO'
+    right_click_commands:
+      - '[sound] ENTITY_VILLAGER_NO'
+
+  # ========================================================
+  # ITENS INFORMATIVOS E NAVEGAÇÃO CANÔNICA
+  # ========================================================
+
+  # Informações das Minas (Slot 31)
   'informacao':
     material: BOOK
     slot: 31
-    display_name: '&e&lMINAS LIBERADAS'
+    display_name: '&#7FB4F4&lMINAS &8• &fInformações'
     lore:
-      - '&7A lista mostra somente as minas'
-      - '&7que o seu grupo pode acessar.'
+      - '&7Central de informações sobre o acesso'
+      - '&7e reset das minas regeneráveis.'
       - ''
-      - '&7Os ranks liberam as minas anteriores.'
-      - '&7VIPs e prestigios liberam sua mina.'
+      - '&7Minas de Rank: &f10 minas'
+      - '&7Minas VIPs: &b3 minas'
+      - '&7Minas de Prestígio: &63 minas'
+      - ''
+      - '&eTW Network • RealMines'
 
+  # Botão Universal de Retorno (Slot 45 - Design System)
   'voltar':
     material: ARROW
-    slot: 49
-    display_name: '&e&lVoltar ao menu'
+    slot: 45
+    display_name: '&e➔ &lVoltar ao Menu'
+    lore:
+      - '&7Retorne à central principal de navegação'
+      - '&7para escolher outro subsistema.'
+      - ''
+      - '&7Destino: &eMenu Principal'
+      - ''
+      - '&e▶ Clique para voltar'
     left_click_commands:
       - '[openguimenu] principal'
     right_click_commands:
       - '[openguimenu] principal'
+
+  # Botão Universal de Fechamento (Slot 49 - Design System)
+  'fechar':
+    material: BARRIER
+    slot: 49
+    display_name: '&c➔ &lFechar'
+    lore:
+      - '&7Encerre a visualização desta interface'
+      - '&7e retorne à sua jogatina.'
+      - ''
+      - '&7Ação: &cFechar GUI'
+      - ''
+      - '&c▶ Clique para fechar'
+    left_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+      - '[close]'
+    right_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+      - '[close]'

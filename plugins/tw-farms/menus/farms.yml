@@ -1,0 +1,297 @@
+# ==============================================================================
+# TW Network — Configuração Padronizada de Menu: Central de Agricultura (tw-farms)
+# Em conformidade estrita com o Design System (R1) e Arquitetura de Navegação (R2)
+# ==============================================================================
+
+title: '&8➔ &#7FB4F4&lCENTRAL DE AGRICULTURA'
+size: 54
+
+items:
+  # Moldura de vidro decorativa (Design System: 54 slots)
+  'moldura':
+    material: BLACK_STAINED_GLASS_PANE
+    slots:
+      # Linha 1
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      # Linha 2 (Laterais)
+      - 9
+      - 17
+      # Linha 3 (Laterais)
+      - 18
+      - 26
+      # Linha 4 (Laterais e divisórias)
+      - 27
+      - 33
+      - 34
+      - 35
+      # Linha 5 (Faixa divisória inferior)
+      - 36
+      - 37
+      - 38
+      - 39
+      - 40
+      - 41
+      - 42
+      - 43
+      - 44
+      # Linha 6 (Borda inferior)
+      - 46
+      - 47
+      - 48
+      - 50
+      - 51
+      - 52
+      - 53
+    name: ' '
+
+  # 1. Trigo (Slot 10)
+  'cultura_trigo':
+    slot: 10
+    material: WHEAT
+    name: '&#7FB4F4&lCULTURA: TRIGO'
+    lore:
+      - '&7Plantação básica inicial do servidor.'
+      - '&7Gera renda regular para novos agricultores.'
+      - ''
+      - '&7Requisito: &fRank Carvão'
+      - '&7Venda por un: &a$20.0 &8| Ciclo: &f15s'
+      - ''
+      - '&a▶ Clique para comprar sementes'
+    commands:
+      - '[player] farm comprar semente_trigo'
+    action: '[player] farm comprar semente_trigo'
+
+  # 2. Cenoura (Slot 11)
+  'cultura_cenoura':
+    slot: 11
+    material: CARROT
+    name: '&#7FB4F4&lCULTURA: CENOURA'
+    lore:
+      - '&7Cultura rápida com alto rendimento unitário.'
+      - '&7Excelente sinergia com fertilizantes médios.'
+      - ''
+      - '&7Requisito: &fRank Sino'
+      - '&7Venda por un: &a$80.0 &8| Ciclo: &f14s'
+      - ''
+      - '&a▶ Clique para comprar sementes'
+    commands:
+      - '[player] farm comprar semente_cenoura'
+    action: '[player] farm comprar semente_cenoura'
+
+  # 3. Batata (Slot 12)
+  'cultura_batata':
+    slot: 12
+    material: POTATO
+    name: '&#7FB4F4&lCULTURA: BATATA'
+    lore:
+      - '&7Tubérculo resistente de colheita abundante.'
+      - '&7Multiplica a capacidade de venda do silo.'
+      - ''
+      - '&7Requisito: &fRank Sino'
+      - '&7Venda por un: &a$80.0 &8| Ciclo: &f14s'
+      - ''
+      - '&a▶ Clique para comprar sementes'
+    commands:
+      - '[player] farm comprar semente_batata'
+    action: '[player] farm comprar semente_batata'
+
+  # 4. Cana-de-Açúcar (Slot 13)
+  'cultura_cana':
+    slot: 13
+    material: SUGAR_CANE
+    name: '&#7FB4F4&lCULTURA: CANA-DE-AÇÚCAR'
+    lore:
+      - '&7Plantação semi-automática de alto lucro.'
+      - '&7Ideal para grandes áreas em seu terreno.'
+      - ''
+      - '&7Requisito: &fRank Biscoito'
+      - '&7Venda por un: &a$350.0 &8| Ciclo: &f12s'
+      - ''
+      - '&a▶ Clique para comprar sementes'
+    commands:
+      - '[player] farm comprar semente_cana'
+    action: '[player] farm comprar semente_cana'
+
+  # 5. Cacto (Slot 14)
+  'cultura_cacto':
+    slot: 14
+    material: CACTUS
+    name: '&#7FB4F4&lCULTURA: CACTO'
+    lore:
+      - '&7Cultura desértica autossuficiente.'
+      - '&7Colheita passiva contínua com auto-sell.'
+      - ''
+      - '&7Requisito: &fRank Rena'
+      - '&7Venda por un: &a$1.500.0 &8| Ciclo: &f10s'
+      - ''
+      - '&a▶ Clique para comprar sementes'
+    commands:
+      - '[player] farm comprar semente_cacto'
+    action: '[player] farm comprar semente_cacto'
+
+  # 6. Melancia (Slot 15)
+  'cultura_melancia':
+    slot: 15
+    material: MELON_SLICE
+    name: '&#7FB4F4&lCULTURA: MELANCIA'
+    lore:
+      - '&7Fruta pesada de alto retorno financeiro.'
+      - '&7Gera múltiplos pedaços por cada quebra.'
+      - ''
+      - '&7Requisito: &fRank Rena'
+      - '&7Venda por un: &a$1.800.0 &8| Ciclo: &f10s'
+      - ''
+      - '&a▶ Clique para comprar sementes'
+    commands:
+      - '[player] farm comprar semente_melancia'
+    action: '[player] farm comprar semente_melancia'
+
+  # 7. Fungo do Nether (Slot 16)
+  'cultura_fungo':
+    slot: 16
+    material: NETHER_WART
+    name: '&#7FB4F4&lCULTURA: FUNGO DO NETHER'
+    lore:
+      - '&7O mais lucrativo cultivo do servidor.'
+      - '&7Crescimento nobre para magnatas agrícolas.'
+      - ''
+      - '&7Requisito: &fRank Noel'
+      - '&7Venda por un: &a$15.000.0 &8| Ciclo: &f8s'
+      - ''
+      - '&a▶ Clique para comprar sementes'
+    commands:
+      - '[player] farm comprar semente_fungo'
+    action: '[player] farm comprar semente_fungo'
+
+  # Fertilizante Pequeno (Slot 28)
+  'fertilizante_pequeno':
+    slot: 28
+    material: BONE_MEAL
+    name: '&#7FB4F4&lFERTILIZANTE BÁSICO'
+    lore:
+      - '&7Acelera o ciclo de maturação de todas'
+      - '&7as plantas próximas em seu terreno.'
+      - ''
+      - '&7Aceleração: &a+20% Velocidade'
+      - '&7Preço: &e$25.000'
+      - ''
+      - '&a▶ Clique para adquirir fertilizante'
+    commands:
+      - '[player] farm comprar adubo1'
+    action: '[player] farm comprar adubo1'
+
+  # Fertilizante Industrial (Slot 29)
+  'fertilizante_industrial':
+    slot: 29
+    material: GLOWSTONE_DUST
+    name: '&#7FB4F4&lFERTILIZANTE INDUSTRIAL'
+    lore:
+      - '&7Pó energizado para grandes latifúndios.'
+      - '&7Reduz pela metade o tempo de colheita.'
+      - ''
+      - '&7Aceleração: &a+50% Velocidade'
+      - '&7Preço: &e$250.000'
+      - ''
+      - '&a▶ Clique para adquirir fertilizante'
+    commands:
+      - '[player] farm comprar adubo2'
+    action: '[player] farm comprar adubo2'
+
+  # Enxada Ceifadora 3x3 (Slot 30)
+  'enxada_ceifadora':
+    slot: 30
+    material: GOLDEN_HOE
+    name: '&#7FB4F4&lENXADA DO FAZENDEIRO &8[3x3]'
+    lore:
+      - '&7Ferramenta mística com colheita em área.'
+      - '&7Ceifa blocos 3x3 com replantio automático.'
+      - ''
+      - '&7Raio: &f3x3 Blocos'
+      - '&7Preço: &e$5.000.000'
+      - ''
+      - '&a▶ Clique para adquirir enxada'
+    commands:
+      - '[player] farm comprar enxada_3x3'
+    action: '[player] farm comprar enxada_3x3'
+
+  # Silo Virtual & Venda (Slot 31)
+  'silo_virtual':
+    slot: 31
+    material: CHEST
+    name: '&#7FB4F4&lSILO VIRTUAL &8• &fArmazenamento'
+    lore:
+      - '&7Todas as colheitas vão direto ao silo'
+      - '&7virtual sem sujar o chão com drops soltos.'
+      - ''
+      - '&7Capacidade Base: &e50.000 itens'
+      - '&7Auto-Sell: &aAtivado'
+      - ''
+      - '&a▶ Clique para vender safra acumulada'
+    commands:
+      - '[player] farm vender'
+    action: '[player] farm vender'
+
+  # Alquimia de Fertilizantes (Slot 32)
+  'alquimia_fazenda':
+    slot: 32
+    material: BREWING_STAND
+    name: '&#7FB4F4&lALQUIMIA AGRÍCOLA'
+    lore:
+      - '&7Transmute experiência vanilla e Almas'
+      - '&7para produzir fertilizantes nivelados.'
+      - ''
+      - '&7Almas em Conta: &d%tw_souls%'
+      - '&7Status: &aDisponível'
+      - ''
+      - '&a▶ Clique para abrir mesa de alquimia'
+    commands:
+      - '[player] farm alquimia'
+    action: '[player] farm alquimia'
+
+  # Botão Universal de Retorno (Slot 45 - Design System)
+  'voltar':
+    slot: 45
+    material: ARROW
+    name: '&e➔ &lVoltar ao Menu'
+    lore:
+      - '&7Retorne à central principal de navegação'
+      - '&7para escolher outro subsistema.'
+      - ''
+      - '&7Destino: &eMenu Principal'
+      - ''
+      - '&e▶ Clique para voltar'
+    commands:
+      - '[openguimenu] principal'
+    left_click_commands:
+      - '[openguimenu] principal'
+    right_click_commands:
+      - '[openguimenu] principal'
+    action: '[menu] principal'
+
+  # Botão Universal de Fechamento (Slot 49 - Design System)
+  'fechar':
+    slot: 49
+    material: BARRIER
+    name: '&c➔ &lFechar'
+    lore:
+      - '&7Encerre a visualização desta interface'
+      - '&7e retorne à sua jogatina.'
+      - ''
+      - '&7Ação: &cFechar GUI'
+      - ''
+      - '&c▶ Clique para fechar'
+    commands:
+      - '[close]'
+    left_click_commands:
+      - '[close]'
+    right_click_commands:
+      - '[close]'
+    action: '[close]'

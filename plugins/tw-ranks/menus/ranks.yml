@@ -1,0 +1,378 @@
+# ==============================================================================
+# TW Network — Configuração Padronizada de Menu: Trilha de Ranks (tw-ranks)
+# Em conformidade estrita com o Design System (R1) e Arquitetura de Navegação (R2)
+# ==============================================================================
+
+title: '&8➔ &#7FB4F4&lTRILHA DE RANKS'
+size: 54
+
+items:
+  # Moldura de vidro decorativa
+  'moldura':
+    material: BLACK_STAINED_GLASS_PANE
+    slots:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 17
+      - 18
+      - 22
+      - 26
+      - 27
+      - 28
+      - 29
+      - 30
+      - 31
+      - 32
+      - 33
+      - 34
+      - 35
+      - 36
+      - 37
+      - 38
+      - 39
+      - 40
+      - 41
+      - 42
+      - 43
+      - 44
+      - 46
+      - 47
+      - 53
+    name: ' '
+
+  # 1. Rank Carvão (Slot 10)
+  'rank_carvao':
+    slot: 10
+    material: COAL
+    name: '&#7FB4F4&lRANK CARVÃO &8[1/10]'
+    lore:
+      - '&7O início da jornada no servidor.'
+      - '&7Libera a primeira mina e comandos básicos.'
+      - ''
+      - '&7Custo: &e$25.000'
+      - '&7Multiplicador: &f1.0x'
+      - ''
+      - '&a▶ Clique para conferir requisitos'
+    commands:
+      - '[player] rankup'
+    action: '[player] rankup'
+
+  # 2. Rank Neve (Slot 11)
+  'rank_neve':
+    slot: 11
+    material: SNOWBALL
+    name: '&#7FB4F4&lRANK NEVE &8[2/10]'
+    lore:
+      - '&7Desbloqueia a Mina Neve e amplia'
+      - '&7o limite de plots disponíveis.'
+      - ''
+      - '&7Custo: &e$800.000'
+      - '&7Multiplicador: &f1.1x'
+      - ''
+      - '&a▶ Clique para evoluir'
+    commands:
+      - '[player] rankup'
+    action: '[player] rankup'
+
+  # 3. Rank Sino (Slot 12)
+  'rank_sino':
+    slot: 12
+    material: BELL
+    name: '&#7FB4F4&lRANK SINO &8[3/10]'
+    lore:
+      - '&7Acesso a novos minérios de ouro'
+      - '&7e máquinas industriais avançadas.'
+      - ''
+      - '&7Custo: &e$25.000.000'
+      - '&7Multiplicador: &f1.2x'
+      - ''
+      - '&a▶ Clique para evoluir'
+    commands:
+      - '[player] rankup'
+    action: '[player] rankup'
+
+  # 4. Rank Biscoito (Slot 13)
+  'rank_biscoito':
+    slot: 13
+    material: COOKIE
+    name: '&#7FB4F4&lRANK BISCOITO &8[4/10]'
+    lore:
+      - '&7Libera culturas avançadas de fazenda'
+      - '&7e a mina adocicada de ferro.'
+      - ''
+      - '&7Custo: &e$500.000.000'
+      - '&7Multiplicador: &f1.35x'
+      - ''
+      - '&a▶ Clique para evoluir'
+    commands:
+      - '[player] rankup'
+    action: '[player] rankup'
+
+  # 5. Rank Duende (Slot 14)
+  'rank_duende':
+    slot: 14
+    material: EMERALD
+    name: '&#7FB4F4&lRANK DUENDE &8[5/10]'
+    lore:
+      - '&7Mestres da manufatura e engenharia.'
+      - '&7Libera a Mina Duende de esmeraldas.'
+      - ''
+      - '&7Custo: &e$15.000.000.000'
+      - '&7Multiplicador: &f1.5x'
+      - ''
+      - '&a▶ Clique para evoluir'
+    commands:
+      - '[player] rankup'
+    action: '[player] rankup'
+
+  # 6. Rank Rena (Slot 15)
+  'rank_rena':
+    slot: 15
+    material: REDSTONE
+    name: '&#7FB4F4&lRANK RENA &8[6/10]'
+    lore:
+      - '&7Velocidade e força bruta.'
+      - '&7Libera geradores de alta frequência.'
+      - ''
+      - '&7Custo: &e$500.000.000.000'
+      - '&7Multiplicador: &f1.75x'
+      - ''
+      - '&a▶ Clique para evoluir'
+    commands:
+      - '[player] rankup'
+    action: '[player] rankup'
+
+  # 7. Rank Trenó (Slot 16)
+  'rank_treno':
+    slot: 16
+    material: MINECART
+    name: '&#7FB4F4&lRANK TRENÓ &8[7/10]'
+    lore:
+      - '&7Transporte massivo de recursos.'
+      - '&7Libera a Mina Trenó de diamantes.'
+      - ''
+      - '&7Custo: &e$20.000.000.000.000'
+      - '&7Multiplicador: &f2.0x'
+      - ''
+      - '&a▶ Clique para evoluir'
+    commands:
+      - '[player] rankup'
+    action: '[player] rankup'
+
+  # 8. Rank Quebra-Nozes (Slot 19)
+  'rank_quebranozes':
+    slot: 19
+    material: PRISMARINE_SHARD
+    name: '&#7FB4F4&lRANK QUEBRA-NOZES &8[8/10]'
+    lore:
+      - '&7Resistência lendária contra o vazio.'
+      - '&7Acesso a minérios extraterrestres.'
+      - ''
+      - '&7Custo: &e$800.000.000.000.000'
+      - '&7Multiplicador: &f2.5x'
+      - ''
+      - '&a▶ Clique para evoluir'
+    commands:
+      - '[player] rankup'
+    action: '[player] rankup'
+
+  # 9. Rank Estrela (Slot 20)
+  'rank_estrela':
+    slot: 20
+    material: NETHER_STAR
+    name: '&#7FB4F4&lRANK ESTRELA &8[9/10]'
+    lore:
+      - '&7Brilho divino e riqueza estelar.'
+      - '&7Último estágio antes do topo.'
+      - ''
+      - '&7Custo: &e$15.000.000.000.000.000'
+      - '&7Multiplicador: &f3.0x'
+      - ''
+      - '&a▶ Clique para evoluir'
+    commands:
+      - '[player] rankup'
+    action: '[player] rankup'
+
+  # 10. Rank Noel (Slot 21)
+  'rank_noel':
+    slot: 21
+    material: FIREWORK_STAR
+    name: '&#7FB4F4&lRANK NOEL &8[MAX]'
+    lore:
+      - '&7O ápice absoluto da esteira comum.'
+      - '&7Habilita a execução do prestígio.'
+      - ''
+      - '&7Custo: &a$0 &8(Requer Estrela)'
+      - '&7Bônus: &e$1.000.000 de Boas-Vindas'
+      - ''
+      - '&a▶ Clique para atingir o topo'
+    commands:
+      - '[player] rankup'
+    action: '[player] rankup'
+
+  # Prestígio 1: Grinch (Slot 23)
+  'prestigio_grinch':
+    slot: 23
+    material: AMETHYST_SHARD
+    name: '&2&lPRESTÍGIO GRINCH &8[I]'
+    lore:
+      - '&7Reinicie sua jornada e receba'
+      - '&7o multiplicador permanente de 1.5x.'
+      - ''
+      - '&7Custo: &e$50.000.000.000.000.000'
+      - '&7Multiplicador Permanente: &a1.5x'
+      - ''
+      - '&a▶ Clique para prestigiar'
+    commands:
+      - '[player] prestigio grinch'
+    action: '[player] prestigio grinch'
+
+  # Prestígio 2: Yeti (Slot 24)
+  'prestigio_yeti':
+    slot: 24
+    material: PACKED_ICE
+    name: '&b&lPRESTÍGIO YETI &8[II]'
+    lore:
+      - '&7A força das montanhas congeladas.'
+      - '&7Multiplicador global permanente de 2.0x.'
+      - ''
+      - '&7Custo: &e$200.000.000.000.000.000'
+      - '&7Multiplicador Permanente: &a2.0x'
+      - ''
+      - '&a▶ Clique para prestigiar'
+    commands:
+      - '[player] prestigio yeti'
+    action: '[player] prestigio yeti'
+
+  # Prestígio 3: Krampus (Slot 25)
+  'prestigio_krampus':
+    slot: 25
+    material: NETHERITE_INGOT
+    name: '&4&lPRESTÍGIO KRAMPUS &8[III]'
+    lore:
+      - '&7A supremacia máxima da rede.'
+      - '&7Triplica todos os seus ganhos (3.0x).'
+      - ''
+      - '&7Custo: &e$800.000.000.000.000.000'
+      - '&7Multiplicador Permanente: &a3.0x'
+      - ''
+      - '&a▶ Clique para prestigiar'
+    commands:
+      - '[player] prestigio krampus'
+    action: '[player] prestigio krampus'
+
+  # Informações / Status (Slot 48)
+  'info_progresso':
+    slot: 48
+    material: BOOK
+    name: '&#7FB4F4&lSEU PROGRESSO'
+    lore:
+      - '&7Resumo da sua evolução atual'
+      - '&7e fundos disponíveis para subida.'
+      - ''
+      - '&7Rank Atual: &a%tw_rank%'
+      - '&7Saldo: &e$%vault_eco_balance_formatted%'
+      - '&7Tokens: &e%tw_tokens%'
+      - ''
+      - '&a▶ Clique para conferir requisitos'
+    commands:
+      - '[player] ranks'
+    action: '[player] ranks'
+
+  # Botão Universal de Retorno (Slot 45)
+  'voltar':
+    slot: 45
+    material: ARROW
+    name: '&e➔ &lVoltar ao Menu'
+    lore:
+      - '&7Retorne à central principal de navegação'
+      - '&7para escolher outro subsistema.'
+      - ''
+      - '&7Destino: &eMenu Principal'
+      - ''
+      - '&e▶ Clique para voltar'
+    commands:
+      - '[openguimenu] principal'
+    left_click_commands:
+      - '[openguimenu] principal'
+    right_click_commands:
+      - '[openguimenu] principal'
+    action: '[menu] principal'
+
+  # Botão Universal de Fechamento (Slot 49)
+  'fechar':
+    slot: 49
+    material: BARRIER
+    name: '&c➔ &lFechar'
+    lore:
+      - '&7Encerre a visualização desta interface'
+      - '&7e retorne à sua jogatina.'
+      - ''
+      - '&7Ação: &cFechar GUI'
+      - ''
+      - '&c▶ Clique para fechar'
+    commands:
+      - '[close]'
+    left_click_commands:
+      - '[close]'
+    right_click_commands:
+      - '[close]'
+    action: '[close]'
+
+  # Botão Ação: Evoluir (Slot 50)
+  'botao_rankup':
+    slot: 50
+    material: EMERALD_BLOCK
+    name: '&a&lEVOLUIR (RANKUP)'
+    lore:
+      - '&7Avance para o próximo estágio'
+      - '&7da trilha e desbloqueie novas áreas.'
+      - ''
+      - '&7Saldo: &e$%vault_eco_balance_formatted%'
+      - '&7Ação: &aEvoluir 1 nível'
+      - ''
+      - '&a▶ Clique para evoluir agora'
+    commands:
+      - '[player] rankup'
+    action: '[player] rankup'
+
+  # Botão Ação: Evoluir MAX (Slot 51)
+  'botao_rankupmax':
+    slot: 51
+    material: GOLD_BLOCK
+    name: '&e&lEVOLUÇÃO MÁXIMA'
+    lore:
+      - '&7Adquira todos os ranks possíveis'
+      - '&7utilizando todo o saldo em conta.'
+      - ''
+      - '&7Modo: &eAutomático'
+      - '&7Economia: &fGasta até o limite'
+      - ''
+      - '&a▶ Clique para evoluir ao máximo'
+    commands:
+      - '[player] rankupmax'
+    action: '[player] rankupmax'
+
+  # Botão Ação: Prestígio (Slot 52)
+  'botao_prestigio':
+    slot: 52
+    material: BEACON
+    name: '&d&lMENU DE PRESTÍGIO'
+    lore:
+      - '&7Acesse as opções de prestígio divino'
+      - '&7para multiplicar seus lucros em até 3x.'
+      - ''
+      - '&7Status: &fDisponível no rank Noel'
+      - ''
+      - '&a▶ Clique para abrir prestígios'
+    commands:
+      - '[player] prestigio'
+    action: '[player] prestigio'

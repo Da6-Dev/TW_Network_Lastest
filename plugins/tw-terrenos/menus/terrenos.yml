@@ -1,0 +1,160 @@
+# ==============================================================================
+# TW Network — Configuração Padronizada de Menu: Agência de Terrenos (tw-terrenos)
+# Em conformidade estrita com o Design System (R1) e Arquitetura de Navegação (R2)
+# ==============================================================================
+
+title: '&8➔ &#7FB4F4&lAGÊNCIA DE TERRENOS'
+size: 27
+
+items:
+  # Moldura de vidro decorativa (Design System: 27 slots)
+  'moldura':
+    material: BLACK_STAINED_GLASS_PANE
+    slots:
+      # Linha 1
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      # Linha 2 (Laterais e divisórias)
+      - 9
+      - 10
+      - 12
+      - 14
+      - 16
+      - 17
+      # Linha 3 (Borda inferior)
+      - 19
+      - 20
+      - 21
+      - 23
+      - 25
+    name: ' '
+
+  # Item 1: Comprar Novo Terreno (Slot 11)
+  'comprar_terreno':
+    slot: 11
+    material: GRASS_BLOCK
+    name: '&#7FB4F4&lCOMPRAR NOVO TERRENO'
+    lore:
+      - '&7Adquira um novo lote protegido no mundo'
+      - '&7de terrenos para expandir seu império.'
+      - ''
+      - '&7Preço Base: &e$50.000 &8(Dobra a cada compra)'
+      - '&7Lotes: &f%plotsquared_plot_count%&7/&f%plotsquared_allowed_plot_count%'
+      - ''
+      - '&a▶ Clique para adquirir um terreno'
+    commands:
+      - '[player] plot auto'
+    action: '[player] plot auto'
+
+  # Item 2: Ir para Meu Terreno / Home (Slot 13)
+  'meu_terreno':
+    slot: 13
+    material: ENDER_PEARL
+    name: '&#7FB4F4&lMEU TERRENO &8• &fHome'
+    lore:
+      - '&7Teleporte-se imediatamente até o seu'
+      - '&7terreno principal no mundo de plots.'
+      - ''
+      - '&7Mundo: &aterrenos'
+      - '&7Status: &aDisponível'
+      - ''
+      - '&a▶ Clique para teleportar'
+    commands:
+      - '[player] plot home'
+    action: '[player] plot home'
+
+  # Item 3: Gerenciar Membros e Regras (Slot 15)
+  'gerenciar_terreno':
+    slot: 15
+    material: WRITABLE_BOOK
+    name: '&#7FB4F4&lGERENCIAR TERRENO'
+    lore:
+      - '&7Adicione amigos, configure permissões'
+      - '&7de voo e regras de proteção do lote.'
+      - ''
+      - '&7Comandos: &f/p trust&7, &f/p add&7, &f/p deny'
+      - '&7Voo no Lote: &aPermitido (/fly)'
+      - ''
+      - '&a▶ Clique para ver comandos'
+    commands:
+      - '[player] plot help'
+    action: '[player] plot help'
+
+  # Botão Universal de Retorno (Slot 18 - Design System 27 slots)
+  'voltar':
+    slot: 18
+    material: ARROW
+    name: '&e➔ &lVoltar ao Menu'
+    lore:
+      - '&7Retorne à central principal de navegação'
+      - '&7para escolher outro subsistema.'
+      - ''
+      - '&7Destino: &eMenu Principal'
+      - ''
+      - '&e▶ Clique para voltar'
+    commands:
+      - '[openguimenu] principal'
+    left_click_commands:
+      - '[openguimenu] principal'
+    right_click_commands:
+      - '[openguimenu] principal'
+    action: '[menu] principal'
+
+  # Botão Universal de Fechamento (Slot 22 - Design System 27 slots)
+  'fechar':
+    slot: 22
+    material: BARRIER
+    name: '&c➔ &lFechar'
+    lore:
+      - '&7Encerre a visualização desta interface'
+      - '&7e retorne à sua jogatina.'
+      - ''
+      - '&7Ação: &cFechar GUI'
+      - ''
+      - '&c▶ Clique para fechar'
+    commands:
+      - '[close]'
+    left_click_commands:
+      - '[close]'
+    right_click_commands:
+      - '[close]'
+    action: '[close]'
+
+  # Atalho de Sinergia: Máquinas & Spawners (Slot 24)
+  'atalho_producao':
+    slot: 24
+    material: FURNACE
+    name: '&#7FB4F4&lMÁQUINAS & SPAWNERS'
+    lore:
+      - '&7Estruturas industriais operam apenas'
+      - '&7quando posicionadas dentro dos seus lotes.'
+      - ''
+      - '&7Destino: &fFábrica & Geradores'
+      - ''
+      - '&a▶ Clique para abrir máquinas'
+    commands:
+      - '[player] maquinas'
+    action: '[player] maquinas'
+
+  # Atalho ao Hub Central (Slot 26)
+  'atalho_hub':
+    slot: 26
+    material: NETHER_STAR
+    name: '&#7FB4F4&lMENU PRINCIPAL'
+    lore:
+      - '&7Acesso rápido a todos os 10 subsistemas'
+      - '&7da rede a partir da agência de lotes.'
+      - ''
+      - '&7Destino: &eHub Central'
+      - ''
+      - '&a▶ Clique para abrir o hub'
+    commands:
+      - '[openguimenu] principal'
+    action: '[menu] principal'

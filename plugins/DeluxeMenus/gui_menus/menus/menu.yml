@@ -1,97 +1,245 @@
-menu_title: '&8» &6&lMENU PRINCIPAL &8| &eRankup'
+menu_title: '&8➔ &6&lMENU PRINCIPAL'
 open_command:
   - menu
   - ajuda
 register_command: true
-size: 45
+size: 54
 
 items:
-  # Moldura decorativa
+  # Moldura de vidro decorativa (Design System)
   'painel_borda':
     material: BLACK_STAINED_GLASS_PANE
     slots:
+      # Linha 1 (Borda superior)
       - 0
       - 1
       - 2
       - 3
-      - 4
       - 5
       - 6
       - 7
       - 8
+      # Linha 2 (Divisória)
       - 9
+      - 10
+      - 11
+      - 12
+      - 13
+      - 14
+      - 15
+      - 16
       - 17
+      # Linha 3 (Laterais)
+      - 18
+      - 26
+      # Linha 4 (Laterais e divisórias)
       - 27
+      - 28
+      - 29
+      - 33
+      - 34
       - 35
+      # Linha 5 (Faixa divisória inferior)
       - 36
       - 37
       - 38
       - 39
+      - 40
       - 41
       - 42
       - 43
       - 44
+      # Linha 6 (Borda inferior)
+      - 45
+      - 46
+      - 47
+      - 50
+      - 51
+      - 52
     display_name: ' '
 
-  # Perfil do Jogador
+  # Perfil do Jogador (Slot 4 - Topo Central)
   'perfil':
     material: head-%player_name%
     slot: 4
-    display_name: '&e&lSEU PERFIL'
+    display_name: '&#7FB4F4&lSEU PERFIL'
     lore:
-      - '&7Jogador: &f%player_name%'
-      - '&7Saldo: &a$%vault_eco_balance_formatted%'
-      - '&7Grupo: &b%luckperms_primary_group_name%'
+      - '&7Acompanhe o seu progresso, saldo'
+      - '&7e estatísticas gerais no servidor.'
       - ''
-      - '&7Evolua seu rank para minerar'
-      - '&7em áreas mais lucrativas!'
+      - '&7Jogador: &f%player_name%'
+      - '&7Saldo: &e$%vault_eco_balance_formatted%'
+      - '&7Tokens: &e%tw_tokens%'
+      - '&7Almas: &d%tw_souls%'
+      - '&7Rank Atual: &a%tw_rank%'
+      - ''
+      - '&8TW Network • RankUP Tycoon'
 
-  # Central de Mineracao do TW-Minas
+  # Sistema 1: Mineração (Slot 19)
   'minas':
     material: DIAMOND_PICKAXE
-    slot: 20
-    display_name: '&b&lIR MINERAR'
+    slot: 19
+    display_name: '&#7FB4F4&lMINAS &8• &fMineração'
     lore:
-      - '&7Abra a central de mineracao do servidor.'
-      - '&7Ela leva voce a melhor mina liberada.'
+      - '&7Acesse a central de mineração do servidor'
+      - '&7e teleporte-se para as áreas do seu rank.'
       - ''
-      - '&eClique para abrir a central!'
+      - '&7Seu Rank: &a%tw_rank%'
+      - '&7Status: &aDisponível'
+      - ''
+      - '&a▶ Clique para acessar as minas'
     left_click_commands:
       - '[sound] UI_BUTTON_CLICK'
-      - '[player] mina'
+      - '[openguimenu] minas'
     right_click_commands:
       - '[sound] UI_BUTTON_CLICK'
-      - '[player] mina'
-  # Kits do Jogador
-  'kits':
-    material: CHEST
-    slot: 22
-    display_name: '&c&lKITS DA MINA PVP'
-    lore:
-      - '&7Resgate seu kit de combate'
-      - '&7básico, VIP ou prestígio.'
-      - ''
-      - '&eCooldown individual de 1 hora.'
-      - '&eClique para abrir os kits PvP!'
-    left_click_commands:
-      - '[sound] BLOCK_CHEST_OPEN'
-      - '[close]'
-      - '[player] kits'
-    right_click_commands:
-      - '[sound] BLOCK_CHEST_OPEN'
-      - '[close]'
-      - '[player] kits'
+      - '[openguimenu] minas'
 
-  # Loja / Mercado
+  # Sistema 2: Trilha de Ranks (Slot 20)
+  'ranks':
+    material: NETHER_STAR
+    slot: 20
+    display_name: '&#7FB4F4&lRANKS &8• &fEvolução'
+    lore:
+      - '&7Trilha completa de evolução de ranks'
+      - '&7com multiplicadores e novas áreas.'
+      - ''
+      - '&7Rank Atual: &a%tw_rank%'
+      - '&7Saldo: &e$%vault_eco_balance_formatted%'
+      - ''
+      - '&a▶ Clique para ver os ranks'
+    left_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+      - '[close]'
+      - '[player] ranks'
+    right_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+      - '[close]'
+      - '[player] ranks'
+
+  # Sistema 3: Agência de Terrenos (Slot 21)
+  'terrenos':
+    material: GRASS_BLOCK
+    slot: 21
+    display_name: '&#7FB4F4&lTERRENOS &8• &fLotes'
+    lore:
+      - '&7Adquira terrenos para construir sua base,'
+      - '&7instalar fábricas e geradores.'
+      - ''
+      - '&7Mundo: &aterrenos'
+      - '&7Status: &aDisponível'
+      - ''
+      - '&a▶ Clique para gerenciar terrenos'
+    left_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+      - '[close]'
+      - '[player] terrenos'
+    right_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+      - '[close]'
+      - '[player] terrenos'
+
+  # Sistema 4: Fábrica de Máquinas (Slot 22)
+  'maquinas':
+    material: FURNACE
+    slot: 22
+    display_name: '&#7FB4F4&lMÁQUINAS &8• &fIndústria'
+    lore:
+      - '&7Compre e gerencie geradores industriais'
+      - '&7automáticos com alta rentabilidade.'
+      - ''
+      - '&7Saldo: &e$%vault_eco_balance_formatted%'
+      - '&7Tokens: &e%tw_tokens%'
+      - ''
+      - '&a▶ Clique para abrir a fábrica'
+    left_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+      - '[close]'
+      - '[player] maquinas'
+    right_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+      - '[close]'
+      - '[player] maquinas'
+
+  # Sistema 5: Mercado de Spawners (Slot 23)
+  'spawners':
+    material: SPAWNER
+    slot: 23
+    display_name: '&#7FB4F4&lSPAWNERS &8• &fGeradores'
+    lore:
+      - '&7Geradores de monstros com stack até 10k,'
+      - '&7modo virtual sem lag e coleta de almas.'
+      - ''
+      - '&7Almas: &d%tw_souls%'
+      - '&7Status: &aDisponível'
+      - ''
+      - '&a▶ Clique para abrir spawners'
+    left_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+      - '[close]'
+      - '[player] spawners'
+    right_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+      - '[close]'
+      - '[player] spawners'
+
+  # Sistema 6: Central Agrícola (Slot 24)
+  'farms':
+    material: HAY_BLOCK
+    slot: 24
+    display_name: '&#7FB4F4&lFARMS &8• &fAgricultura'
+    lore:
+      - '&7Silos virtuais com auto-sell automático,'
+      - '&7alquimia de fertilizantes e colheita em área.'
+      - ''
+      - '&7Capacidade Base: &e50.000 un'
+      - '&7Status: &aDisponível'
+      - ''
+      - '&a▶ Clique para abrir a central agrícola'
+    left_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+      - '[close]'
+      - '[player] farms'
+    right_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+      - '[close]'
+      - '[player] farms'
+
+  # Sistema 7: Caixas & Chaves Virtuais (Slot 25)
+  'caixas':
+    material: TRIPWIRE_HOOK
+    slot: 25
+    display_name: '&#7FB4F4&lCAIXAS &8• &fRecompensas'
+    lore:
+      - '&7Abra caixas misteriosas com chaves virtuais,'
+      - '&7sistema de pity e forja de chaves divinas.'
+      - ''
+      - '&7Almas: &d%tw_souls%'
+      - '&7Chaves Virtuais: &eDisponíveis'
+      - ''
+      - '&a▶ Clique para abrir caixas'
+    left_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+      - '[close]'
+      - '[player] caixas'
+    right_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+      - '[close]'
+      - '[player] caixas'
+
+  # Sistema 8: Mercado Global (Slot 30)
   'loja':
     material: EMERALD
-    slot: 24
-    display_name: '&6&lMERCADO & LOJA'
+    slot: 30
+    display_name: '&#7FB4F4&lMERCADO &8• &fLoja Global'
     lore:
-      - '&7Compre melhorias, blocos raros'
-      - '&7e venda os seus minérios.'
+      - '&7Compre suprimentos, blocos decorativos'
+      - '&7e venda a sua produção minerada.'
       - ''
-      - '&eClique para abrir o mercado!'
+      - '&7Saldo: &e$%vault_eco_balance_formatted%'
+      - '&7Cotação: &eAtiva'
+      - ''
+      - '&a▶ Clique para abrir o mercado'
     left_click_commands:
       - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
       - '[close]'
@@ -101,16 +249,41 @@ items:
       - '[close]'
       - '[player] shop'
 
-  # Cosméticos de Lobby
-  'cosmeticos':
-    material: NETHER_STAR
+  # Sistema 9: Kits de Combate PvP (Slot 31)
+  'kits':
+    material: IRON_CHESTPLATE
     slot: 31
-    display_name: '&d&lCOSMÉTICOS'
+    display_name: '&#7FB4F4&lKITS &8• &fArena PvP'
     lore:
-      - '&7Ative efeitos de partículas,'
-      - '&7chapéus e animais de estimação.'
+      - '&7Resgate kits de combate para duelos'
+      - '&7na Arena PvP do servidor.'
       - ''
-      - '&eClique para abrir o ProCosmetics!'
+      - '&7Disponíveis: &fBásico&7, &bVIP&7, &6Prestígio'
+      - '&7Cooldown: &e1 hora'
+      - ''
+      - '&a▶ Clique para resgatar kits'
+    left_click_commands:
+      - '[sound] BLOCK_CHEST_OPEN'
+      - '[close]'
+      - '[player] kits'
+    right_click_commands:
+      - '[sound] BLOCK_CHEST_OPEN'
+      - '[close]'
+      - '[player] kits'
+
+  # Sistema 10: Cosméticos Visuais (Slot 32)
+  'cosmeticos':
+    material: ENDER_EYE
+    slot: 32
+    display_name: '&#7FB4F4&lCOSMÉTICOS &8• &fEstética'
+    lore:
+      - '&7Personalize seu visual com partículas,'
+      - '&7chapéus, companheiros e efeitos.'
+      - ''
+      - '&7Coleção: &eProCosmetics'
+      - '&7Status: &aDisponível'
+      - ''
+      - '&a▶ Clique para abrir cosméticos'
     left_click_commands:
       - '[sound] ENTITY_PLAYER_LEVELUP'
       - '[close]'
@@ -120,11 +293,65 @@ items:
       - '[close]'
       - '[player] cosmetics<delay=5>'
 
-  # Botão Fechar
-  'fechar':
-    material: BARRIER
-    slot: 40
-    display_name: '&c&lFechar'
+  # Ranking dos Mais Ricos / Baltop (Slot 48)
+  'baltop':
+    material: GOLD_BLOCK
+    slot: 48
+    display_name: '&#7FB4F4&lMAGNATAS &8• &fRanking'
+    lore:
+      - '&7Confira os jogadores mais ricos'
+      - '&7e influentes de toda a rede.'
+      - ''
+      - '&7Seu Saldo: &e$%vault_eco_balance_formatted%'
+      - '&7Classificação: &fAtualizada em tempo real'
+      - ''
+      - '&a▶ Clique para ver o ranking'
     left_click_commands:
       - '[sound] UI_BUTTON_CLICK'
       - '[close]'
+      - '[player] baltop'
+    right_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+      - '[close]'
+      - '[player] baltop'
+
+  # Botão Universal de Fechamento (Slot 49 - Design System)
+  'fechar':
+    material: BARRIER
+    slot: 49
+    display_name: '&c➔ &lFechar'
+    lore:
+      - '&7Encerre a visualização desta interface'
+      - '&7e retorne à sua jogatina.'
+      - ''
+      - '&7Ação: &cFechar GUI'
+      - ''
+      - '&c▶ Clique para fechar'
+    left_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+      - '[close]'
+    right_click_commands:
+      - '[sound] UI_BUTTON_CLICK'
+      - '[close]'
+
+  # Atalho Rápido ao Spawn (Slot 53)
+  'spawn':
+    material: ENDER_PEARL
+    slot: 53
+    display_name: '&#7FB4F4&lSPAWN &8• &fLobby Central'
+    lore:
+      - '&7Teleporte-se imediatamente de volta'
+      - '&7ao ponto central do mundo principal.'
+      - ''
+      - '&7Mundo: &fworld'
+      - '&7Zona: &aProtegida'
+      - ''
+      - '&a▶ Clique para ir ao spawn'
+    left_click_commands:
+      - '[sound] ENTITY_ENDERMAN_TELEPORT'
+      - '[close]'
+      - '[player] spawn'
+    right_click_commands:
+      - '[sound] ENTITY_ENDERMAN_TELEPORT'
+      - '[close]'
+      - '[player] spawn'
