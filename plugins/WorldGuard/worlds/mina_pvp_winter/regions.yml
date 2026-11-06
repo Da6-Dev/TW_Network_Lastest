@@ -1,23 +1,4 @@
 #
-# WorldGuard regions for the Mina PvP Winter arena.
+# WorldGuard regions for mina_pvp_winter
 #
-regions:
-    __global__:
-        members: {}
-        flags: {other-explosion: deny, use: allow, invincible: deny, interact: allow,
-            pvp: allow, mob-spawning: deny, block-place: deny, fire-spread: deny,
-            item-drop: allow, fall-damage: allow, item-pickup: allow, passthrough: deny,
-            block-break: deny, tnt: deny}
-        owners: {}
-        type: global
-        priority: 0
-    spawn:
-        min: {x: -76, y: 95, z: 4}
-        max: {x: -52, y: 130, z: 28}
-        members: {}
-        flags: {pvp: deny, invincible: allow, allow-combat-entry: deny,
-            fall-damage: deny, item-drop: allow, item-pickup: allow,
-            block-break: deny, block-place: deny}
-        owners: {}
-        type: cuboid
-        priority: 10
+regions: {}
