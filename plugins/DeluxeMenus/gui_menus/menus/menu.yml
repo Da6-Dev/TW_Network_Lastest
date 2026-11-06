@@ -110,11 +110,9 @@ items:
       - '&a▶ Clique para ver os ranks'
     left_click_commands:
       - '[sound] UI_BUTTON_CLICK'
-      - '[close]'
       - '[player] ranks'
     right_click_commands:
       - '[sound] UI_BUTTON_CLICK'
-      - '[close]'
       - '[player] ranks'
 
   # Sistema 3: Agência de Terrenos (Slot 21)
@@ -132,11 +130,9 @@ items:
       - '&a▶ Clique para gerenciar terrenos'
     left_click_commands:
       - '[sound] UI_BUTTON_CLICK'
-      - '[close]'
       - '[player] terrenos'
     right_click_commands:
       - '[sound] UI_BUTTON_CLICK'
-      - '[close]'
       - '[player] terrenos'
 
   # Sistema 4: Fábrica de Máquinas (Slot 22)
@@ -154,11 +150,9 @@ items:
       - '&a▶ Clique para abrir a fábrica'
     left_click_commands:
       - '[sound] UI_BUTTON_CLICK'
-      - '[close]'
       - '[player] maquinas'
     right_click_commands:
       - '[sound] UI_BUTTON_CLICK'
-      - '[close]'
       - '[player] maquinas'
 
   # Sistema 5: Mercado de Spawners (Slot 23)
@@ -176,11 +170,9 @@ items:
       - '&a▶ Clique para abrir spawners'
     left_click_commands:
       - '[sound] UI_BUTTON_CLICK'
-      - '[close]'
       - '[player] spawners'
     right_click_commands:
       - '[sound] UI_BUTTON_CLICK'
-      - '[close]'
       - '[player] spawners'
 
   # Sistema 6: Central Agrícola (Slot 24)
@@ -198,11 +190,9 @@ items:
       - '&a▶ Clique para abrir a central agrícola'
     left_click_commands:
       - '[sound] UI_BUTTON_CLICK'
-      - '[close]'
       - '[player] farms'
     right_click_commands:
       - '[sound] UI_BUTTON_CLICK'
-      - '[close]'
       - '[player] farms'
 
   # Sistema 7: Caixas & Chaves Virtuais (Slot 25)
@@ -220,11 +210,9 @@ items:
       - '&a▶ Clique para abrir caixas'
     left_click_commands:
       - '[sound] UI_BUTTON_CLICK'
-      - '[close]'
       - '[player] caixas'
     right_click_commands:
       - '[sound] UI_BUTTON_CLICK'
-      - '[close]'
       - '[player] caixas'
 
   # Sistema 8: Mercado Global (Slot 30)
@@ -242,11 +230,9 @@ items:
       - '&a▶ Clique para abrir o mercado'
     left_click_commands:
       - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
-      - '[close]'
       - '[player] shop'
     right_click_commands:
       - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
-      - '[close]'
       - '[player] shop'
 
   # Sistema 9: Kits de Combate PvP (Slot 31)
@@ -264,11 +250,9 @@ items:
       - '&a▶ Clique para resgatar kits'
     left_click_commands:
       - '[sound] BLOCK_CHEST_OPEN'
-      - '[close]'
       - '[player] kits'
     right_click_commands:
       - '[sound] BLOCK_CHEST_OPEN'
-      - '[close]'
       - '[player] kits'
 
   # Sistema 10: Cosméticos Visuais (Slot 32)
@@ -286,12 +270,10 @@ items:
       - '&a▶ Clique para abrir cosméticos'
     left_click_commands:
       - '[sound] ENTITY_PLAYER_LEVELUP'
-      - '[close]'
-      - '[player] cosmetics<delay=5>'
+      - '[player] cosmetics'
     right_click_commands:
       - '[sound] ENTITY_PLAYER_LEVELUP'
-      - '[close]'
-      - '[player] cosmetics<delay=5>'
+      - '[player] cosmetics'
 
   # Ranking dos Mais Ricos / Baltop (Slot 48)
   'baltop':
