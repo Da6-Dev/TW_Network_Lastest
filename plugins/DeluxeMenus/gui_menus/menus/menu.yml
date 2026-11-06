@@ -90,10 +90,10 @@ items:
       - '&a▶ Clique para acessar as minas'
     left_click_commands:
       - '[sound] UI_BUTTON_CLICK'
-      - '[openguimenu] minas'
+      - '[player] minas'
     right_click_commands:
       - '[sound] UI_BUTTON_CLICK'
-      - '[openguimenu] minas'
+      - '[player] minas'
 
   # Sistema 2: Trilha de Ranks (Slot 20)
   'ranks':

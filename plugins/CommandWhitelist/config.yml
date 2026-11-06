@@ -28,6 +28,7 @@ groups:
   default:
     commands:
     - mina
+    - minas
     - menu
     - ajuda
     - mine
