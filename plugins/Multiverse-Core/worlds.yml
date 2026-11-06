@@ -1,13 +1,13 @@
-minecraft:mina_pvp:
+minecraft:mina_pvp_winter:
   adjust-spawn: true
   alias: '&c&lTW &f&lMINA PVP'
   allow-advancement-grant: false
   allow-flight: false
   allow-weather: false
-  anchor-respawn: false
+  anchor-respawn: true
   auto-heal: true
   auto-load: true
-  bed-respawn: false
+  bed-respawn: true
   biome: ''
   difficulty: hard
   entry-fee:
@@ -15,21 +15,21 @@ minecraft:mina_pvp:
     amount: 0.0
     currency: '@vault-economy'
   gamemode: survival
-  generator: VoidGen
+  generator: ''
   hidden: false
   hunger: true
   keep-spawn-in-memory: true
   meta: {}
   player-limit: -1
-  portal-form: none
+  portal-form: all
   pvp: true
   respawn-world: ''
   scale: 1.0
   spawn-location:
     ==: MVSpawnLocation
-    x: 0.5
-    y: 101.0
-    z: 0.5
+    x: -64.0
+    y: 110.0
+    z: 16.0
     pitch: 0.0
     yaw: 0.0
   spawning:
@@ -77,12 +77,12 @@ minecraft:mina_pvp:
   read-only:
     environment: normal
     generator-settings: ''
-    legacy-world-name: mina_pvp
-    seed: 793660847404048705
+    legacy-world-name: mina_pvp_winter
+    seed: -2789934038661551011
   version: 1.3
 minecraft:minas:
   adjust-spawn: true
-  alias: ''
+  alias: '&c&lTW &f&lMINA PVP'
   allow-advancement-grant: false
   allow-flight: true
   allow-weather: false
@@ -91,7 +91,7 @@ minecraft:minas:
   auto-load: true
   bed-respawn: false
   biome: ''
-  difficulty: peaceful
+  difficulty: hard
   entry-fee:
     enabled: false
     amount: 0.0
@@ -100,7 +100,7 @@ minecraft:minas:
   generator: VoidGen
   hidden: false
   hunger: false
-  keep-spawn-in-memory: false
+  keep-spawn-in-memory: true
   meta: {}
   player-limit: -1
   portal-form: none
@@ -173,7 +173,7 @@ minecraft:overworld:
   auto-load: true
   bed-respawn: false
   biome: ''
-  difficulty: peaceful
+  difficulty: hard
   entry-fee:
     enabled: false
     amount: 0.0
@@ -182,7 +182,7 @@ minecraft:overworld:
   generator: VoidGen
   hidden: false
   hunger: false
-  keep-spawn-in-memory: false
+  keep-spawn-in-memory: true
   meta: {}
   player-limit: -1
   portal-form: none
@@ -246,7 +246,7 @@ minecraft:overworld:
   version: 1.3
 minecraft:terrenos:
   adjust-spawn: true
-  alias: ''
+  alias: '&c&lTW &f&lMINA PVP'
   allow-advancement-grant: false
   allow-flight: true
   allow-weather: false
@@ -264,7 +264,7 @@ minecraft:terrenos:
   generator: PlotSquared
   hidden: false
   hunger: false
-  keep-spawn-in-memory: false
+  keep-spawn-in-memory: true
   meta: {}
   player-limit: -1
   portal-form: none

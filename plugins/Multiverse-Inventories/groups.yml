@@ -17,6 +17,6 @@ groups:
     - all
   mina_pvp:
     worlds:
-    - mina_pvp
+    - mina_pvp_winter
     shares:
     - all
